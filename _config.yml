@@ -1,0 +1,16 @@
+# Defaults for the theme's own preview build. Consuming repositories set their own
+# title, description and dk_* values; see README.md.
+title: Drayker theme
+description: The Drayker documentation theme — one dark Jekyll layout shared by every drayker.org documentation site.
+dk_kicker: Design kit
+dk_subdomain: drayker-theme
+dk_repo: https://github.com/draykerdk/drayker-theme
+
+plugins:
+  - jekyll-optional-front-matter
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
