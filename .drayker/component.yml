@@ -1,0 +1,33 @@
+schema_version: 1
+component:
+  id: drayker-theme
+  name: Drayker Theme
+  layer: PORTAL
+  artifact_type: theme
+  problem: Give Drayker documentation sites a consistent, accessible visual and navigation system.
+  scope:
+    - Shared Jekyll layout and design tokens for documentation repositories.
+    - Navigation back to source repositories and ecosystem entrypoints.
+  non_scope:
+    - The Design Component used by drayker.org and drayker.com.
+    - Governance or content truth for consuming repositories.
+  dependencies:
+    - drayker.org
+  implementation:
+    level: operational
+    scope: The theme is published as repository code and referenced by Drayker documentation sites.
+    evidence:
+      - type: usage
+        ref: https://github.com/draykerdk/dk/blob/master/docs/_config.yml
+      - type: document
+        ref: README.md
+  risks:
+    - A breaking layout change can affect many documentation sites at once.
+    - Shared styling can hide differences in content maturity between components.
+  contributions:
+    availability: open
+    entrypoint: https://github.com/draykerdk/drayker-theme/issues
+  source_of_truth:
+    repository: https://github.com/draykerdk/drayker-theme
+    path: _layouts/default.html
+  last_reviewed: "2026-08-10"
