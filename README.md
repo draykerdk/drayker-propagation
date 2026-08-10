@@ -32,8 +32,9 @@ If the site is served from `docs/`, the `_config.yml` goes in `docs/` too.
 
 ## What it gives you
 
-- The Drayker tokens: canvas `#08080A`, surface `#0C0C0F`, border `#18181E`, text `#EDECF0`, muted `#8585A0`, accent `#FF5500`, Space Grotesk + JetBrains Mono, 1320px content width.
+- The Drayker tokens: canvas `#08080A`, surface `#0C0C0F`, border `#18181E`, text `#EDECF0`, muted `#8585A0`, accent `#FF5500`, Archivo + JetBrains Mono, 1320px content width.
 - A sticky header carrying the mark and a way back to the volunteers portal and the source repository.
+- The complete official favicon chain on every generated Markdown page, served from the canonical portal assets.
 - Markdown styling for headings, tables, code, blockquotes and lists, with tables scrolling inside their own container instead of pushing the page sideways.
 - A shared footer pointing at the protocol, the knowledge base, the open functions and the volunteer flow.
 - Visible focus states, `prefers-reduced-motion` respected, no JavaScript.
