@@ -202,4 +202,17 @@
       }, 2600);
     });
   });
+
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const syncMarkMotion = () => {
+    document.querySelectorAll('[data-drayker]').forEach((element) => {
+      const mark = element.__dk;
+      if (!mark) return;
+      if (motion.matches) mark.stop();
+      else if (mark.opts.animate && !mark.ctx.ring.flat) mark.start();
+    });
+  };
+
+  window.addEventListener('DOMContentLoaded', syncMarkMotion);
+  motion.addEventListener('change', syncMarkMotion);
 })();

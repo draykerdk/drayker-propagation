@@ -1,0 +1,2 @@
+# Source artifacts are byte-preserved from the supplied design archive.
+design/source/** -whitespace
