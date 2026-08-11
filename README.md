@@ -1,46 +1,39 @@
-# drayker-theme
+# Drayker Propagation
 
-The Drayker documentation theme: one dark Jekyll layout so that every `*.drayker.org` documentation site reads as part of the same system as [drayker.org](https://drayker.org) and [drayker.com](https://drayker.com).
+An English-language public toolkit for volunteers who want to help people find, understand and responsibly discuss Drayker.
 
-## Using it
+The site gives a volunteer a clear first move without turning outreach into hype: primary sources, honest message starters, a small mission matcher, a public contribution path and the official brand assets.
 
-In the `_config.yml` of the repository whose README is published by GitHub Pages:
+## What is included
 
-```yaml
-remote_theme: draykerdk/drayker-theme
-plugins:
-  - jekyll-remote-theme
-  - jekyll-optional-front-matter
+- A responsive GitHub Pages landing page in [`index.html`](index.html).
+- A client-side mission matcher that suggests a small, source-led starting task based on a volunteer's strength and available time.
+- Ready-to-copy, factual message starters — each points people back to primary sources.
+- A reusable logo kit in [`assets/brand/logo`](assets/brand/logo), including light, dark, mono, signature and app-icon variants.
+- An English [brand guide](docs/brand-guide.md) and downloadable kit for contributors.
+- A zero-dependency static integrity check.
 
-title: BSDK
-description: Base Structure DK — the base structure proposed for the Dk kernel.
+## Publish with GitHub Pages
 
-dk_kicker: Kernel component        # the small uppercase line above the title
-dk_subdomain: bsdk.drayker.org     # shown beside the mark and in the footer bar
-dk_repo: https://github.com/draykerdk/bsdk
+1. In the repository settings, open **Pages**.
+2. Select **Deploy from a branch**.
+3. Select `master` and the repository root.
+4. Save. GitHub Pages will serve `index.html` directly.
 
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
+No runtime credentials, form collection or third-party analytics are used. The main contribution CTA opens the organization's existing public volunteer-introduction issue form.
+
+## Validate locally
+
+```sh
+node tools/check.js
 ```
 
-`title` and `description` become the page header, so a README does not need to repeat its own name as an `# H1`.
+The site itself has no build step. Open `index.html` in a browser for a visual check.
 
-If the site is served from `docs/`, the `_config.yml` goes in `docs/` too.
+## Editorial rule
 
-## What it gives you
+This is a propagation toolkit, not a claim factory. Keep every message tied to a public primary source, describe proposals as proposals, and do not add promises, performance claims or urgency that the source does not support.
 
-- The Drayker tokens: canvas `#08080A`, surface `#0C0C0F`, border `#18181E`, text `#EDECF0`, muted `#8585A0`, accent `#FF5500`, Archivo + JetBrains Mono, 1320px content width.
-- A sticky header carrying the mark and a way back to the volunteers portal and the source repository.
-- The complete official favicon chain on every generated Markdown page, served from the canonical portal assets.
-- Markdown styling for headings, tables, code, blockquotes and lists, with tables scrolling inside their own container instead of pushing the page sideways.
-- A shared footer pointing at the protocol, the knowledge base, the open functions and the volunteer flow.
-- Visible focus states, `prefers-reduced-motion` respected, no JavaScript.
+## Recommended repository name
 
-The layout writes its own `<title>` and Open Graph tags rather than depending on `jekyll-seo-tag`, so it builds in a repository whose plugin list you have not touched.
-
-## Changing it
-
-`_layouts/default.html` is the whole theme — markup and tokens in one file, on purpose: thirteen sites inherit it and a single file is what makes a change reviewable. If a token changes here it must change in `SITE_PATTERN.md` of [`draykerdk/drayker.org`](https://github.com/draykerdk/drayker.org) as well; that document is the source of truth for the pattern.
+`drayker-propagation` would make the repository's purpose clear. Rename it in GitHub only after updating the Pages address and any inbound links.
