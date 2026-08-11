@@ -1,0 +1,180 @@
+{
+  "version": "4.0.0",
+  "source": "../source/Drayker Logo Variations.html",
+  "groups": [
+    {
+      "id": "universal",
+      "order": "01",
+      "name": "Universal symbols",
+      "shortName": "Universal",
+      "description": "The most reusable symbolic forms: planet, energy and the unknown. These should be considered before narrower technical studies.",
+      "use": ["The message needs a symbol that travels across projects", "Planet, energy, emergence or the unknown is central", "A campaign needs immediate symbolic recognition"],
+      "avoid": ["A product scope already has a precise body", "The visual would imply a literal machine that the content does not discuss"]
+    },
+    {
+      "id": "standard",
+      "order": "02",
+      "name": "Standard identity",
+      "shortName": "Standard",
+      "description": "Restrained marks with the normal crossed rings and a dark, decisive shadow. These stay closest to Drayker’s identity language.",
+      "use": ["Identity must remain more important than spectacle", "A dark shadow and familiar orbit are enough", "The animation supports a header, statement or institutional page"],
+      "avoid": ["A specific scope body communicates the subject more accurately", "The content is about a literal orbital structure"]
+    },
+    {
+      "id": "earth-studies",
+      "order": "03",
+      "name": "Earth studies",
+      "shortName": "Earth",
+      "description": "Earlier realistic-Earth treatments preserved as design studies: day, night, ember and terminator combinations.",
+      "use": ["The campaign is explicitly planetary", "Day, night, geography or stewardship carries meaning", "A historical design direction needs to be referenced"],
+      "avoid": ["The current universal Earth already says enough", "A historical study could be mistaken for the production mark"]
+    },
+    {
+      "id": "celestial",
+      "order": "04",
+      "name": "Celestial variants",
+      "shortName": "Celestial",
+      "description": "Alternative Sun and Black Hole treatments, including the accretion-disk study. Broadly symbolic, but more dramatic than the universal forms.",
+      "use": ["Energy, gravity or the unknown is the actual subject", "A long-form story benefits from a more cinematic body", "The distinction between horizon and accretion disk matters"],
+      "avoid": ["The quieter universal Sun or Black Hole is sufficient", "Drama would overpower the message"]
+    },
+    {
+      "id": "system-bodies",
+      "order": "05",
+      "name": "System bodies",
+      "shortName": "Systems",
+      "description": "The evolved Turn 10 family: spherical structures that encode each Drayker scope while preserving standard ring behavior.",
+      "use": ["A specific Drayker scope is the subject", "The body’s structure explains a system concept", "A technical page needs a distinct but coherent scope symbol"],
+      "avoid": ["The audience does not know the scope vocabulary", "A universal symbol would communicate faster"]
+    },
+    {
+      "id": "scope-studies",
+      "order": "06",
+      "name": "Scope development studies",
+      "shortName": "Scope studies",
+      "description": "Turns 8 and 9 document two earlier passes over the eight scope bodies. They are valuable references, not default recommendations.",
+      "use": ["Comparing the evolution of a scope mark", "Researching body geometry or hard-shadow decisions", "A custom extension needs historical precedent"],
+      "avoid": ["Publishing a current production identity without review", "A Turn 10 system body already covers the need"]
+    },
+    {
+      "id": "elements",
+      "order": "07",
+      "name": "Elemental and abstract bodies",
+      "shortName": "Elements",
+      "description": "Fire, water, earth, air, aether and fractal bodies explore metaphorical matter inside the standard orbital language.",
+      "use": ["A conceptual story genuinely depends on the element", "A custom campaign needs an abstract body metaphor", "The visual is presented as an exploration"],
+      "avoid": ["The animation could be mistaken for an official scope", "The metaphor is decorative rather than explanatory"]
+    },
+    {
+      "id": "ring-experiments",
+      "order": "08",
+      "name": "Ring customization studies",
+      "shortName": "Ring studies",
+      "description": "Material, width, nodes, segmentation and built-ring experiments. These deliberately depart from the standard ring and therefore stay near the bottom.",
+      "use": ["The ring material or structure is itself the subject", "A project-specific extension needs a documented precedent", "The work is clearly labeled as a customization"],
+      "avoid": ["A standard ring communicates the idea", "The result would be used as Drayker’s default identity"]
+    },
+    {
+      "id": "applied-machinery",
+      "order": "09",
+      "name": "Applied machinery examples",
+      "shortName": "Machinery",
+      "description": "Literal habitat, extraction, shielding, terraforming and drydock configurations. These are the narrowest and least common applications.",
+      "use": ["The content explicitly describes the depicted machine", "The orbital apparatus carries essential technical meaning", "A speculative project needs a concrete customization example"],
+      "avoid": ["The ring is merely decorative", "A standard or universal animation can carry the story", "The configuration would be presented as the normal brand mark"]
+    }
+  ],
+  "animations": [
+    {"id":"11b","group":"universal","name":"Earth","sourceName":"Terra","renderer":"hearth","description":"Real coastlines rotate beneath a blue atmosphere while the illuminated limb is cut by the original dark shadow.","tags":["planet","people","place","stewardship"]},
+    {"id":"11c","group":"universal","name":"Sun","sourceName":"Sol","renderer":"hsun","description":"A living corona and luminous stellar body express energy, origin, growth and emergence without adding machinery.","tags":["energy","emergence","light","origin"]},
+    {"id":"11d","group":"universal","name":"Black Hole","sourceName":"Buraco negro (sem disco)","renderer":"hbh","description":"A photon ring interrupted by the Drayker shadow creates an open symbol for boundaries, gravity and the unknown.","tags":["unknown","boundary","gravity","research"]},
+
+    {"id":"11a","group":"standard","name":"Core mark","sourceName":"Logo normal","renderer":"hplain","description":"The orange Drayker body, normal chrome rings and opaque shadow form the closest animated expression of the core identity.","tags":["identity","default","orange","hard shadow"]},
+    {"id":"3f","group":"standard","name":"Earth gyroscope","sourceName":"Giroscópio","renderer":"gyro","description":"The standard crossed gyroscope sits over the realistic Earth: the most direct bridge between planet and mark.","tags":["earth","gyroscope","standard rings"]},
+    {"id":"4f","group":"standard","name":"Fine-line orbit","sourceName":"Traço fino","renderer":"gthin","description":"The rings become a restrained thread of light so the globe dominates and the orbit only signs the composition.","tags":["minimal","thin rings","quiet"]},
+
+    {"id":"1a","group":"earth-studies","name":"Day Earth","sourceName":"Terra diurna","renderer":"variant-a","description":"Deep ocean, orange continents and a rotating terminator create a direct daytime planetary reading.","tags":["earth","day","geography"]},
+    {"id":"1b","group":"earth-studies","name":"Night Earth","sourceName":"Terra noturna","renderer":"variant-b","description":"A near-black planet turns coastlines into glowing filaments while the chrome orbit carries the contrast.","tags":["earth","night","coastlines"]},
+    {"id":"1d","group":"earth-studies","name":"Ember Earth","sourceName":"Terra brasa","renderer":"variant-d","description":"The orange brand sphere keeps real continents as dark cutouts, combining Earth with the established identity color.","tags":["earth","ember","brand"]},
+    {"id":"2a","group":"earth-studies","name":"Day–night terminator","sourceName":"Terminador","renderer":"variant-a-cross","description":"Daytime land and nocturnal coastline filaments share one globe, divided by a pointer-responsive terminator.","tags":["earth","day and night","terminator"]},
+    {"id":"2b","group":"earth-studies","name":"Cut ember terminator","sourceName":"Brasa recortada","renderer":"variant-d-cross","description":"An orange daytime body and glowing nighttime coastlines combine in a brand-led Earth hybrid.","tags":["earth","ember","day and night"]},
+
+    {"id":"5a","group":"celestial","name":"Plasma Black Hole","sourceName":"Buraco negro","renderer":"gbh","description":"A completely dark sphere, incandescent photon ring and plasma-like crossed rings create a dramatic horizon study.","tags":["black hole","plasma","horizon"]},
+    {"id":"5b","group":"celestial","name":"Silhouette Sun","sourceName":"Sol","renderer":"gsun","description":"Limb-darkened stellar light and an open corona place the orbital structure in silhouette against the photosphere.","tags":["sun","energy","corona"]},
+    {"id":"5c","group":"celestial","name":"Black Hole with Accretion Disk","sourceName":"Buraco negro com disco","renderer":"gbhdisk","description":"A hot accretion disk bends around the horizon, adding a literal gravitational-lensing narrative to the black body.","tags":["black hole","accretion disk","gravity"]},
+
+    {"id":"10a","group":"system-bodies","name":"Dk · Geodesic","sourceName":"Dk · geodésica","renderer":"edk","description":"A twenty-face geodesic sphere and white nucleus express a kernel with no privileged axis.","tags":["Dk","kernel","geodesic"]},
+    {"id":"10b","group":"system-bodies","name":"DAF · Equal Lobes","sourceName":"DAF · gomos iguais","renderer":"edaf","description":"Twelve equal pole-to-pole lobes form one sphere from autonomous, equivalent parts.","tags":["DAF","federation","equal parts"]},
+    {"id":"10c","group":"system-bodies","name":"BSDK · Weave","sourceName":"BSDK · trança","renderer":"ebsdk","description":"Opposing spiral bundles weave from pole to pole, making the base structure feel constructed rather than drawn.","tags":["BSDK","weave","base structure"]},
+    {"id":"10d","group":"system-bodies","name":"Dk Network · Mesh","sourceName":"Dk Network · malha","renderer":"enet","description":"A second-order icosahedral mesh carries packets along equal routes in every direction.","tags":["network","mesh","routing"]},
+    {"id":"10e","group":"system-bodies","name":"LCrypt · Armillary Cage","sourceName":"LCrypt · gaiola armilar","renderer":"elc","description":"Five great circles, a cipher ring and a counter-rotating scan express layered living cryptography.","tags":["LCrypt","cryptography","armillary"]},
+    {"id":"10f","group":"system-bodies","name":"UID · Spherical Iris","sourceName":"UID · íris esférica","renderer":"euid","description":"Concentric shells create an eye-like globe with pupil and highlight for the system’s human identity layer.","tags":["UID","identity","iris"]},
+    {"id":"10g","group":"system-bodies","name":"DFM / DFMP · Zones","sourceName":"DFM / DFMP · zonas","renderer":"edfmp","description":"Symmetric equatorial zones and measured intervals turn protocol into a visibly calibrated body.","tags":["DFM","DFMP","protocol","measurement"]},
+    {"id":"10h","group":"system-bodies","name":"Emergence · Seed","sourceName":"Emergence · semente","renderer":"eemg","description":"A Fibonacci distribution grows outward from the sphere, expressing uniform emergence from a shared center.","tags":["emergence","seed","growth"]},
+
+    {"id":"9a","group":"scope-studies","name":"Dk · Hard-shadow Study","sourceName":"Dk · kernel","renderer":"ddk","description":"The Dk body under the corrected opaque wedge and single-material graphite orbit.","tags":["Dk","hard shadow","study"]},
+    {"id":"9b","group":"scope-studies","name":"DAF · Hard-shadow Study","sourceName":"DAF · federação","renderer":"ddaf","description":"The DAF federation body tested with a dry-edged opaque shadow and brushed graphite rings.","tags":["DAF","hard shadow","study"]},
+    {"id":"9c","group":"scope-studies","name":"BSDK · Hard-shadow Study","sourceName":"BSDK · estrutura base","renderer":"dbsdk","description":"The BSDK base-structure body in the corrected hard-shadow, single-material ring system.","tags":["BSDK","hard shadow","study"]},
+    {"id":"9d","group":"scope-studies","name":"Dk Network · Hard-shadow Study","sourceName":"Dk Network · rede","renderer":"dnet","description":"The network body tested under the decisive opaque wedge and neutral graphite orbit.","tags":["network","hard shadow","study"]},
+    {"id":"9e","group":"scope-studies","name":"LCrypt · Hard-shadow Study","sourceName":"LCrypt · segurança","renderer":"dlc","description":"The security body with a dry opaque shadow and one-material brushed rings.","tags":["LCrypt","security","study"]},
+    {"id":"9f","group":"scope-studies","name":"UID · Hard-shadow Study","sourceName":"UID · identidade","renderer":"duid","description":"The identity body in the corrected hard-shadow treatment, preserving a neutral orbit.","tags":["UID","identity","study"]},
+    {"id":"9g","group":"scope-studies","name":"DFM / DFMP · Hard-shadow Study","sourceName":"DFM / DFMP · protocolo","renderer":"ddfmp","description":"The protocol body tested with the opaque wedge and brushed single-material rings.","tags":["DFM","DFMP","protocol","study"]},
+    {"id":"9h","group":"scope-studies","name":"Emergence · Hard-shadow Study","sourceName":"Emergence · iniciativa","renderer":"demg","description":"The initiative body tested with the corrected opaque wedge and neutral structural rings.","tags":["emergence","initiative","study"]},
+    {"id":"8a","group":"scope-studies","name":"Dk · Kernel Study","sourceName":"Dk · kernel","renderer":"cdk","description":"A wire shell, off-plane internal orbit and pulsing white nucleus make intelligence visibly centered.","tags":["Dk","kernel","wireframe"]},
+    {"id":"8b","group":"scope-studies","name":"DAF · Federation Study","sourceName":"DAF · federação","renderer":"cdaf","description":"A small set of linked autonomous cells adheres to one shared sphere.","tags":["DAF","federation","cells"]},
+    {"id":"8c","group":"scope-studies","name":"BSDK · Helix Study","sourceName":"BSDK · estrutura base","renderer":"cbsdk","description":"A double helix wraps the body with visible rungs, treating kernel DNA as the symbol’s matter.","tags":["BSDK","helix","base structure"]},
+    {"id":"8d","group":"scope-studies","name":"Dk Network · Parallel Mesh Study","sourceName":"Dk Network · rede paralela","renderer":"cnet","description":"A dense centerless mesh of nodes and links lets every point become a possible route.","tags":["network","mesh","nodes"]},
+    {"id":"8e","group":"scope-studies","name":"LCrypt · Living Cipher Study","sourceName":"LCrypt · criptografia viva","renderer":"clc","description":"Cipher rings rotate at different speeds while a scan and central key blocks pulse in counterpoint.","tags":["LCrypt","cipher","scan"]},
+    {"id":"8f","group":"scope-studies","name":"UID · Iris Study","sourceName":"UID · identidade","renderer":"cuid","description":"Concentric rings, radial marks and a dark pupil turn the system toward the person.","tags":["UID","iris","identity"]},
+    {"id":"8g","group":"scope-studies","name":"DFM / DFMP · Layer Study","sourceName":"DFM / DFMP · protocolo","renderer":"cdfmp","description":"Stacked layers brighten as they rise through proposal, discussion, validation and resolution.","tags":["DFM","DFMP","layers","protocol"]},
+    {"id":"8h","group":"scope-studies","name":"Emergence · Swarm Study","sourceName":"Emergence · iniciativa","renderer":"cemg","description":"Orbiting particles gather toward a central glow: many volunteers cohering around one emergence.","tags":["emergence","swarm","volunteers"]},
+
+    {"id":"12a","group":"elements","name":"Fire","sourceName":"Fogo","renderer":"mfire","description":"Radial plumes tremble at different rhythms around an incandescent core.","tags":["fire","energy","element"]},
+    {"id":"12b","group":"elements","name":"Water","sourceName":"Água","renderer":"mwater","description":"Concentric waves leave the center while meridional ripples travel underneath.","tags":["water","flow","element"]},
+    {"id":"12c","group":"elements","name":"Earth Element","sourceName":"Terra","renderer":"mearth","description":"Twenty tectonic plates cover the sphere with equal geometry and varied density.","tags":["earth element","plates","element"]},
+    {"id":"12d","group":"elements","name":"Air","sourceName":"Ar","renderer":"mair","description":"Seven alternating jet streams ripple around the sphere like atmospheric bands.","tags":["air","atmosphere","element"]},
+    {"id":"12e","group":"elements","name":"Aether","sourceName":"Éter","renderer":"maether","description":"Three concentric icosahedra rotate at different speeds with illuminated vertices.","tags":["aether","icosahedron","element"]},
+    {"id":"12f","group":"elements","name":"Fractal","sourceName":"Fractal","renderer":"mfractal","description":"Each icosahedron face contains the next scale, repeating one structure through three levels.","tags":["fractal","scale","recursion"]},
+
+    {"id":"4a","group":"ring-experiments","name":"Thick Chrome","sourceName":"Cromo espesso","renderer":"gband","description":"The orbit becomes a wide metal ribbon whose highlight moves along the curve.","tags":["custom ring","chrome","thick"]},
+    {"id":"4b","group":"ring-experiments","name":"Ember Rings","sourceName":"Aros de brasa","renderer":"gorange","description":"The same gyroscope takes on the hot orange material of the brand.","tags":["custom ring","orange","ember"]},
+    {"id":"4c","group":"ring-experiments","name":"Open Crossing","sourceName":"Cruzamento aberto","renderer":"gwide","description":"A wider angle and larger radius open the crossing so the globe breathes inside it.","tags":["custom ring","wide orbit","spacing"]},
+    {"id":"4d","group":"ring-experiments","name":"Axis Rings","sourceName":"Aros com eixo","renderer":"gaxis","description":"A visible rotation axis joins the two rings and makes the mark read as a calibrated instrument.","tags":["custom ring","axis","instrument"]},
+    {"id":"4e","group":"ring-experiments","name":"Riveted Copper","sourceName":"Cobre rebitado","renderer":"gcopper","description":"Thick bronze rings and illuminated rivets shift the language from high-tech to built equipment.","tags":["custom ring","copper","rivets"]},
+    {"id":"6a","group":"ring-experiments","name":"Twin Rails","sourceName":"Aros gêmeos","renderer":"gtwin","description":"Each ring becomes two parallel lines, suggesting an assembled technical rail.","tags":["custom ring","twin","rail"]},
+    {"id":"6b","group":"ring-experiments","name":"Beaded Orbit","sourceName":"Contas","renderer":"gdot","description":"A sequence of orbiting points reads as solid from a distance and granular up close.","tags":["custom ring","dots","granular"]},
+    {"id":"6c","group":"ring-experiments","name":"Blue Glass","sourceName":"Vidro azul","renderer":"gglass","description":"A thick translucent ring with a bright core introduces planetary blue into the structure.","tags":["custom ring","glass","blue"]},
+    {"id":"6d","group":"ring-experiments","name":"Moving Nodes","sourceName":"Nós","renderer":"gnode","description":"Bright nodes travel along a thin orbit as moving points of federation.","tags":["custom ring","nodes","federation"]},
+    {"id":"6e","group":"ring-experiments","name":"Chrome and Ember","sourceName":"Cromo e brasa","renderer":"gbicolor","description":"A single ring material transitions from chrome into the orange heat of the brand.","tags":["custom ring","bicolor","chrome"]},
+    {"id":"6f","group":"ring-experiments","name":"Segmented Ribbon","sourceName":"Fita segmentada","renderer":"gseg","description":"A wide band divides into modules like sectors of an orbital structure.","tags":["custom ring","segments","modular"]},
+    {"id":"7a","group":"ring-experiments","name":"Ring Station","sourceName":"Estação anelar","renderer":"ghab","description":"Wide segmented hulls and radial beams turn both rings into a visible habitat.","tags":["custom ring","station","habitat"]},
+    {"id":"7b","group":"ring-experiments","name":"Solar Collector Study","sourceName":"Coletor","renderer":"gsolar","description":"Dark structural panels make the ring shadow read as literal collection from the planet.","tags":["custom ring","collector","panels"]},
+    {"id":"7c","group":"ring-experiments","name":"Horizon Extractor Study","sourceName":"Extrator de horizonte","renderer":"gbh","description":"Built rings, plasma filaments and the wedge cross a black horizon in an early extraction study.","tags":["custom ring","black hole","extractor"]},
+
+    {"id":"13a","group":"applied-machinery","name":"Habitat Ring","sourceName":"Nave-anel · casco habitado","renderer":"plain+hull+none","description":"A wide occupied hull carries seams, beams, modules and moving navigation lights.","tags":["customization example","habitat","hull"]},
+    {"id":"13b","group":"applied-machinery","name":"Extractor","sourceName":"Extrator","renderer":"plain+collector+extract","description":"Collection panels, intake mouths and radial flow turn the orbit into a literal extraction machine.","tags":["customization example","extractor","collector"]},
+    {"id":"13c","group":"applied-machinery","name":"Shield Array","sourceName":"Blindagem","renderer":"grid+shieldRing+shield","description":"Emitter rings and a faceted scan make protection part of the orbital apparatus.","tags":["customization example","shield","emitters"]},
+    {"id":"13d","group":"applied-machinery","name":"Terraformer","sourceName":"Terraformador","renderer":"plain+hull+terraform","description":"Measured plots and illuminated plates appear only where the hull has rewritten the surface.","tags":["customization example","terraforming","hull"]},
+    {"id":"13e","group":"applied-machinery","name":"Orbital Drydock","sourceName":"Estaleiro","renderer":"weave+drydock+none","description":"Gantries cross the hull while docked vessels travel along the outer track.","tags":["customization example","drydock","industry"]},
+    {"id":"13f","group":"applied-machinery","name":"Captured Star","sourceName":"Estrela captada","renderer":"star+collector+extract","description":"The corona disappears behind the wedge as stellar energy moves into the collector structure.","tags":["customization example","star","energy capture"]},
+    {"id":"13g","group":"applied-machinery","name":"Event Horizon Machine","sourceName":"Horizonte","renderer":"voidBody+hull+extract","description":"A black body, photon ring, heavy hull and extraction field form the catalog’s most extreme machine.","tags":["customization example","event horizon","extreme"]}
+  ],
+  "aliases": {
+    "earth": "11b",
+    "sun": "11c",
+    "black-hole": "11d",
+    "core-orbit": "11a",
+    "network-grid": "10d",
+    "geodesic": "10a",
+    "woven-sphere": "10c",
+    "extraction-field": "13b",
+    "protection-field": "13c",
+    "terraform-field": "13d",
+    "habitat-ring": "13a",
+    "collector-ring": "13b",
+    "shield-array": "13c",
+    "orbital-drydock": "13e",
+    "captured-star": "13f",
+    "event-horizon": "13g"
+  }
+}

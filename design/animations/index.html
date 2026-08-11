@@ -4,169 +4,72 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#08080a">
-  <meta name="description" content="The structured Drayker animation catalog: universal symbols first, standard bodies and effects next, customization examples last.">
-  <title>Drayker Animation Catalog · Useful symbols first</title>
+  <meta name="description" content="All 65 original Drayker animations, organized by practical priority with an exact source player and dedicated documentation pages.">
+  <title>Drayker Animation Library · 65 original studies</title>
   <link rel="canonical" href="https://propagation.drayker.org/design/animations/">
   <link rel="icon" href="../../assets/brand/logo/drayker-favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..110,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../design.css">
-  <link rel="stylesheet" href="catalog.css">
-  <script defer src="../../assets/js/drayker-mark.js"></script>
-  <script defer src="source-embed.js"></script>
+  <link rel="stylesheet" href="catalog.css?v=4.0.0">
+  <script defer src="source-embed.js?v=4.0.0"></script>
+  <script defer src="catalog.js?v=4.0.0"></script>
   <script defer src="../design.js"></script>
 </head>
 <body>
   <a class="skip" href="#catalog">Skip to catalog</a>
   <header class="topbar">
-    <a class="wordmark" href="../" aria-label="Back to Drayker Design Library"><img src="../../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="146" height="51"><span>Animation catalog</span></a>
-    <nav aria-label="Animation catalog navigation"><a href="#symbols">Symbols</a><a href="#standard">Standard</a><a href="#effects">Effects</a><a href="#customization">Custom</a></nav>
+    <a class="wordmark" href="../" aria-label="Back to Drayker Design Library"><img src="../../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="146" height="51"><span>Animation library</span></a>
+    <nav aria-label="Animation library navigation"><a href="#catalog">Browse</a><a href="#groups">Families</a><a href="../logos/">Logos</a><a href="../#source-material">Source</a></nav>
     <a class="back-link" href="../">Design library ↗</a>
   </header>
 
   <main id="catalog">
-    <section class="catalog-hero">
+    <section class="catalog-intro">
       <div>
-        <p class="eyebrow">16 DOCUMENTED ANIMATIONS / ORIGINAL RENDERERS</p>
-        <h1>Symbols first.<br><em>Custom examples last.</em></h1>
-        <p class="lede">Earth, Sun and Black Hole travel across the widest range of narratives. Standard-ring bodies follow them. Unusual orbital structures are kept as examples of what can be customized.</p>
+        <p class="eyebrow">COMPLETE SOURCE INVENTORY / 65 INTERACTIVE STUDIES</p>
+        <h1>Every animation.<br><em>Useful order.</em></h1>
       </div>
-      <div class="catalog-hero-mark">
-        <span>PRIMARY UNIVERSAL SYMBOL / EARTH</span>
-        <iframe src="../source/Drayker%20Logo%20Variations.html#11b" data-source-target="11b" title="Original interactive Earth animation"></iframe>
-        <a href="earth/">Understand when to use Earth →</a>
+      <div class="catalog-intro-copy">
+        <p class="lede">Nothing is silently omitted. Earth, Sun and Black Hole lead; restrained standard rings follow; scope and conceptual studies come next; unusual ring and machinery customizations stay at the bottom.</p>
+        <div class="catalog-stats" aria-label="Catalog statistics"><div><strong>65</strong><span>original animations</span></div><div><strong>09</strong><span>explained families</span></div><div><strong>01</strong><span>shared source player</span></div></div>
       </div>
     </section>
 
-    <div class="catalog-rule">
-      <span>SELECTION RULE</span>
-      <strong>Universal symbol → standard-ring body → functional effect → custom structure only when a project truly needs one.</strong>
+    <section class="catalog-tools" aria-label="Catalog filters">
+      <label class="catalog-search"><span>SEARCH THE LIBRARY</span><input id="catalog-search" type="search" placeholder="Earth, network, rings, 10d…" autocomplete="off"></label>
+      <div class="group-filter" id="group-filter" aria-label="Filter by family"><button type="button" class="is-active" data-group="all">All · 65</button></div>
+      <p id="result-count" aria-live="polite">Loading the complete source inventory…</p>
+    </section>
+
+    <div class="catalog-layout" id="groups">
+      <aside class="catalog-player" aria-label="Original animation preview">
+        <div class="player-head"><span>LIVE / ORIGINAL SOURCE</span><span id="player-source">SOURCE 11B</span></div>
+        <div class="player-frame">
+          <iframe id="source-player" src="../source/Drayker%20Logo%20Variations.html#11b" data-source-target="11b" title="Original interactive Earth animation"></iframe>
+          <div class="player-loading">Initializing the preserved source…</div>
+        </div>
+        <div class="player-copy">
+          <p id="player-family">01 / UNIVERSAL SYMBOLS</p>
+          <h2 id="player-name">Earth</h2>
+          <p id="player-description">Real coastlines rotate beneath a blue atmosphere while the illuminated limb is cut by the original dark shadow.</p>
+          <div class="player-tags" id="player-tags"><span>planet</span><span>people</span><span>place</span></div>
+          <div class="player-actions"><button type="button" id="player-prev" aria-label="Preview previous animation">← Previous</button><a id="player-detail" href="source/11b/">Open full page →</a><button type="button" id="player-next" aria-label="Preview next animation">Next →</button></div>
+        </div>
+      </aside>
+
+      <div class="catalog-groups" id="catalog-groups">
+        <noscript><p class="catalog-empty">JavaScript is required to build the searchable index. The preserved source sheet remains available under Design → Source.</p></noscript>
+      </div>
     </div>
 
-    <section class="catalog-group" id="symbols">
-      <div class="catalog-group-head">
-        <div><span>01 / UNIVERSAL SYMBOLS</span><h2>Earth, Sun &amp; Black Hole</h2></div>
-        <p>Start here when the animation needs symbolic range. Planet, energy and the unknown work across science, infrastructure, culture and collective action. These three previews run the exact original source-sheet animations.</p>
-      </div>
-      <div class="catalog-grid">
-        <a class="catalog-card" href="earth/">
-          <div class="catalog-card-head"><span>01A</span><span>Broadest context range</span></div>
-          <iframe src="../source/Drayker%20Logo%20Variations.html#11b" data-source-target="11b" title="Original interactive Earth animation" loading="lazy"></iframe>
-          <div class="catalog-card-copy"><h3>Earth</h3><p>Real coastlines, a blue atmosphere and the standard Drayker orbit: a direct symbol for people, place, systems and planetary responsibility.</p><code>original source sheet · 11b / hearth</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card" href="sun/">
-          <div class="catalog-card-head"><span>01B</span><span>Energy &amp; emergence</span></div>
-          <iframe src="../source/Drayker%20Logo%20Variations.html#11c" data-source-target="11c" title="Original interactive Sun animation" loading="lazy"></iframe>
-          <div class="catalog-card-copy"><h3>Sun</h3><p>Light, energy, origin and emergence. The original corona is interrupted by the same dark structural shadow.</p><code>original source sheet · 11c / hsun</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card" href="black-hole/">
-          <div class="catalog-card-head"><span>01C</span><span>Boundary &amp; unknown</span></div>
-          <iframe src="../source/Drayker%20Logo%20Variations.html#11d" data-source-target="11d" title="Original interactive Black Hole animation" loading="lazy"></iframe>
-          <div class="catalog-card-copy"><h3>Black Hole</h3><p>A photon ring and dark horizon for limits, uncertainty, deep research and systems beyond direct observation.</p><code>original source sheet · 11d / hbh</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card" href="core-orbit/">
-          <div class="catalog-card-head"><span>01D</span><span>Identity baseline</span></div>
-          <svg data-drayker data-body="plain" data-rings="hairline" data-wedge="none" data-shadow="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Core orbit</h3><p>The baseline expression: plain body, opaque dark shadow and the standard hairline rings.</p><code>body=plain · rings=hairline · wedge=none · shadow=1</code><strong>Open animation page →</strong></div>
-        </a>
-      </div>
-    </section>
-
-    <section class="catalog-group" id="standard">
-      <div class="catalog-group-head">
-        <div><span>02 / STANDARD BODIES</span><h2>Minimal rings, darker shadow</h2></div>
-        <p>These bodies stay close to the main visual language. They use the normal hairline rings and a fully opaque shadow, so the topic changes without changing the identity structure.</p>
-      </div>
-      <div class="catalog-grid">
-        <a class="catalog-card" href="network-grid/">
-          <div class="catalog-card-head"><span>02A</span><span>Used by Propagation</span></div>
-          <svg data-drayker data-body="grid" data-rings="hairline" data-wedge="none" data-accent="#3FA9FF" data-shadow="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Network grid</h3><p>A minimal network body in Dk Network blue, without changing the standard orbital structure.</p><code>body=grid · rings=hairline · wedge=none · accent=#3FA9FF · shadow=1</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card" href="geodesic/">
-          <div class="catalog-card-head"><span>02B</span><span>Structural body</span></div>
-          <svg data-drayker data-body="geo" data-rings="hairline" data-wedge="none" data-shadow="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Geodesic</h3><p>A geodesic shell for architecture and systems language, still using the normal rings.</p><code>body=geo · rings=hairline · wedge=none · shadow=1</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card" href="woven-sphere/">
-          <div class="catalog-card-head"><span>02C</span><span>Interdependence</span></div>
-          <svg data-drayker data-body="weave" data-rings="hairline" data-wedge="none" data-shadow="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Woven sphere</h3><p>Two woven directions on the sphere for reciprocal systems and federated relationships.</p><code>body=weave · rings=hairline · wedge=none · shadow=1</code><strong>Open animation page →</strong></div>
-        </a>
-      </div>
-    </section>
-
-    <section class="catalog-group" id="effects">
-      <div class="catalog-group-head">
-        <div><span>03 / FUNCTIONAL EFFECTS</span><h2>Action inside the shadow</h2></div>
-        <p>Use these when the action inside the two shadowed quarters is part of the message. The standard orbital rings remain unchanged.</p>
-      </div>
-      <div class="catalog-grid">        <a class="catalog-card" href="extraction-field/">
-          <div class="catalog-card-head"><span>03A</span><span>Quarter effect</span></div>
-          <svg data-drayker data-body="plain" data-rings="hairline" data-wedge="extract" data-shadow="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Extraction field</h3><p>The normal orbit stays intact while energy moves through the two shadowed quarters.</p><code>body=plain · rings=hairline · wedge=extract · shadow=1</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card" href="protection-field/">
-          <div class="catalog-card-head"><span>03B</span><span>Quarter effect</span></div>
-          <svg data-drayker data-body="grid" data-rings="hairline" data-wedge="shield" data-accent="#3FA9FF" data-shadow="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Protection field</h3><p>The standard rings remain while a faceted field and scan occupy the protected quarters.</p><code>body=grid · rings=hairline · wedge=shield · accent=#3FA9FF · shadow=1</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card" href="terraform-field/">
-          <div class="catalog-card-head"><span>03C</span><span>Quarter effect</span></div>
-          <svg data-drayker data-body="plain" data-rings="hairline" data-wedge="terraform" data-shadow="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Terraform field</h3><p>Measured plots appear inside the shadow without replacing the standard orbital language.</p><code>body=plain · rings=hairline · wedge=terraform · shadow=1</code><strong>Open animation page →</strong></div>
-        </a>
-      </div>
-    </section>
-
-    <section class="catalog-group" id="customization">
-      <div class="catalog-group-head">
-        <div><span>04 / CUSTOMIZATION EXAMPLES</span><h2>How far the system can stretch</h2></div>
-        <p>These are not normal-use recommendations. They document possible project-specific customization: the ring becomes a hull, collector, shield array or drydock. Keep them at the bottom unless the structure itself is the subject.</p>
-      </div>
-      <div class="catalog-grid">        <a class="catalog-card specialized" href="habitat-ring/">
-          <div class="catalog-card-head"><span>04A</span><span>Customization example · 13A</span></div>
-          <svg data-drayker data-body="plain" data-rings="hull" data-wedge="none" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Habitat ring</h3><p>A wide occupied hull with seams, beams, modules and moving navigation lights.</p><code>body=plain · rings=hull · wedge=none</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card specialized" href="collector-ring/">
-          <div class="catalog-card-head"><span>04B</span><span>Customization example · 13B</span></div>
-          <svg data-drayker data-body="plain" data-rings="collector" data-wedge="extract" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Collector ring</h3><p>Specialized collection panels and intake mouths turn the structure into a machine.</p><code>body=plain · rings=collector · wedge=extract</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card specialized" href="shield-array/">
-          <div class="catalog-card-head"><span>04C</span><span>Customization example · 13C</span></div>
-          <svg data-drayker data-body="grid" data-rings="shieldRing" data-wedge="shield" data-accent="#3FA9FF" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Shield array</h3><p>Emitter rings make protection structural. Use only when the orbital apparatus matters.</p><code>body=grid · rings=shieldRing · wedge=shield · accent=#3FA9FF</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card specialized" href="orbital-drydock/">
-          <div class="catalog-card-head"><span>04D</span><span>Customization example · 13E</span></div>
-          <svg data-drayker data-body="weave" data-rings="drydock" data-wedge="none" data-stars="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Orbital drydock</h3><p>Gantry structures and docked vessels introduce an explicit industrial scale.</p><code>body=weave · rings=drydock · wedge=none · stars=1</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card specialized" href="captured-star/">
-          <div class="catalog-card-head"><span>04E</span><span>Customization example · 13F</span></div>
-          <svg data-drayker data-body="star" data-rings="collector" data-wedge="extract" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Captured star</h3><p>Collector rings around a stellar body make energy extraction the entire subject.</p><code>body=star · rings=collector · wedge=extract</code><strong>Open animation page →</strong></div>
-        </a>
-        <a class="catalog-card specialized" href="event-horizon/">
-          <div class="catalog-card-head"><span>04F</span><span>Customization example · 13G</span></div>
-          <svg data-drayker data-body="voidBody" data-rings="hull" data-wedge="extract" data-stars="1" aria-hidden="true"></svg>
-          <div class="catalog-card-copy"><h3>Event horizon</h3><p>A hull and extraction effect meet the extreme visual language of a black body.</p><code>body=voidBody · rings=hull · wedge=extract · stars=1</code><strong>Open animation page →</strong></div>
-        </a>
-      </div>
-    </section>
-
-    <section class="static-note">
-      <div><span>NOT AN ANIMATION</span><h2>The official mark is separate.</h2></div>
-      <div><p>For identity, favicon, signature, print and most small applications, use the supplied static mark. The animation catalog does not replace the production asset system.</p><a class="button button-accent" href="../#production-assets">Open production assets →</a></div>
+    <section class="catalog-boundary">
+      <div><span>STATIC IDENTITY / SEPARATE LIBRARY</span><h2>Animation is not the logo.</h2></div>
+      <div><p>The production mark, compact icon, signatures, monochrome exports, scope colors and app icons are organized separately with surface and size guidance.</p><a class="button button-accent" href="../logos/">Open the complete logo library →</a></div>
     </section>
   </main>
 
-  <footer>
-    <div><img src="../../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="150" height="52"><span>ANIMATION CATALOG</span></div>
-    <div><a href="../">Design library</a><a href="../../">Propagation</a><a href="https://github.com/draykerdk/drayker-propagation">Repository</a><a href="#catalog">Top ↑</a></div>
-  </footer>
+  <footer><div><img src="../../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="150" height="52"><span>COMPLETE ANIMATION LIBRARY</span></div><div><a href="../logos/">Logos</a><a href="../">Design library</a><a href="../../">Propagation</a><a href="#catalog">Top ↑</a></div></footer>
 </body>
 </html>
