@@ -16,8 +16,9 @@ check(layout.includes('https://dknowledger.drayker.org'), 'Dknowledger footer ta
 check(!layout.includes('https://dknowledge.drayker.org'), 'retired Dknowledge hostname remains');
 
 for (const asset of ['favicon.ico', 'drayker-favicon.svg', 'favicon-32.png', 'favicon-16.png', 'apple-touch-icon.png']) {
-  check(layout.includes('https://drayker.org/') && layout.includes(asset), 'favicon chain is missing ' + asset);
+  check(layout.includes('https://drayker.org/') && layout.includes(asset + '?v=20260811'), 'versioned favicon chain is missing ' + asset);
 }
+check(layout.includes('sizes="any"') && layout.includes('sizes="180x180"'), 'favicon size metadata is incomplete');
 
 if (failures.length) {
   failures.forEach((failure) => console.error('FAIL: ' + failure));
