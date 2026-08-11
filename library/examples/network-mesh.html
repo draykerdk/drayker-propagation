@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drayker Dk Network mesh example</title>
+  <style>
+    html,body{min-height:100%;margin:0;background:#08080a;color:#edecf0;font-family:Arial,sans-serif}
+    main{display:grid;min-height:100vh;place-items:center;padding:32px}
+    figure{width:min(680px,100%);margin:0;border:1px solid #18181e;background:#0c0c0f}
+    svg{display:block;width:100%;height:auto}
+    figcaption{display:flex;justify-content:space-between;padding:14px 16px;border-top:1px solid #18181e;color:#8585a0;font:11px monospace}
+  </style>
+  <script defer src="../../assets/js/drayker-mark.js"></script>
+  <script defer src="../components/network-mesh.js"></script>
+  <script defer src="../components/mark-presets.js"></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+      var instance = Drayker.create('#network-example', Object.assign({}, DraykerPresets.networkMesh));
+      if (matchMedia('(prefers-reduced-motion: reduce)').matches) instance.stop();
+    });
+  </script>
+</head>
+<body>
+  <main>
+    <figure>
+      <svg id="network-example" role="img" aria-label="Interactive Dk Network mesh"></svg>
+      <figcaption><span>DK NETWORK / MESH 10D</span><span>POINTER-RESPONSIVE</span></figcaption>
+    </figure>
+  </main>
+</body>
+</html>
