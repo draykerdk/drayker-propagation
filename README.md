@@ -10,6 +10,7 @@ The site gives a volunteer a clear first move without turning outreach into hype
 - A client-side mission matcher that suggests a small, source-led starting task based on a volunteer's strength and available time.
 - Ready-to-copy, factual message starters — each points people back to primary sources.
 - An interactive, reduced-motion-safe signal field based on the official **Dk Network · mesh (10d)** variation, with no third-party runtime dependency.
+- An organized [reusable design library](library/README.md) extracted from the original Logo Variations sheet: engine, network component, presets, CSS tokens, examples, source documents and a machine-readable manifest.
 - A reusable logo kit in [`assets/brand/logo`](assets/brand/logo), including light, dark, mono, signature and app-icon variants.
 - An English [brand guide](docs/brand-guide.md) and downloadable kit for contributors.
 - A zero-dependency static integrity check.
@@ -29,6 +30,10 @@ node tools/check.js
 ```
 
 The site itself has no build step. Open `index.html` in a browser for a visual check.
+
+## Reuse the design source
+
+Start with [`library/manifest.json`](library/manifest.json) when integrating assets programmatically, or open the preserved [`Drayker Logo Variations`](library/source/drayker-logo-variations.html) sheet to inspect the original decisions. A complete downloadable package is published as `assets/brand/Drayker-Design-Library.zip`.
 
 ## Editorial rule
 

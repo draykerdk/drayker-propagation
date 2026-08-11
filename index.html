@@ -3,232 +3,178 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#08080A">
-  <meta name="description" content="A practical, source-led toolkit for volunteers who want to help people discover and understand Drayker.">
+  <meta name="theme-color" content="#f2efe8">
+  <meta name="description" content="Drayker Propagation gives volunteers the sources, language and official materials they need to help the work travel responsibly.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Drayker Propagation">
-  <meta property="og:description" content="A practical, source-led toolkit for volunteers who want to help people discover and understand Drayker.">
+  <meta property="og:title" content="Drayker Propagation · Make the work travel">
+  <meta property="og:description" content="A source-led propagation desk for Drayker volunteers.">
   <meta property="og:url" content="https://propagation.drayker.org/">
   <meta property="og:image" content="https://propagation.drayker.org/assets/brand/logo/kit/icon-1024.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://propagation.drayker.org/assets/brand/logo/kit/icon-1024.png">
-  <title>Drayker Propagation · Volunteer toolkit</title>
+  <title>Drayker Propagation · Make the work travel</title>
   <link rel="canonical" href="https://propagation.drayker.org/">
   <link rel="icon" href="assets/brand/logo/drayker-favicon.svg" type="image/svg+xml" sizes="any">
   <link rel="icon" href="assets/brand/logo/kit/favicon-32.png" type="image/png" sizes="32x32">
-  <link rel="icon" href="assets/brand/logo/kit/favicon-16.png" type="image/png" sizes="16x16">
   <link rel="apple-touch-icon" href="assets/brand/logo/kit/apple-touch-icon.png" sizes="180x180">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/site.css">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..110,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/propagation.css">
   <script defer src="assets/js/drayker-mark.js"></script>
+  <script defer src="library/components/network-mesh.js"></script>
+  <script defer src="library/components/mark-presets.js"></script>
   <script defer src="assets/js/propagation-network.js"></script>
   <script defer src="assets/js/site.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <div class="page-grid" aria-hidden="true"></div>
+  <div class="signal-bar" aria-label="Drayker propagation principles">
+    <div class="signal-bar-track">
+      <span>TRACE THE SOURCE</span><i>✦</i><span>TRANSLATE THE CONTEXT</span><i>✦</i><span>INVITE PARTICIPATION</span><i>✦</i><span>LEAVE THE CLAIM INSPECTABLE</span>
+    </div>
+  </div>
 
   <header class="site-header">
     <div class="shell header-inner">
       <a class="brand-lockup" href="#top" aria-label="Drayker Propagation home">
-        <img src="assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="158" height="56">
-        <span>Propagation</span>
+        <img src="assets/brand/logo/assinatura/drayker-horizontal.svg" alt="Drayker" width="170" height="58">
+        <span>Propagation desk</span>
       </a>
-
       <nav class="primary-nav" aria-label="Primary navigation">
-        <a href="#mission">Mission</a>
-        <a href="#paths">Find a path</a>
-        <a href="#toolkit">Toolkit</a>
-        <a href="#brand">Brand kit</a>
+        <a href="#roles">Ways to help</a>
+        <a href="#paths">Mission finder</a>
+        <a href="#toolkit">Field kit</a>
+        <a href="#library">Design library</a>
       </nav>
-
-      <a class="header-cta" href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Join the signal <span aria-hidden="true">↗</span></a>
+      <a class="header-cta" href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Join the network <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
   <main id="main-content">
-    <section class="hero shell" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="eyebrow-index">00</span> VOLUNTEER TOOLKIT / PUBLIC COMMUNICATION</p>
-        <h1 id="hero-title">Build a clearer signal for <em>Drayker.</em></h1>
-        <p class="hero-lede">A place for volunteers who want to help people find the work, understand it from primary sources, and choose a meaningful way to take part.</p>
-
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Start your introduction <span aria-hidden="true">→</span></a>
-          <a class="button button-secondary" href="#toolkit">Explore the toolkit <span aria-hidden="true">↓</span></a>
-        </div>
-
-        <ul class="hero-principles" aria-label="Propagation principles">
-          <li>Source-led</li>
-          <li>Plain-spoken</li>
-          <li>Respectful</li>
-        </ul>
-      </div>
-
-      <div class="hero-stage" aria-label="Drayker mark and propagation signal">
-        <div class="stage-orbit stage-orbit-one" aria-hidden="true"></div>
-        <div class="stage-orbit stage-orbit-two" aria-hidden="true"></div>
-        <div class="stage-axis axis-horizontal" aria-hidden="true"></div>
-        <div class="stage-axis axis-vertical" aria-hidden="true"></div>
-        <div class="signal-pulse pulse-one" aria-hidden="true"></div>
-        <div class="signal-pulse pulse-two" aria-hidden="true"></div>
-        <div class="mark-frame">
-          <img src="assets/brand/logo/escuro/drayker-marca.svg" alt="Drayker mark" width="366" height="366">
-        </div>
-        <div class="stage-note note-top"><span>01</span> VERIFIED SOURCE</div>
-        <div class="stage-note note-bottom"><span>02</span> HUMAN CONNECTION</div>
-      </div>
-
-      <aside class="hero-footnote">
-        <span class="footnote-rule" aria-hidden="true"></span>
-        <p><strong>Propagation is not pressure.</strong> It is the practice of making reliable context easier to find, understand and carry forward.</p>
-      </aside>
-    </section>
-
-    <section class="section section-border" id="mission" aria-labelledby="mission-title">
-      <div class="shell section-grid mission-grid">
-        <div class="section-heading">
-          <p class="eyebrow"><span class="eyebrow-index">01</span> THE MISSION</p>
-          <h2 id="mission-title">Make the path in, not the noise around it.</h2>
-        </div>
-
-        <div class="mission-copy">
-          <p class="section-lede">Good propagation makes it easier for someone to move from a first question to the material that can answer it. It does not ask people to repeat claims they cannot inspect.</p>
-          <p>Use this page to choose a small contribution, find the right public resource, and communicate with enough care that curiosity can become informed participation.</p>
-        </div>
-
-        <div class="mission-pledge">
-          <p class="mono-label">THE PROPAGATION PLEDGE</p>
-          <p>“I will point to sources, separate the written from the proposed, and leave people freer to decide for themselves.”</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-border signal-section" id="signal" aria-labelledby="signal-title" data-signal-field>
-      <div class="shell signal-layout">
-        <div class="signal-copy">
-          <p class="eyebrow"><span class="eyebrow-index">LIVE</span> INTERACTIVE SIGNAL FIELD</p>
-          <h2 id="signal-title">A useful signal keeps its source connected.</h2>
-          <p class="section-lede">Propagation works like a living network: context moves between people, but its route back to the public record stays visible.</p>
-          <p>Move across the field to explore it. Each pulse represents a careful handoff — source, interpretation, invitation — travelling without severing the links between them.</p>
-
-          <dl class="signal-legend">
-            <div>
-              <dt>Nodes</dt>
-              <dd>People and public resources</dd>
-            </div>
-            <div>
-              <dt>Links</dt>
-              <dd>Traceable context</dd>
-            </div>
-            <div>
-              <dt>Pulses</dt>
-              <dd>Responsible handoffs</dd>
-            </div>
-          </dl>
-        </div>
-
-        <figure class="signal-stage">
-          <div class="signal-stage-topline" aria-hidden="true">
-            <span><i></i> SIGNAL ACTIVE</span>
-            <span>DK NETWORK / 10D</span>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="kicker"><span>VOLUNTEER PROPAGATION</span><span>PUBLIC / SOURCE-LED</span></p>
+          <h1 id="hero-title">Make the work <em>travel.</em></h1>
+          <p class="hero-lede">Help Drayker reach the people who can question it, explain it and build with it — without cutting the message away from its source.</p>
+          <div class="hero-actions">
+            <a class="button button-solid" href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Choose a first mission <span aria-hidden="true">→</span></a>
+            <a class="button button-line" href="#toolkit">Open the field kit <span aria-hidden="true">↓</span></a>
           </div>
-          <svg class="signal-network" data-propagation-network role="img" aria-labelledby="network-title network-description">
-            <title id="network-title">Interactive Drayker propagation network</title>
-            <desc id="network-description">A spherical mesh of connected nodes with signals travelling between them. The field responds gently to pointer movement.</desc>
-          </svg>
+          <div class="hero-note">
+            <span>01</span>
+            <p><strong>Propagation is not pressure.</strong> It is a clear route from curiosity to evidence to participation.</p>
+          </div>
+        </div>
+
+        <figure class="network-stage" data-signal-field>
+          <div class="network-meta" aria-hidden="true">
+            <span><i></i> LIVE NETWORK</span>
+            <span>DK / MESH 10D</span>
+          </div>
+          <svg class="signal-network" data-propagation-network role="img" aria-label="Interactive Drayker network with signals moving between connected nodes"></svg>
           <figcaption>
-            <span>CURSOR-RESPONSIVE</span>
-            <span>REDUCED-MOTION SAFE</span>
+            <span>Move your pointer across the field</span>
+            <span>Signal follows context</span>
           </figcaption>
+          <div class="network-index" aria-hidden="true">N / 01</div>
         </figure>
       </div>
     </section>
 
-    <section class="section" aria-labelledby="lanes-title">
-      <div class="shell">
-        <div class="section-intro split-intro">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-index">02</span> THREE WAYS TO HELP</p>
-            <h2 id="lanes-title">Choose the contribution that fits your real capacity.</h2>
-          </div>
-          <p>Every lane starts from the same ethic: make one useful thing, attach its source, and pass the next person a clearer handoff.</p>
+    <div class="action-ribbon" aria-hidden="true">
+      <div class="shell action-ribbon-inner">
+        <span>READ</span><b>→</b><span>UNDERSTAND</span><b>→</b><span>MAKE</span><b>→</b><span>CONNECT</span>
+      </div>
+    </div>
+
+    <section class="manifesto" aria-labelledby="manifesto-title">
+      <div class="shell manifesto-grid">
+        <div class="section-tag"><span>01</span> THE STANDARD</div>
+        <div class="manifesto-copy">
+          <h2 id="manifesto-title">A louder message is not always a stronger signal.</h2>
+          <p>Strong propagation lets another person inspect the source, understand your framing and decide what to do next. The goal is not repetition. The goal is informed movement.</p>
         </div>
-
-        <div class="lane-grid">
-          <article class="lane-card lane-card-orange">
-            <div class="card-index">A</div>
-            <div class="lane-icon" aria-hidden="true">↗</div>
-            <h3>Explain</h3>
-            <p>Turn one public page, concept or open question into an accessible introduction that does not dilute its source.</p>
-            <ul>
-              <li>Write a plain-language summary</li>
-              <li>Prepare a conversation starter</li>
-              <li>Link a reader to the original record</li>
-            </ul>
-          </article>
-
-          <article class="lane-card">
-            <div class="card-index">B</div>
-            <div class="lane-icon" aria-hidden="true">◌</div>
-            <h3>Translate</h3>
-            <p>Make the work legible across formats, communities and languages while keeping the original meaning visible.</p>
-            <ul>
-              <li>Adapt a verified source for a new audience</li>
-              <li>Create visual, audio or written explainers</li>
-              <li>Mark interpretation as interpretation</li>
-            </ul>
-          </article>
-
-          <article class="lane-card">
-            <div class="card-index">C</div>
-            <div class="lane-icon" aria-hidden="true">＋</div>
-            <h3>Connect</h3>
-            <p>Help an interested person reach the appropriate public forum, open function or volunteer entry point.</p>
-            <ul>
-              <li>Share the right contribution link</li>
-              <li>Route questions to public discussion</li>
-              <li>Welcome without overpromising</li>
-            </ul>
-          </article>
-        </div>
+      </div>
+      <div class="shell principles" aria-label="Propagation standards">
+        <article>
+          <span>01 / SOURCE</span>
+          <h3>Keep the origin visible.</h3>
+          <p>Lead with the public record. Your interpretation should always have a route back.</p>
+        </article>
+        <article>
+          <span>02 / CONTEXT</span>
+          <h3>Translate without flattening.</h3>
+          <p>Make complex work legible while preserving what is written, proposed and still open.</p>
+        </article>
+        <article>
+          <span>03 / AGENCY</span>
+          <h3>Invite, never corner.</h3>
+          <p>Offer the next public step and leave people free to form their own judgment.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section section-border matcher-section" id="paths" aria-labelledby="matcher-title" data-matcher>
-      <div class="shell matcher-layout">
-        <div class="matcher-intro">
-          <p class="eyebrow"><span class="eyebrow-index">03</span> FIND YOUR NEXT MOVE</p>
-          <h2 id="matcher-title">A small mission is easier to finish than a vague intention.</h2>
-          <p>Choose the strength you want to use and the time you actually have. The matcher will suggest a source-led starting point — not assign work or invent a role.</p>
+    <section class="roles" id="roles" aria-labelledby="roles-title">
+      <div class="shell section-head">
+        <div class="section-tag"><span>02</span> WAYS TO HELP</div>
+        <h2 id="roles-title">Use what you already know how to do.</h2>
+        <p>Good volunteer work starts with honest capacity, not an invented title.</p>
+      </div>
+      <div class="shell role-list">
+        <article class="role-row">
+          <div class="role-number">A</div>
+          <h3>Explain</h3>
+          <p>Turn one public concept into a clear introduction, source map or conversation starter.</p>
+          <a href="#paths">Find a writing mission <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="role-row">
+          <div class="role-number">B</div>
+          <h3>Translate</h3>
+          <p>Carry meaning across languages, formats and communities without hiding the original.</p>
+          <a href="#brand">Use the visual kit <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="role-row">
+          <div class="role-number">C</div>
+          <h3>Connect</h3>
+          <p>Route a real question to the right document, discussion or contribution path.</p>
+          <a href="https://forum.drayker.org/">Open the forum <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="mission-finder" id="paths" aria-labelledby="matcher-title" data-matcher>
+      <div class="shell mission-grid">
+        <div class="mission-intro">
+          <div class="section-tag section-tag-light"><span>03</span> MISSION FINDER</div>
+          <h2 id="matcher-title">Pick a move you can finish.</h2>
+          <p>Select a strength and an honest amount of time. You will get a practical, source-led starting point — not a vague role.</p>
         </div>
 
-        <div class="matcher-controls">
+        <div class="mission-controls">
           <fieldset>
-            <legend>What can you bring today?</legend>
+            <legend>What can you bring?</legend>
             <div class="choice-row" role="group" aria-label="Contribution strength">
-              <button type="button" class="choice-button is-selected" data-skill="story" aria-pressed="true">Words &amp; stories</button>
-              <button type="button" class="choice-button" data-skill="visual" aria-pressed="false">Visual thinking</button>
+              <button type="button" class="choice-button is-selected" data-skill="story" aria-pressed="true">Words</button>
+              <button type="button" class="choice-button" data-skill="visual" aria-pressed="false">Visuals</button>
               <button type="button" class="choice-button" data-skill="connection" aria-pressed="false">Conversation</button>
               <button type="button" class="choice-button" data-skill="research" aria-pressed="false">Research</button>
             </div>
           </fieldset>
-
           <fieldset>
-            <legend>How much time is honest?</legend>
+            <legend>What time is real?</legend>
             <div class="choice-row" role="group" aria-label="Available time">
-              <button type="button" class="choice-button is-selected" data-window="brief" aria-pressed="true">15 minutes</button>
-              <button type="button" class="choice-button" data-window="session" aria-pressed="false">About an hour</button>
-              <button type="button" class="choice-button" data-window="ongoing" aria-pressed="false">A recurring rhythm</button>
+              <button type="button" class="choice-button is-selected" data-window="brief" aria-pressed="true">15 min</button>
+              <button type="button" class="choice-button" data-window="session" aria-pressed="false">1 hour</button>
+              <button type="button" class="choice-button" data-window="ongoing" aria-pressed="false">Ongoing</button>
             </div>
           </fieldset>
         </div>
 
         <aside class="recommendation" aria-live="polite">
-          <div class="recommendation-topline"><span>YOUR STARTING POINT</span><span data-recommendation-code>STORY / 15</span></div>
+          <div class="recommendation-code"><span>YOUR NEXT MOVE</span><span data-recommendation-code>STORY / 15</span></div>
           <h3 data-recommendation-title>Make a one-sentence bridge.</h3>
           <p data-recommendation-body>Read one public page and write a short, accurate introduction that links directly back to it. Share the source before your interpretation.</p>
           <ol data-recommendation-steps>
@@ -236,221 +182,232 @@
             <li>Write the clearest sentence you can defend.</li>
             <li>Send the reader to the source.</li>
           </ol>
-          <a class="text-link" data-recommendation-link href="https://drayker.org/#org/docs">Open public documentation <span aria-hidden="true">→</span></a>
+          <a class="arrow-link" data-recommendation-link href="https://drayker.org/#org/docs">Open public documentation <span aria-hidden="true">→</span></a>
         </aside>
       </div>
     </section>
 
-    <section class="section" id="toolkit" aria-labelledby="toolkit-title">
-      <div class="shell">
-        <div class="section-intro split-intro">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-index">04</span> PROPAGATION TOOLKIT</p>
-            <h2 id="toolkit-title">Everything starts with a source people can inspect.</h2>
+    <section class="field-kit" id="toolkit" aria-labelledby="toolkit-title">
+      <div class="shell field-kit-head">
+        <div class="section-tag section-tag-dark"><span>04</span> THE FIELD KIT</div>
+        <h2 id="toolkit-title">Everything you share should lead somewhere real.</h2>
+      </div>
+
+      <div class="shell resource-list">
+        <article class="resource-row">
+          <span class="resource-index">01</span>
+          <div><p>UNDERSTAND</p><h3>Read the public record</h3></div>
+          <p>Start with Drayker’s published portal, protocol and repositories before you summarize the work.</p>
+          <div class="resource-links">
+            <a href="https://drayker.org/#org/home">Public portal ↗</a>
+            <a href="https://drayker.org/#org/docs">Documentation ↗</a>
+            <a href="https://github.com/draykerdk">GitHub ↗</a>
           </div>
-          <p>These are public starting points, not a closed campaign system. Use the resource that serves the question in front of you.</p>
+        </article>
+        <article class="resource-row">
+          <span class="resource-index">02</span>
+          <div><p>PARTICIPATE</p><h3>Use a public handoff</h3></div>
+          <p>Send people to the existing forum, open functions or volunteer route instead of building a private gate.</p>
+          <div class="resource-links">
+            <a href="https://forum.drayker.org/">Public forum ↗</a>
+            <a href="https://drayker.org/#org/fn">Open functions ↗</a>
+            <a href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Volunteer intro ↗</a>
+          </div>
+        </article>
+        <article class="resource-row">
+          <span class="resource-index">03</span>
+          <div><p>CREATE</p><h3>Carry the official system</h3></div>
+          <p>Use the supplied marks, scope variants and usage rules. Do not redraw or improvise the identity.</p>
+          <div class="resource-links">
+            <a href="assets/brand/Drayker-Propagation-Brand-Kit.zip" download>Download kit ↓</a>
+            <a href="docs/brand-guide.html">Brand guide →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="shell message-desk" aria-labelledby="messages-title">
+        <div class="message-intro">
+          <span>READY TO ADAPT</span>
+          <h3 id="messages-title">Start with language that can survive a source check.</h3>
+          <p>Personalize the context, not the facts.</p>
         </div>
-
-        <div class="tool-grid">
-          <article class="tool-card">
-            <p class="tool-number">01 / CONTEXT</p>
-            <h3>Start at the public record</h3>
-            <p>Point people to the portal, the protocol, and the organization’s published repositories before summarising them yourself.</p>
-            <div class="tool-links">
-              <a href="https://drayker.org/#org/home">Drayker portal <span aria-hidden="true">↗</span></a>
-              <a href="https://dfmp.drayker.org/">DFM Protocol <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/draykerdk">GitHub organization <span aria-hidden="true">↗</span></a>
-            </div>
+        <div class="message-stack">
+          <article class="message-card">
+            <div class="message-top"><span>01 / INTRODUCE</span><button type="button" data-copy-target="message-one">COPY ↗</button></div>
+            <p id="message-one">I have been reading the public Drayker material because it asks a useful question: how can people, teams and AI coordinate in accountable, open ways? If that resonates, start with the source itself: https://drayker.org/</p>
           </article>
-
-          <article class="tool-card tool-card-accent">
-            <p class="tool-number">02 / PARTICIPATION</p>
-            <h3>Hand off to a real next step</h3>
-            <p>When someone wants to contribute, route them to the existing public entry points instead of collecting personal data or making promises.</p>
-            <div class="tool-links">
-              <a href="https://drayker.org/#org/fn">Browse open functions <span aria-hidden="true">↗</span></a>
-              <a href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Volunteer introduction <span aria-hidden="true">↗</span></a>
-              <a href="https://forum.drayker.org/">Public forum <span aria-hidden="true">↗</span></a>
-            </div>
+          <article class="message-card">
+            <div class="message-top"><span>02 / SHARE A SOURCE</span><button type="button" data-copy-target="message-two">COPY ↗</button></div>
+            <p id="message-two">Drayker publishes public documentation, open questions and repositories. I recommend reading the primary material before forming an opinion: https://drayker.org/#org/docs</p>
           </article>
-
-          <article class="tool-card">
-            <p class="tool-number">03 / MATERIAL</p>
-            <h3>Use the official brand kit</h3>
-            <p>Choose the supplied mark variant, keep its proportions, and pair it with an explicit source. The pack includes web, social and print-ready files.</p>
-            <div class="tool-links">
-              <a href="assets/brand/Drayker-Propagation-Brand-Kit.zip" download>Download the kit <span aria-hidden="true">↓</span></a>
-              <a href="docs/brand-guide.html">Read the brand guide <span aria-hidden="true">→</span></a>
-              <a href="assets/brand/logo/" aria-label="Browse logo assets on GitHub">Browse logo assets <span aria-hidden="true">→</span></a>
-            </div>
+          <article class="message-card">
+            <div class="message-top"><span>03 / INVITE</span><button type="button" data-copy-target="message-three">COPY ↗</button></div>
+            <p id="message-three">If you would rather contribute than only follow, the public volunteer introduction is here: https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml</p>
           </article>
-        </div>
-
-        <div class="message-panel" aria-labelledby="messages-title">
-          <div class="message-heading">
-            <p class="eyebrow"><span class="eyebrow-index">05</span> MESSAGE STARTERS</p>
-            <h3 id="messages-title">Adapt the context. Do not manufacture certainty.</h3>
-            <p>These drafts are intentionally modest. Personalise only what you can support with the linked primary source.</p>
-          </div>
-
-          <div class="message-list">
-            <article class="message-card">
-              <p class="message-type">A / FIRST INTRODUCTION</p>
-              <p id="message-one">I have been reading the public Drayker material because it asks a useful question: how can people, teams and AI coordinate in accountable, open ways? If that resonates, start with the source itself: https://drayker.org/</p>
-              <button class="copy-button" type="button" data-copy-target="message-one">Copy message <span aria-hidden="true">↗</span></button>
-            </article>
-
-            <article class="message-card">
-              <p class="message-type">B / SHARE A SOURCE</p>
-              <p id="message-two">Drayker publishes public documentation, open questions and repositories. I would recommend reading the primary material before forming an opinion: https://drayker.org/#org/docs</p>
-              <button class="copy-button" type="button" data-copy-target="message-two">Copy message <span aria-hidden="true">↗</span></button>
-            </article>
-
-            <article class="message-card">
-              <p class="message-type">C / INVITE CONTRIBUTION</p>
-              <p id="message-three">If you would rather contribute than only follow, the public volunteer introduction is here: https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml</p>
-              <button class="copy-button" type="button" data-copy-target="message-three">Copy message <span aria-hidden="true">↗</span></button>
-            </article>
-          </div>
           <p class="copy-status" aria-live="polite" data-copy-status></p>
         </div>
       </div>
     </section>
 
-    <section class="section section-border" id="brand" aria-labelledby="brand-title">
-      <div class="shell brand-layout">
+    <section class="design-library" id="library" aria-labelledby="library-title">
+      <div class="shell library-head">
+        <div class="section-tag"><span>05</span> REUSABLE DESIGN LIBRARY</div>
+        <div>
+          <h2 id="library-title">The design source, organized to be used again.</h2>
+          <p>The original Logo Variations sheet is preserved, but its useful parts now live as independent assets: engine, components, presets, tokens, examples and production-ready marks.</p>
+        </div>
+      </div>
+
+      <div class="shell library-stats" aria-label="Library inventory">
+        <div><strong>46</strong><span>logo exports</span></div>
+        <div><strong>06</strong><span>tested presets</span></div>
+        <div><strong>12</strong><span>organized source artifacts</span></div>
+        <div><strong>01</strong><span>machine-readable manifest</span></div>
+      </div>
+
+      <div class="shell artifact-grid">
+        <article class="artifact artifact-engine">
+          <div class="artifact-label"><span>01 / ENGINE</span><span>JS · ZERO BUILD</span></div>
+          <div class="artifact-visual artifact-code" aria-hidden="true">
+            <code><b>Drayker</b>.create(<i>'#mark'</i>, {<br>&nbsp;&nbsp;body: <i>'geo'</i>,<br>&nbsp;&nbsp;rings: <i>'hairline'</i>,<br>&nbsp;&nbsp;accent: <i>'#3FA9FF'</i><br>});</code>
+          </div>
+          <h3>Interactive mark engine</h3>
+          <p>The original dependency-free renderer, with geometry, cursor response, static export and documented extension points.</p>
+          <div class="artifact-links">
+            <a href="assets/js/drayker-mark.js" download>Download engine ↓</a>
+            <a href="library/docs/DRAYKER-MARK.md">Read API notes →</a>
+          </div>
+        </article>
+
+        <article class="artifact artifact-network">
+          <div class="artifact-label"><span>02 / COMPONENT</span><span>DK NETWORK · 10D</span></div>
+          <div class="artifact-visual artifact-network-preview" aria-hidden="true">
+            <img src="assets/brand/logo/escuro/escopo/drayker-network.svg" alt="" width="160" height="160">
+            <span></span><span></span><span></span>
+          </div>
+          <h3>Network mesh component</h3>
+          <p>The animation used on this page is isolated as a reusable body, with a standalone example and deterministic pulses.</p>
+          <div class="artifact-links">
+            <a href="library/components/network-mesh.js" download>Download component ↓</a>
+            <a href="library/examples/network-mesh.html">Open example ↗</a>
+          </div>
+        </article>
+
+        <article class="artifact artifact-system">
+          <div class="artifact-label"><span>03 / SYSTEM</span><span>CSS + JS</span></div>
+          <div class="artifact-visual scope-palette" aria-label="Drayker scope color tokens">
+            <i style="--scope:#ff5500"></i><i style="--scope:#5ce02e"></i><i style="--scope:#ff8a00"></i><i style="--scope:#9c8cff"></i><i style="--scope:#3fa9ff"></i><i style="--scope:#14e0c0"></i><i style="--scope:#e8ecf5"></i><i style="--scope:#ffcb6b"></i>
+          </div>
+          <h3>Tokens and mark presets</h3>
+          <p>Named public colors and six tested configurations turn visual decisions from the design sheet into importable source.</p>
+          <div class="artifact-links">
+            <a href="library/tokens/drayker.css" download>CSS tokens ↓</a>
+            <a href="library/components/mark-presets.js" download>JS presets ↓</a>
+          </div>
+        </article>
+
+        <article class="artifact artifact-source">
+          <div class="artifact-label"><span>04 / SOURCE</span><span>ARCHIVE + MANIFEST</span></div>
+          <div class="artifact-visual source-stack" aria-hidden="true">
+            <span>HTML</span><span>MD</span><span>JSON</span><span>SVG</span>
+          </div>
+          <h3>Original decisions and handoff</h3>
+          <p>The complete variations sheet, design handoff, engine documentation and artifact index remain inspectable.</p>
+          <div class="artifact-links">
+            <a href="library/source/drayker-logo-variations.html">Open design sheet ↗</a>
+            <a href="library/manifest.json">Read manifest →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="shell scope-library">
+        <div class="scope-library-copy">
+          <span>OFFICIAL SCOPE MARKS</span>
+          <h3>Eight scopes. One geometry.</h3>
+          <p>Each mark is available for light and dark surfaces. Use the scope color; never recolor the orbital structure.</p>
+        </div>
+        <div class="scope-marks" aria-label="Official Drayker scope marks">
+          <a href="assets/brand/logo/escopo/drayker-emergence.svg" download><img src="assets/brand/logo/escopo/drayker-emergence.svg" alt="Emergence mark"><span>Emergence</span></a>
+          <a href="assets/brand/logo/escopo/drayker-dk.svg" download><img src="assets/brand/logo/escopo/drayker-dk.svg" alt="Dk mark"><span>Dk</span></a>
+          <a href="assets/brand/logo/escopo/drayker-daf.svg" download><img src="assets/brand/logo/escopo/drayker-daf.svg" alt="DAF mark"><span>DAF</span></a>
+          <a href="assets/brand/logo/escopo/drayker-bsdk.svg" download><img src="assets/brand/logo/escopo/drayker-bsdk.svg" alt="BSDK mark"><span>BSDK</span></a>
+          <a href="assets/brand/logo/escopo/drayker-network.svg" download><img src="assets/brand/logo/escopo/drayker-network.svg" alt="Dk Network mark"><span>Network</span></a>
+          <a href="assets/brand/logo/escopo/drayker-lcrypt.svg" download><img src="assets/brand/logo/escopo/drayker-lcrypt.svg" alt="Living Cryptography mark"><span>LCrypt</span></a>
+          <a href="assets/brand/logo/escopo/drayker-uid.svg" download><img src="assets/brand/logo/escopo/drayker-uid.svg" alt="UID mark"><span>UID</span></a>
+          <a href="assets/brand/logo/escopo/drayker-dfm.svg" download><img src="assets/brand/logo/escopo/drayker-dfm.svg" alt="DFM mark"><span>DFM</span></a>
+        </div>
+      </div>
+
+      <div class="shell library-download">
+        <div>
+          <span>COMPLETE PACKAGE</span>
+          <h3>Take the organized library with you.</h3>
+        </div>
+        <div>
+          <p>Includes components, examples, source documents, tokens, manifest, texture and the full production logo collection.</p>
+          <a class="button button-solid" href="assets/brand/Drayker-Design-Library.zip" download>Download design library <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="brand-kit" id="brand" aria-labelledby="brand-title">
+      <div class="shell brand-grid">
         <div class="brand-copy">
-          <p class="eyebrow"><span class="eyebrow-index">06</span> BRAND KIT</p>
-          <h2 id="brand-title">A shared visual language, ready to carry.</h2>
-          <p class="section-lede">The full logo system from the Drayker design kit lives in this repository. It gives volunteers the correct format for a dark surface, a light surface, one-colour print, a favicon and scope-specific material.</p>
+          <div class="section-tag"><span>06</span> OFFICIAL MATERIAL</div>
+          <h2 id="brand-title">One identity. Ready for every surface.</h2>
+          <p>The complete Drayker logo system is packaged for dark, light, mono, app-icon and scope-specific use.</p>
           <div class="brand-actions">
-            <a class="button button-primary" href="assets/brand/Drayker-Propagation-Brand-Kit.zip" download>Download full kit <span aria-hidden="true">↓</span></a>
-            <a class="button button-secondary" href="docs/brand-guide.html">Use it correctly <span aria-hidden="true">→</span></a>
+            <a class="button button-dark" href="assets/brand/Drayker-Propagation-Brand-Kit.zip" download>Download the full kit <span aria-hidden="true">↓</span></a>
+            <a class="arrow-link arrow-link-dark" href="docs/brand-guide.html">Read the usage guide <span aria-hidden="true">→</span></a>
           </div>
         </div>
-
-        <div class="brand-samples" aria-label="Examples of official Drayker brand assets">
-          <figure class="brand-sample sample-dark">
-            <img src="assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="White Drayker horizontal signature" width="304" height="102">
-            <figcaption>Signature / dark surface</figcaption>
+        <div class="brand-display" aria-label="Official Drayker logo examples">
+          <figure class="brand-primary">
+            <img src="assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="White Drayker horizontal signature" width="330" height="112">
+            <figcaption>DARK / HORIZONTAL SIGNATURE</figcaption>
           </figure>
-          <figure class="brand-sample sample-light">
-            <img src="assets/brand/logo/assinatura/drayker-horizontal.svg" alt="Drayker horizontal signature" width="304" height="102">
-            <figcaption>Signature / light surface</figcaption>
+          <figure class="brand-mark">
+            <img src="assets/brand/logo/mono/drayker-vazado-preto.svg" alt="Black Drayker knockout mark" width="170" height="170">
+            <figcaption>MONO / KNOCKOUT</figcaption>
           </figure>
-          <figure class="brand-sample sample-orange">
-            <img src="assets/brand/logo/mono/drayker-vazado-preto.svg" alt="Black Drayker knockout mark" width="128" height="128">
-            <figcaption>Mono / textured or colour field</figcaption>
+          <figure class="brand-light">
+            <img src="assets/brand/logo/assinatura/drayker-horizontal.svg" alt="Drayker horizontal signature" width="260" height="88">
+            <figcaption>LIGHT / HORIZONTAL SIGNATURE</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section class="section playbook-section" aria-labelledby="playbook-title">
-      <div class="shell">
-        <div class="section-intro split-intro">
-          <div>
-            <p class="eyebrow"><span class="eyebrow-index">07</span> THE FIVE-MOVE PLAYBOOK</p>
-            <h2 id="playbook-title">One contribution can leave the signal stronger than you found it.</h2>
-          </div>
-          <p>Use this sequence whenever you create, adapt or share something. It works at the scale of a single message or a recurring volunteer practice.</p>
-        </div>
-
-        <ol class="playbook-list">
-          <li>
-            <span class="playbook-index">01</span>
-            <div><h3>Choose one public source</h3><p>Start from what is published, not what you remember or assume.</p></div>
-          </li>
-          <li>
-            <span class="playbook-index">02</span>
-            <div><h3>Name the real question</h3><p>Write for the reader’s actual uncertainty, not a generic audience.</p></div>
-          </li>
-          <li>
-            <span class="playbook-index">03</span>
-            <div><h3>Make one clear artifact</h3><p>A paragraph, conversation, card, translation or visual is enough when it is useful.</p></div>
-          </li>
-          <li>
-            <span class="playbook-index">04</span>
-            <div><h3>Attach the source and scope</h3><p>State what is written, what is open and where the reader can verify it.</p></div>
-          </li>
-          <li>
-            <span class="playbook-index">05</span>
-            <div><h3>Route the next action</h3><p>Offer a public discussion, documentation page or volunteer entry point — never a pressure tactic.</p></div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <section class="section section-border faq-section" aria-labelledby="faq-title">
-      <div class="shell faq-layout">
+    <section class="final-call" aria-labelledby="final-title">
+      <div class="shell final-grid">
         <div>
-          <p class="eyebrow"><span class="eyebrow-index">08</span> QUESTIONS BEFORE YOU SHARE</p>
-          <h2 id="faq-title">A little discipline protects a lot of trust.</h2>
+          <p>THE NETWORK GROWS THROUGH FINISHED CONTRIBUTIONS.</p>
+          <h2 id="final-title">Take one piece.<br>Move it forward.</h2>
         </div>
-
-        <div class="faq-list">
-          <details>
-            <summary>Do I need specialised expertise to help?</summary>
-            <p>No. Begin with a small, source-led contribution you can complete honestly: explain a page, make a reliable link easier to find, or welcome a question into the appropriate public place.</p>
-          </details>
-          <details>
-            <summary>Can I make my own visual material?</summary>
-            <p>Yes, when it is grounded in an official asset and public source. Use the brand guide, preserve the supplied mark, and make the scope of your interpretation clear.</p>
-          </details>
-          <details>
-            <summary>How do I keep information current?</summary>
-            <p>Link to primary sources and check the published page before repeating a claim. If you are unsure, ask a question or describe the uncertainty rather than presenting it as fact.</p>
-          </details>
-          <details>
-            <summary>Where should I take an idea or question?</summary>
-            <p>Use the public forum or the organization’s GitHub repositories. They make the discussion inspectable and help the right people find it.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <section class="final-cta" aria-labelledby="final-title">
-      <div class="shell final-cta-inner">
-        <div>
-          <p class="eyebrow"><span class="eyebrow-index">09</span> READY WHEN YOU ARE</p>
-          <h2 id="final-title">Take the smallest piece you can finish — and let it travel with its source.</h2>
-        </div>
-        <div class="final-actions">
-          <a class="button button-on-accent" href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Introduce yourself <span aria-hidden="true">→</span></a>
-          <a class="text-link text-link-dark" href="https://drayker.org/#org/fn">See open functions <span aria-hidden="true">↗</span></a>
+        <div class="final-action">
+          <p>Start small, keep the source attached, and leave a clear handoff for the next person.</p>
+          <a class="button button-solid" href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Introduce yourself <span aria-hidden="true">↗</span></a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="shell footer-grid">
+    <div class="shell footer-top">
       <div class="footer-brand">
-        <img src="assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="154" height="52">
-        <p>Propagation for people who would rather share reliable context than louder claims.</p>
+        <img src="assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="160" height="54">
+        <span>PROPAGATION / SOURCE-LED</span>
       </div>
-      <div>
-        <p class="footer-label">EXPLORE</p>
-        <a href="https://drayker.org/#org/home">Public portal</a>
-        <a href="https://drayker.org/#org/docs">Documentation</a>
-        <a href="https://forum.drayker.org/">Forum</a>
-      </div>
-      <div>
-        <p class="footer-label">PARTICIPATE</p>
-        <a href="https://drayker.org/#org/fn">Open functions</a>
-        <a href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Volunteer introduction</a>
-        <a href="https://github.com/draykerdk">GitHub organization</a>
-      </div>
-      <div>
-        <p class="footer-label">MATERIAL</p>
-        <a href="assets/brand/Drayker-Propagation-Brand-Kit.zip" download>Brand kit</a>
-        <a href="docs/brand-guide.html">Brand guide</a>
+      <div class="footer-links">
+        <a href="https://drayker.org/">Drayker.org ↗</a>
+        <a href="https://forum.drayker.org/">Forum ↗</a>
+        <a href="https://github.com/draykerdk">GitHub ↗</a>
         <a href="#top">Back to top ↑</a>
       </div>
     </div>
     <div class="shell footer-bottom">
-      <span>DRAYKER PROPAGATION / SOURCE-LED VOLUNTEER TOOLKIT</span>
-      <span>BUILT FOR PUBLIC PARTICIPATION</span>
+      <span>PUBLIC VOLUNTEER TOOLKIT</span>
+      <span>MAKE THE WORK TRAVEL WITH ITS SOURCE</span>
     </div>
   </footer>
 </body>

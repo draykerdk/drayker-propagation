@@ -1,12 +1,21 @@
 # Deployment
 
-The production site is intended to run at `https://propagation.drayker.org` from the repository `draykerdk/drayker-propagation`.
+The production site runs at `https://propagation.drayker.org` from the repository `draykerdk/drayker-propagation`.
 
 The repository contains `.github/workflows/deploy-pages.yml`. It validates the static site and then deploys the repository root through GitHub Pages whenever `master` changes. It does not need a build tool or a `CNAME` file.
 
-## Required administrator actions
+## Current production state
 
-These actions require a repository administrator, maintainer, or a token with both **Administration: write** and **Pages: write** for the repository.
+- Repository: `draykerdk/drayker-propagation`
+- Publishing source: GitHub Actions
+- Custom domain: `propagation.drayker.org`
+- DNS: CNAME to `draykerdk.github.io`, DNS-only
+- TLS certificate: approved
+- HTTPS enforcement: enabled
+
+## Provisioning sequence
+
+These are the steps used to provision the current deployment. They require a repository administrator, maintainer, or a token with both **Administration: write** and **Pages: write** for the repository.
 
 1. Rename `draykerdk/drayker-theme` to `draykerdk/drayker-propagation`.
 2. Push or merge the Pages workflow into `master`.
