@@ -9,8 +9,9 @@ The site gives a volunteer a clear first move without turning outreach into hype
 - A responsive GitHub Pages landing page in [`index.html`](index.html).
 - A client-side mission matcher that suggests a small, source-led starting task based on a volunteer's strength and available time.
 - Ready-to-copy, factual message starters — each points people back to primary sources.
-- The original **Turn 13c · Protection** interactive mark, mounted directly from the supplied `drayker-mark.js` engine with its canonical declarative attributes.
-- A [canonical design library](design/README.md) that organizes the eight original Turn 13 combinations, all 46 production logo exports, usage rules, source documents and a machine-readable manifest without reimplementing the animations.
+- A restrained **Network grid** mark on the propagation landing page, mounted directly from the supplied engine with standard hairline rings and the darkest shadow.
+- A [canonical design library](design/README.md) with 16 dedicated animation pages: universal symbols first, standard bodies and effects next, and unusual Turn 13 rings last as customization examples.
+- The original Earth, Sun and Black Hole renderers executed directly from the preserved source sheet, without reimplementing their animation code.
 - A reusable logo kit in [`assets/brand/logo`](assets/brand/logo), including light, dark, mono, signature and app-icon variants.
 - An English [brand guide](docs/brand-guide.md) and downloadable kit for contributors.
 - A zero-dependency static integrity check.

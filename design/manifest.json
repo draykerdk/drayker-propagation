@@ -1,19 +1,49 @@
 {
   "name": "Drayker canonical design library",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "language": "en",
   "provenance": {
     "archive": "Drayker_ site em desenvolvimento3.5 forum.zip",
     "designSheet": "source/Drayker Logo Variations.html",
-    "sourceSection": "Turn 13 · the structure as a ship",
+    "sourceSections": [
+      "Turn 11 · light only where there is no shadow",
+      "Turn 13 · the structure as a ship"
+    ],
     "engine": "../assets/js/drayker-mark.js",
     "engineSha256": "0a421c6b10ade43a6e45e03ba1a5e7a690ea1e9cb29ebc5827321385e37c380c",
-    "policy": "Animations are configured from the original engine, never reimplemented."
+    "policy": "Animations are executed by the original source sheet or configured from the original engine, never reimplemented."
+  },
+  "catalog": {
+    "selectionOrder": ["universalSymbols", "standardBodies", "functionalEffects", "customizationExamples"],
+    "universalSymbols": [
+      { "id": "earth", "name": "Earth", "page": "animations/earth/", "renderer": "source-sheet", "sourceId": "11b", "sourceRenderer": "hearth" },
+      { "id": "sun", "name": "Sun", "page": "animations/sun/", "renderer": "source-sheet", "sourceId": "11c", "sourceRenderer": "hsun" },
+      { "id": "black-hole", "name": "Black Hole", "page": "animations/black-hole/", "renderer": "source-sheet", "sourceId": "11d", "sourceRenderer": "hbh" },
+      { "id": "core-orbit", "name": "Core orbit", "page": "animations/core-orbit/", "renderer": "engine", "body": "plain", "rings": "hairline", "wedge": "none", "shadow": 1 }
+    ],
+    "standardBodies": [
+      { "id": "network-grid", "name": "Network grid", "page": "animations/network-grid/", "body": "grid", "rings": "hairline", "wedge": "none", "accent": "#3FA9FF", "shadow": 1 },
+      { "id": "geodesic", "name": "Geodesic", "page": "animations/geodesic/", "body": "geo", "rings": "hairline", "wedge": "none", "shadow": 1 },
+      { "id": "woven-sphere", "name": "Woven sphere", "page": "animations/woven-sphere/", "body": "weave", "rings": "hairline", "wedge": "none", "shadow": 1 }
+    ],
+    "functionalEffects": [
+      { "id": "extraction-field", "name": "Extraction field", "page": "animations/extraction-field/", "body": "plain", "rings": "hairline", "wedge": "extract", "shadow": 1 },
+      { "id": "protection-field", "name": "Protection field", "page": "animations/protection-field/", "body": "grid", "rings": "hairline", "wedge": "shield", "accent": "#3FA9FF", "shadow": 1 },
+      { "id": "terraform-field", "name": "Terraform field", "page": "animations/terraform-field/", "body": "plain", "rings": "hairline", "wedge": "terraform", "shadow": 1 }
+    ],
+    "customizationExamples": [
+      { "id": "habitat-ring", "name": "Habitat ring", "page": "animations/habitat-ring/", "sourceId": "13a" },
+      { "id": "collector-ring", "name": "Collector ring", "page": "animations/collector-ring/", "sourceId": "13b" },
+      { "id": "shield-array", "name": "Shield array", "page": "animations/shield-array/", "sourceId": "13c" },
+      { "id": "orbital-drydock", "name": "Orbital drydock", "page": "animations/orbital-drydock/", "sourceId": "13e" },
+      { "id": "captured-star", "name": "Captured star", "page": "animations/captured-star/", "sourceId": "13f" },
+      { "id": "event-horizon", "name": "Event horizon", "page": "animations/event-horizon/", "sourceId": "13g" }
+    ]
   },
   "interactiveMarks": [
     { "sourceId": "13a", "name": "Habitable ring ship", "body": "plain", "rings": "hull", "wedge": "none" },
     { "sourceId": "13b", "name": "Collector", "body": "plain", "rings": "collector", "wedge": "extract" },
-    { "sourceId": "13c", "name": "Protection", "body": "grid", "rings": "shieldRing", "wedge": "shield", "accent": "#3FA9FF", "usedBy": ["../index.html"] },
+    { "sourceId": "13c", "name": "Protection", "body": "grid", "rings": "shieldRing", "wedge": "shield", "accent": "#3FA9FF" },
     { "sourceId": "13d", "name": "Terraformer", "body": "plain", "rings": "hull", "wedge": "terraform" },
     { "sourceId": "13e", "name": "Drydock", "body": "weave", "rings": "drydock", "wedge": "none", "stars": true },
     { "sourceId": "13f", "name": "Captured star", "body": "star", "rings": "collector", "wedge": "extract" },
