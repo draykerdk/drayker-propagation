@@ -1,6 +1,8 @@
 title: Drayker Propagation
 description: A practical, source-led toolkit for volunteers who want to help people discover and understand Drayker.
 lang: en
+url: "https://propagation.drayker.org"
+baseurl: ""
 markdown: kramdown
 
 # The site is intentionally static: it can be published directly from GitHub Pages
