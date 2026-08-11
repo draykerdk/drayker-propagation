@@ -1,8 +1,8 @@
 # Drayker Propagation
 
-An English-language public toolkit for volunteers who want to help people find, understand and responsibly discuss Drayker.
+An English-language public toolkit for volunteers who want to help people find, understand and responsibly discuss Drayker’s actual public argument.
 
-The site gives a volunteer a clear first move without turning outreach into hype: primary sources, honest message starters, a small mission matcher, a public contribution path and the official brand assets.
+Drayker proposes a way of working where people keep creating, discovering and learning while intelligence carries the rest — with the resulting decisions, evidence and resources kept connected to the work. This site gives a volunteer a clear first move without turning that argument into hype: primary sources, honest message starters, a small mission matcher, a public contribution path and the official brand assets.
 
 ## What is included
 
@@ -20,7 +20,7 @@ The site gives a volunteer a clear first move without turning outreach into hype
 
 The site includes a zero-build [GitHub Pages workflow](.github/workflows/deploy-pages.yml). It runs the static contract before publishing the repository root from `master`.
 
-The intended production address is `https://propagation.drayker.org`. It must be registered in the repository's Pages settings before its DNS CNAME is created. See the [deployment guide](docs/deployment.md) for the exact, safe order.
+The production address is [propagation.drayker.org](https://propagation.drayker.org/). GitHub Pages publishes `master` through the repository workflow, with the custom domain and HTTPS already enabled. See the [deployment guide](docs/deployment.md) for the current configuration and recovery procedure.
 
 No runtime credentials, form collection or third-party analytics are used. The main contribution CTA opens the organization's existing public volunteer-introduction issue form.
 
@@ -40,6 +40,6 @@ Start with [`design/manifest.json`](design/manifest.json) when integrating asset
 
 This is a propagation toolkit, not a claim factory. Keep every message tied to a public primary source, describe proposals as proposals, and do not add promises, performance claims or urgency that the source does not support.
 
-## Repository name
+## Repository identity
 
-The intended name is `drayker-propagation`. Rename the GitHub repository before enabling the Pages deployment so the repository identity, deployment record and public purpose stay aligned.
+The canonical repository is [`draykerdk/drayker-propagation`](https://github.com/draykerdk/drayker-propagation). The former theme prototype and its experimental animation are not sources for this site; the reusable documentation theme remains a separate repository at `draykerdk/drayker-theme`.
