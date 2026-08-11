@@ -1,19 +1,24 @@
 {
   "name": "Drayker canonical design library",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "language": "en",
   "provenance": {
     "archive": "Drayker_ site em desenvolvimento3.5 forum.zip",
     "designSheet": "source/Drayker Logo Variations.html",
-    "sourceSections": [
-      "Turn 11 · light only where there is no shadow",
-      "Turn 13 · the structure as a ship"
-    ],
+    "sourceSections": ["Turns 1–13 · 65 interactive studies", "Turn 14 · 46 production exports"],
     "engine": "../assets/js/drayker-mark.js",
     "engineSha256": "0a421c6b10ade43a6e45e03ba1a5e7a690ea1e9cb29ebc5827321385e37c380c",
     "policy": "Animations are executed by the original source sheet or configured from the original engine, never reimplemented."
   },
   "catalog": {
+    "data": "animations/catalog-data.json",
+    "totalAnimations": 65,
+    "totalFamilies": 9,
+    "canonicalPagePattern": "animations/source/{sourceId}/",
+    "priority": ["universal", "standard", "earth-studies", "celestial", "system-bodies", "scope-studies", "elements", "ring-experiments", "applied-machinery"],
+    "policy": "All entries mount the untouched SVG and renderer already running in the preserved source sheet."
+  },
+  "featuredSelections": {
     "selectionOrder": ["universalSymbols", "standardBodies", "functionalEffects", "customizationExamples"],
     "universalSymbols": [
       { "id": "earth", "name": "Earth", "page": "animations/earth/", "renderer": "source-sheet", "sourceId": "11b", "sourceRenderer": "hearth" },

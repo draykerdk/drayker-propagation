@@ -10,9 +10,9 @@ The site gives a volunteer a clear first move without turning outreach into hype
 - A client-side mission matcher that suggests a small, source-led starting task based on a volunteer's strength and available time.
 - Ready-to-copy, factual message starters — each points people back to primary sources.
 - A restrained **Network grid** mark on the propagation landing page, mounted directly from the supplied engine with standard hairline rings and the darkest shadow.
-- A [canonical design library](design/README.md) with 16 dedicated animation pages: universal symbols first, standard bodies and effects next, and unusual Turn 13 rings last as customization examples.
-- The original Earth, Sun and Black Hole renderers executed directly from the preserved source sheet, without reimplementing their animation code.
-- A reusable logo kit in [`assets/brand/logo`](assets/brand/logo), including light, dark, mono, signature and app-icon variants.
+- A [canonical design library](design/README.md) with all 65 source animations, searchable by nine explained families and documented on dedicated pages.
+- Every animation is executed directly from the preserved source sheet; its geometry, timing and pointer behavior are not reimplemented.
+- A [complete logo library](design/logos/) covering all 46 supplied light, dark, scope, monochrome, signature and app-icon files.
 - An English [brand guide](docs/brand-guide.md) and downloadable kit for contributors.
 - A zero-dependency static integrity check.
 
