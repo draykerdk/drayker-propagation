@@ -15,17 +15,26 @@ check(exists('assets/css/site.css'), 'site stylesheet is missing');
 check(exists('assets/js/site.js'), 'site script is missing');
 check(exists('docs/brand-guide.md'), 'brand guide is missing');
 check(exists('docs/brand-guide.html'), 'static brand guide is missing');
+check(exists('docs/deployment.md'), 'deployment guide is missing');
+check(exists('.github/workflows/deploy-pages.yml'), 'GitHub Pages deployment workflow is missing');
 check(exists('assets/brand/Drayker-Propagation-Brand-Kit.zip'), 'downloadable brand kit is missing');
 check(exists('assets/brand/logo/escuro/drayker-marca.svg'), 'dark Drayker mark is missing');
 check(exists('assets/brand/logo/assinatura/drayker-horizontal-branco.svg'), 'dark horizontal signature is missing');
 check(exists('assets/brand/logo/kit/favicon-32.png'), 'favicon kit is missing');
 check(page.includes('Drayker Propagation'), 'page title does not identify the propagation site');
 check(page.includes('https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml'), 'volunteer introduction CTA is missing');
+check(page.includes('https://propagation.drayker.org/'), 'production canonical URL is missing');
 check(page.includes('id="toolkit"'), 'toolkit section is missing');
 check(page.includes('id="paths"'), 'mission matcher section is missing');
 check(page.includes('id="brand"'), 'brand section is missing');
 check(!page.includes('TODO'), 'unfinished TODO text remains in the landing page');
 check(!page.includes('example.com'), 'placeholder URL remains in the landing page');
+const pagesWorkflow = exists('.github/workflows/deploy-pages.yml')
+  ? fs.readFileSync(path.join(root, '.github/workflows/deploy-pages.yml'), 'utf8')
+  : '';
+check(pagesWorkflow.includes('actions/configure-pages@v5'), 'Pages workflow does not configure GitHub Pages');
+check(pagesWorkflow.includes('actions/upload-pages-artifact@v4'), 'Pages workflow does not upload the static artifact');
+check(pagesWorkflow.includes('actions/deploy-pages@v4'), 'Pages workflow does not deploy the artifact');
 
 const localReferences = [...page.matchAll(/(?:href|src)="([^"#][^"]*)"/g)]
   .map((match) => match[1])

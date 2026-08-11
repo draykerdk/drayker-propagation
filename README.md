@@ -13,12 +13,11 @@ The site gives a volunteer a clear first move without turning outreach into hype
 - An English [brand guide](docs/brand-guide.md) and downloadable kit for contributors.
 - A zero-dependency static integrity check.
 
-## Publish with GitHub Pages
+## GitHub Pages deployment
 
-1. In the repository settings, open **Pages**.
-2. Select **Deploy from a branch**.
-3. Select `master` and the repository root.
-4. Save. GitHub Pages will serve `index.html` directly.
+The site includes a zero-build [GitHub Pages workflow](.github/workflows/deploy-pages.yml). It runs the static contract before publishing the repository root from `master`.
+
+The intended production address is `https://propagation.drayker.org`. It must be registered in the repository's Pages settings before its DNS CNAME is created. See the [deployment guide](docs/deployment.md) for the exact, safe order.
 
 No runtime credentials, form collection or third-party analytics are used. The main contribution CTA opens the organization's existing public volunteer-introduction issue form.
 
@@ -34,6 +33,6 @@ The site itself has no build step. Open `index.html` in a browser for a visual c
 
 This is a propagation toolkit, not a claim factory. Keep every message tied to a public primary source, describe proposals as proposals, and do not add promises, performance claims or urgency that the source does not support.
 
-## Recommended repository name
+## Repository name
 
-`drayker-propagation` would make the repository's purpose clear. Rename it in GitHub only after updating the Pages address and any inbound links.
+The intended name is `drayker-propagation`. Rename the GitHub repository before enabling the Pages deployment so the repository identity, deployment record and public purpose stay aligned.
