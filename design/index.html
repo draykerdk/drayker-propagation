@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08080a">
+  <meta name="description" content="The canonical Drayker design library: original interactive marks, production assets, rules and source material.">
+  <title>Drayker Design Library · Canonical assets</title>
+  <link rel="canonical" href="https://propagation.drayker.org/design/">
+  <link rel="icon" href="../assets/brand/logo/drayker-favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..110,400..700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="design.css">
+  <script defer src="../assets/js/drayker-mark.js"></script>
+  <script defer src="design.js"></script>
+</head>
+<body>
+  <a class="skip" href="#content">Skip to content</a>
+
+  <header class="topbar">
+    <a class="wordmark" href="../" aria-label="Back to Drayker Propagation">
+      <img src="../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="146" height="51">
+      <span>Design library</span>
+    </a>
+    <nav aria-label="Design library navigation">
+      <a href="#principles">Rules</a>
+      <a href="#animation-bank">Animations</a>
+      <a href="#production-assets">Assets</a>
+      <a href="#source-material">Source</a>
+    </nav>
+    <a class="back-link" href="../">Propagation ↗</a>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">CANONICAL LIBRARY / SOURCE-PRESERVING</p>
+        <h1>Use what exists.<br><em>Keep it intact.</em></h1>
+        <p class="lede">Everything needed to apply the Drayker visual system without reverse-engineering it: original interactive combinations, official exports, selection rules and the complete decision record.</p>
+        <div class="hero-actions">
+          <a class="button button-accent" href="#animation-bank">Browse the animation bank ↓</a>
+          <a class="button" href="../assets/brand/Drayker-Design-Library.zip" download>Download the library</a>
+        </div>
+      </div>
+      <div class="hero-mark">
+        <div class="mark-meta"><span>ORIGINAL VARIANT 13C</span><span>CURSOR-REACTIVE</span></div>
+        <svg data-drayker data-body="grid" data-rings="shieldRing" data-wedge="shield" data-accent="#3FA9FF" role="img" aria-label="Original Drayker protection animation"></svg>
+        <p>body=grid · rings=shieldRing · wedge=shield · accent=#3FA9FF</p>
+      </div>
+    </section>
+
+    <section class="principles" id="principles" aria-labelledby="principles-title">
+      <div class="section-heading">
+        <p>01 / NON-NEGOTIABLE</p>
+        <h2 id="principles-title">The source decides.</h2>
+      </div>
+      <div class="rule-grid">
+        <article><span>01</span><h3>Do not redraw.</h3><p>Interactive marks come from the supplied <code>drayker-mark.js</code>. Static marks come from the supplied exports.</p></article>
+        <article><span>02</span><h3>Configure, do not fork.</h3><p>Use declarative attributes for a catalogued combination. New behavior belongs in a registered engine extension, never a replacement pipeline.</p></article>
+        <article><span>03</span><h3>Keep the geometry.</h3><p>Do not stretch, rotate, mirror or detach the wedge from its rings. The structure and its shadow are one system.</p></article>
+        <article><span>04</span><h3>Choose by surface.</h3><p>Light, dark and knockout files are different applications of the same geometry. Use the correct supplied family.</p></article>
+      </div>
+      <div class="rule-callout">
+        <strong>Official mark</strong>
+        <code>&lt;svg data-drayker data-rings="mono" data-accent="#FF5500" data-gaze="0,0.34" data-animate="false" data-fit="1.5"&gt;&lt;/svg&gt;</code>
+        <a href="../design/docs/DRAYKER-MARK.md">Read the complete mark specification →</a>
+      </div>
+    </section>
+
+    <section class="animation-bank" id="animation-bank" aria-labelledby="animations-title">
+      <div class="section-heading inverse">
+        <p>02 / ORIGINAL ANIMATION BANK</p>
+        <h2 id="animations-title">Eight tested combinations.<br>No replicas.</h2>
+        <div class="heading-note">Each preview below is mounted directly by the untouched engine using the exact attributes from Turn 13 of the original Logo Variations sheet.</div>
+      </div>
+
+      <div class="animation-grid">
+        <article class="animation-card">
+          <div class="card-head"><span>13A</span><span>ORBITAL HULL</span></div>
+          <svg data-drayker data-body="plain" data-rings="hull" data-wedge="none" aria-label="Orbital hull animation"></svg>
+          <div class="card-copy"><h3>Habitable ring ship</h3><p>A wide hull with seams, radial beams, modules and navigation lights moving along the track.</p><code>body=plain · rings=hull · wedge=none</code></div>
+        </article>
+
+        <article class="animation-card">
+          <div class="card-head"><span>13B</span><span>EXTRACTION</span></div>
+          <svg data-drayker data-body="plain" data-rings="collector" data-wedge="extract" aria-label="Collector and extraction animation"></svg>
+          <div class="card-copy"><h3>Collector</h3><p>Dark panels and intake mouths face the body while energy moves through the two covered quarters.</p><code>body=plain · rings=collector · wedge=extract</code></div>
+        </article>
+
+        <article class="animation-card is-selected">
+          <div class="card-head"><span>13C</span><span>PROTECTION · USED HERE</span></div>
+          <svg data-drayker data-body="grid" data-rings="shieldRing" data-wedge="shield" data-accent="#3FA9FF" aria-label="Protection animation in Dk Network blue"></svg>
+          <div class="card-copy"><h3>Protection</h3><p>Thin rings with emitters cover two quarters with a faceted field and periodic scan.</p><code>body=grid · rings=shieldRing · wedge=shield · accent=#3FA9FF</code></div>
+        </article>
+
+        <article class="animation-card">
+          <div class="card-head"><span>13D</span><span>TERRAFORMING</span></div>
+          <svg data-drayker data-body="plain" data-rings="hull" data-wedge="terraform" aria-label="Terraforming animation"></svg>
+          <div class="card-copy"><h3>Terraformer</h3><p>The hull rewrites the covered quarters as measured plots and illuminated plates.</p><code>body=plain · rings=hull · wedge=terraform</code></div>
+        </article>
+
+        <article class="animation-card">
+          <div class="card-head"><span>13E</span><span>INDUSTRIAL SCALE</span></div>
+          <svg data-drayker data-body="weave" data-rings="drydock" data-wedge="none" data-stars="1" aria-label="Orbital drydock animation"></svg>
+          <div class="card-copy"><h3>Drydock</h3><p>Gantry structures cross the hull while docked vessels move along its outer track.</p><code>body=weave · rings=drydock · wedge=none · stars=1</code></div>
+        </article>
+
+        <article class="animation-card">
+          <div class="card-head"><span>13F</span><span>STELLAR ENERGY</span></div>
+          <svg data-drayker data-body="star" data-rings="collector" data-wedge="extract" aria-label="Captured star animation"></svg>
+          <div class="card-copy"><h3>Captured star</h3><p>The corona disappears behind the structure and energy flows toward its collection points.</p><code>body=star · rings=collector · wedge=extract</code></div>
+        </article>
+
+        <article class="animation-card">
+          <div class="card-head"><span>13G</span><span>EXTREME BODY</span></div>
+          <svg data-drayker data-body="voidBody" data-rings="hull" data-wedge="extract" data-stars="1" aria-label="Event horizon animation"></svg>
+          <div class="card-copy"><h3>Horizon</h3><p>A black body, photon ring and extraction geometry against an event horizon.</p><code>body=voidBody · rings=hull · wedge=extract · stars=1</code></div>
+        </article>
+
+        <article class="animation-card">
+          <div class="card-head"><span>13H</span><span>STATIC SEAL</span></div>
+          <svg data-drayker data-body="plain" data-rings="seal" data-wedge="none" data-animate="false" data-gaze="0.16,0.34" aria-label="Static Drayker seal"></svg>
+          <div class="card-copy"><h3>Seal</h3><p>Flat strokes, no gradient and no animation for stamps, embroidery, cutting and small applications.</p><code>body=plain · rings=seal · wedge=none · animate=false</code></div>
+        </article>
+      </div>
+
+      <div class="implementation-note">
+        <div><span>THE NORMAL PATH</span><h3>One script. One SVG. Attributes from the catalog.</h3></div>
+        <pre><code>&lt;script src="drayker-mark.js"&gt;&lt;/script&gt;
+
+&lt;svg data-drayker
+     data-body="grid"
+     data-rings="shieldRing"
+     data-wedge="shield"
+     data-accent="#3FA9FF"&gt;
+&lt;/svg&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="production-assets" id="production-assets" aria-labelledby="assets-title">
+      <div class="section-heading">
+        <p>03 / PRODUCTION ASSETS</p>
+        <h2 id="assets-title">Select. Download. Apply.</h2>
+        <div class="heading-note">The logo is already exported for its intended surfaces. Use these files rather than recreating a frame from the animation.</div>
+      </div>
+
+      <div class="asset-family featured-family">
+        <div class="family-copy"><span>CORE / LIGHT SURFACES</span><h3>Default identity</h3><p>Use the official mark whenever it fits. Compact and bare variants are exceptions for sizes below 20px.</p></div>
+        <div class="asset-cards">
+          <a href="../assets/brand/logo/drayker-marca.svg" download><img src="../assets/brand/logo/drayker-marca.svg" alt="Official Drayker mark"><strong>Official mark</strong><small>drayker-marca.svg</small></a>
+          <a href="../assets/brand/logo/drayker-sem-cunha.svg" download><img src="../assets/brand/logo/drayker-sem-cunha.svg" alt="Drayker mark without wedge"><strong>No wedge</strong><small>drayker-sem-cunha.svg</small></a>
+          <a href="../assets/brand/logo/drayker-orbita-larga.svg" download><img src="../assets/brand/logo/drayker-orbita-larga.svg" alt="Drayker wide orbit mark"><strong>Wide orbit</strong><small>drayker-orbita-larga.svg</small></a>
+          <a href="../assets/brand/logo/drayker-icone.svg" download><img src="../assets/brand/logo/drayker-icone.svg" alt="Compact Drayker icon"><strong>Compact</strong><small>drayker-icone.svg</small></a>
+        </div>
+      </div>
+
+      <div class="asset-family dark-family">
+        <div class="family-copy"><span>DARK SURFACES</span><h3>White structure, black shadow</h3><p>Use the supplied dark family on black. The ring and border become white; the wedge remains black because it is shadow.</p></div>
+        <div class="asset-cards">
+          <a href="../assets/brand/logo/escuro/drayker-marca.svg" download><img src="../assets/brand/logo/escuro/drayker-marca.svg" alt="Drayker mark for dark surfaces"><strong>Dark mark</strong><small>escuro/drayker-marca.svg</small></a>
+          <a href="../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" download><img class="wide" src="../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="White horizontal Drayker signature"><strong>Dark signature</strong><small>horizontal-branco.svg</small></a>
+        </div>
+      </div>
+
+      <div class="asset-family">
+        <div class="family-copy"><span>SCOPE SYSTEM</span><h3>Only the body changes color</h3><p>The orbital structure, border and shadow follow the mark rules. Select the published scope color; never invent one.</p></div>
+        <div class="scope-grid">
+          <a href="../assets/brand/logo/escopo/drayker-emergence.svg" download><img src="../assets/brand/logo/escopo/drayker-emergence.svg" alt="Emergence mark"><span>Emergence</span><small>#FF5500</small></a>
+          <a href="../assets/brand/logo/escopo/drayker-dk.svg" download><img src="../assets/brand/logo/escopo/drayker-dk.svg" alt="Dk mark"><span>Dk</span><small>#5CE02E</small></a>
+          <a href="../assets/brand/logo/escopo/drayker-daf.svg" download><img src="../assets/brand/logo/escopo/drayker-daf.svg" alt="DAF mark"><span>DAF</span><small>#FF8A00</small></a>
+          <a href="../assets/brand/logo/escopo/drayker-bsdk.svg" download><img src="../assets/brand/logo/escopo/drayker-bsdk.svg" alt="BSDK mark"><span>BSDK</span><small>#9C8CFF</small></a>
+          <a href="../assets/brand/logo/escopo/drayker-network.svg" download><img src="../assets/brand/logo/escopo/drayker-network.svg" alt="Dk Network mark"><span>Dk Network</span><small>#3FA9FF</small></a>
+          <a href="../assets/brand/logo/escopo/drayker-lcrypt.svg" download><img src="../assets/brand/logo/escopo/drayker-lcrypt.svg" alt="Living Cryptography mark"><span>LCrypt</span><small>#14E0C0</small></a>
+          <a href="../assets/brand/logo/escopo/drayker-uid.svg" download><img src="../assets/brand/logo/escopo/drayker-uid.svg" alt="UID mark"><span>UID</span><small>#E8ECF5</small></a>
+          <a href="../assets/brand/logo/escopo/drayker-dfm.svg" download><img src="../assets/brand/logo/escopo/drayker-dfm.svg" alt="DFM mark"><span>DFM / DFMP</span><small>#FFCB6B</small></a>
+        </div>
+      </div>
+
+      <div class="file-map" aria-label="Complete production file map">
+        <details open><summary><span>Signatures</span><small>5 SVG</small></summary><p><a href="../assets/brand/logo/assinatura/drayker-horizontal.svg" download>Horizontal</a><a href="../assets/brand/logo/assinatura/drayker-vertical.svg" download>Vertical</a><a href="../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" download>Horizontal white</a><a href="../assets/brand/logo/assinatura/drayker-tecnica.svg" download>Technical</a><a href="../assets/brand/logo/assinatura/drayker-tecnica-branco.svg" download>Technical white</a></p></details>
+        <details><summary><span>Monochrome</span><small>5 SVG</small></summary><p><a href="../assets/brand/logo/mono/drayker-1cor-preto.svg" download>One-color black</a><a href="../assets/brand/logo/mono/drayker-1cor-branco.svg" download>One-color white</a><a href="../assets/brand/logo/mono/drayker-1cor-icone-preto.svg" download>Compact black</a><a href="../assets/brand/logo/mono/drayker-vazado-preto.svg" download>Knockout black</a><a href="../assets/brand/logo/mono/drayker-vazado-branco.svg" download>Knockout white</a></p></details>
+        <details><summary><span>Application icons</span><small>10 files</small></summary><p><a href="../assets/brand/logo/kit/favicon-16.png" download>Favicon 16</a><a href="../assets/brand/logo/kit/favicon-32.png" download>Favicon 32</a><a href="../assets/brand/logo/kit/favicon-48.png" download>Favicon 48</a><a href="../assets/brand/logo/kit/apple-touch-icon.png" download>Apple touch</a><a href="../assets/brand/logo/kit/maskable-512.png" download>Maskable 512</a><a href="../assets/brand/logo/kit/icon-512.png" download>Icon 512</a><a href="../assets/brand/logo/kit/icon-512-branco.png" download>Icon 512 white</a><a href="../assets/brand/logo/kit/icon-512-escuro.png" download>Icon 512 dark</a><a href="../assets/brand/logo/kit/icon-1024.png" download>Icon 1024</a></p></details>
+        <details><summary><span>Dark scope marks</span><small>8 SVG</small></summary><p><a href="../assets/brand/logo/escuro/escopo/drayker-emergence.svg" download>Emergence</a><a href="../assets/brand/logo/escuro/escopo/drayker-dk.svg" download>Dk</a><a href="../assets/brand/logo/escuro/escopo/drayker-daf.svg" download>DAF</a><a href="../assets/brand/logo/escuro/escopo/drayker-bsdk.svg" download>BSDK</a><a href="../assets/brand/logo/escuro/escopo/drayker-network.svg" download>Dk Network</a><a href="../assets/brand/logo/escuro/escopo/drayker-lcrypt.svg" download>LCrypt</a><a href="../assets/brand/logo/escuro/escopo/drayker-uid.svg" download>UID</a><a href="../assets/brand/logo/escuro/escopo/drayker-dfm.svg" download>DFM</a></p></details>
+      </div>
+    </section>
+
+    <section class="source-material" id="source-material" aria-labelledby="source-title">
+      <div class="section-heading inverse">
+        <p>04 / SOURCE MATERIAL</p>
+        <h2 id="source-title">The decisions remain inspectable.</h2>
+        <div class="heading-note">The source reference is preserved as a self-contained directory. Documentation files are copied without rewriting their content.</div>
+      </div>
+      <div class="source-grid">
+        <a class="source-primary" href="source/Drayker%20Logo%20Variations.html">
+          <span>ORIGINAL HTML / COMPLETE</span>
+          <h3>Drayker Logo Variations</h3>
+          <p>Open the complete chronological design sheet, with its original scripts and relative assets intact.</p>
+          <strong>Open source sheet ↗</strong>
+        </a>
+        <a href="docs/DRAYKER-MARK.md"><span>SPECIFICATION</span><h3>DRAYKER-MARK.md</h3><p>Concept, official mark, engine API, extension rules and accessibility.</p><strong>Read document →</strong></a>
+        <a href="manifest.json"><span>MACHINE-READABLE</span><h3>manifest.json</h3><p>Artifact families, canonical animation configurations, paths and provenance.</p><strong>Inspect manifest →</strong></a>
+        <a href="README.md"><span>START HERE</span><h3>Library README</h3><p>Directory map, selection workflow and integrity guarantees.</p><strong>Read overview →</strong></a>
+        <a href="../assets/brand/Drayker-Design-Library.zip" download><span>OFFLINE PACKAGE</span><h3>Complete library</h3><p>Catalog, docs, engine, source reference and production assets in one download.</p><strong>Download ZIP ↓</strong></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div><img src="../assets/brand/logo/assinatura/drayker-horizontal-branco.svg" alt="Drayker" width="150" height="52"><span>CANONICAL DESIGN LIBRARY</span></div>
+    <div><a href="../">Propagation</a><a href="https://drayker.org/">Drayker.org</a><a href="https://github.com/draykerdk/drayker-propagation">Repository</a><a href="#content">Top ↑</a></div>
+  </footer>
+</body>
+</html>
