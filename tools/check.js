@@ -30,6 +30,10 @@ const expectedSheetHash = '8934b382f88c7dbca7272284448fae7927582ed0de3c0d1ed7ede
   'design/index.html',
   'design/design.css',
   'design/design.js',
+  'design/animations/index.html',
+  'design/animations/catalog.css',
+  'design/animations/detail.css',
+  'design/animations/source-embed.js',
   'design/README.md',
   'design/manifest.json',
   'design/docs/DRAYKER-MARK.md',
@@ -48,6 +52,10 @@ const expectedSheetHash = '8934b382f88c7dbca7272284448fae7927582ed0de3c0d1ed7ede
   '.github/workflows/deploy-pages.yml'
 ].forEach((file) => check(exists(file), file + ' is missing'));
 
+const catalogGroups = manifest.catalog;
+const catalogEntries = manifest.catalog.selectionOrder.flatMap((group) => catalogGroups[group]);
+catalogEntries.forEach((entry) => check(exists(path.join('design', entry.page, 'index.html')), 'catalog page is missing: ' + entry.page));
+
 check(!exists('assets/js/propagation-network.js'), 'the reimplemented propagation animation still exists');
 check(!exists('library/components/network-mesh.js'), 'the reimplemented network mesh still exists');
 check(!exists('library/components/mark-presets.js'), 'invented mark presets still exist');
@@ -57,6 +65,11 @@ check(hash('design/source/drayker-mark.js') === expectedEngineHash, 'preserved s
 check(hash('design/source/Drayker Logo Variations.html') === expectedSheetHash, 'original Logo Variations sheet was modified');
 
 check(manifest.provenance.engineSha256 === expectedEngineHash, 'manifest engine hash is incorrect');
+check(manifest.catalog.selectionOrder.join(',') === 'universalSymbols,standardBodies,functionalEffects,customizationExamples', 'catalog priority order is incorrect');
+check(catalogEntries.length === 16, 'catalog must expose 16 documented animations');
+check(manifest.catalog.universalSymbols.slice(0, 3).map((mark) => mark.sourceId).join(',') === '11b,11c,11d', 'Earth, Sun and Black Hole must lead the universal symbols');
+check(manifest.catalog.standardBodies.every((mark) => mark.rings === 'hairline' && mark.shadow === 1), 'standard bodies must use hairline rings and the darkest shadow');
+check(manifest.catalog.customizationExamples.every((mark) => /^13[a-h]$/.test(mark.sourceId)), 'customization examples must retain Turn 13 provenance');
 check(manifest.interactiveMarks.length === 8, 'manifest must expose the eight original Turn 13 combinations');
 check(manifest.interactiveMarks.every((mark) => /^13[a-h]$/.test(mark.sourceId)), 'animation bank source IDs must map to 13a–13h');
 check(manifest.interactiveMarks.some((mark) =>
@@ -67,10 +80,10 @@ check(manifest.interactiveMarks.some((mark) =>
   mark.accent === '#3FA9FF'
 ), 'canonical propagation variant 13c is not declared correctly');
 
-const canonical13c = 'data-body="grid" data-rings="shieldRing" data-wedge="shield" data-accent="#3FA9FF"';
-check(page.replace(/\s+/g, ' ').includes(canonical13c), 'the propagation page does not use original variant 13c declaratively');
-check(designPage.replace(/\s+/g, ' ').includes(canonical13c), 'the design catalog does not include original variant 13c');
-check((designPage.match(/<svg[^>]*data-drayker/g) || []).length === 9, 'design catalog must contain one hero mark and eight original bank entries');
+const canonicalNetwork = 'data-body="grid" data-rings="hairline" data-wedge="none" data-accent="#3FA9FF" data-shadow="1"';
+check(page.replace(/\s+/g, ' ').includes(canonicalNetwork), 'the propagation page does not use the standard Network grid configuration');
+check(designPage.includes('data-source-target="11b"') && designPage.includes('data-source-target="11c"') && designPage.includes('data-source-target="11d"'), 'design page must feature the original Earth, Sun and Black Hole source animations');
+check(designPage.indexOf('animations/#symbols') < designPage.indexOf('animations/#customization'), 'universal symbols must appear before customization examples');
 check(!page.includes('network-mesh.js'), 'landing page still loads the reimplemented network component');
 check(!page.includes('mark-presets.js'), 'landing page still loads invented presets');
 check(!page.includes('propagation-network.js'), 'landing page still loads the reimplemented animation mount');
@@ -80,7 +93,7 @@ check(page.includes('https://propagation.drayker.org/'), 'production canonical U
 check(page.includes('id="toolkit"'), 'toolkit section is missing');
 check(page.includes('id="paths"'), 'mission matcher section is missing');
 check(page.includes('id="library"'), 'design library entry section is missing');
-check(page.includes('design/#animation-bank'), 'landing page does not route to the canonical animation bank');
+check(page.includes('design/animations/'), 'landing page does not route to the structured animation catalog');
 check(designPage.includes('id="production-assets"'), 'production asset catalog is missing');
 check(designPage.includes('id="source-material"'), 'source material catalog is missing');
 
@@ -101,7 +114,7 @@ check(!componentContract.includes('drayker-theme'), 'component contract still re
 
 const checkLocalReferences = (file, html) => {
   const base = path.dirname(file);
-  const references = [...html.matchAll(/<(?:a|img|script|link)\b[^>]*(?:href|src)="([^"#][^"]*)"/g)]
+  const references = [...html.matchAll(/<(?:a|img|script|link|iframe)\b[^>]*(?:href|src)="([^"#][^"]*)"/g)]
     .map((match) => match[1])
     .filter((reference) => !/^[a-z]+:/i.test(reference))
     .map((reference) => decodeURIComponent(reference.split('#')[0].split('?')[0]));
@@ -111,6 +124,8 @@ const checkLocalReferences = (file, html) => {
 
 checkLocalReferences('index.html', page);
 checkLocalReferences('design/index.html', designPage);
+checkLocalReferences('design/animations/index.html', read('design/animations/index.html'));
+catalogEntries.forEach((entry) => checkLocalReferences(path.join('design', entry.page, 'index.html'), read(path.join('design', entry.page, 'index.html'))));
 
 const pagesWorkflow = read('.github/workflows/deploy-pages.yml');
 check(pagesWorkflow.includes('actions/configure-pages@v5'), 'Pages workflow does not configure GitHub Pages');
