@@ -22,9 +22,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@90..110,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/propagation.css">
   <script defer src="assets/js/drayker-mark.js"></script>
-  <script defer src="library/components/network-mesh.js"></script>
-  <script defer src="library/components/mark-presets.js"></script>
-  <script defer src="assets/js/propagation-network.js"></script>
   <script defer src="assets/js/site.js"></script>
 </head>
 <body>
@@ -46,7 +43,7 @@
         <a href="#roles">Ways to help</a>
         <a href="#paths">Mission finder</a>
         <a href="#toolkit">Field kit</a>
-        <a href="#library">Design library</a>
+        <a href="design/">Design library</a>
       </nav>
       <a class="header-cta" href="https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml">Join the network <span aria-hidden="true">↗</span></a>
     </div>
@@ -69,15 +66,22 @@
           </div>
         </div>
 
-        <figure class="network-stage" data-signal-field>
+        <figure class="network-stage canonical-mark-stage">
           <div class="network-meta" aria-hidden="true">
-            <span><i></i> LIVE NETWORK</span>
-            <span>DK / MESH 10D</span>
+            <span><i></i> ORIGINAL ENGINE / LIVE</span>
+            <span>VARIANT 13C · PROTECTION</span>
           </div>
-          <svg class="signal-network" data-propagation-network role="img" aria-label="Interactive Drayker network with signals moving between connected nodes"></svg>
+          <svg class="canonical-mark"
+               data-drayker
+               data-body="grid"
+               data-rings="shieldRing"
+               data-wedge="shield"
+               data-accent="#3FA9FF"
+               role="img"
+               aria-label="Original interactive Drayker protection mark from the Logo Variations catalog"></svg>
           <figcaption>
-            <span>Move your pointer across the field</span>
-            <span>Signal follows context</span>
+            <span>Move your pointer · the original mark follows</span>
+            <a href="design/#animation-bank">Inspect the canonical variant →</a>
           </figcaption>
           <div class="network-index" aria-hidden="true">N / 01</div>
         </figure>
@@ -251,101 +255,75 @@
 
     <section class="design-library" id="library" aria-labelledby="library-title">
       <div class="shell library-head">
-        <div class="section-tag"><span>05</span> REUSABLE DESIGN LIBRARY</div>
+        <div class="section-tag"><span>05</span> CANONICAL DESIGN LIBRARY</div>
         <div>
-          <h2 id="library-title">The design source, organized to be used again.</h2>
-          <p>The original Logo Variations sheet is preserved, but its useful parts now live as independent assets: engine, components, presets, tokens, examples and production-ready marks.</p>
+          <h2 id="library-title">Use the system.<br>Do not redraw it.</h2>
+          <p>The design package is now organized by purpose while preserving its source. Interactive marks use the original engine and its original declarative combinations; production marks are the supplied exports.</p>
         </div>
       </div>
 
-      <div class="shell library-stats" aria-label="Library inventory">
-        <div><strong>46</strong><span>logo exports</span></div>
-        <div><strong>06</strong><span>tested presets</span></div>
-        <div><strong>12</strong><span>organized source artifacts</span></div>
-        <div><strong>01</strong><span>machine-readable manifest</span></div>
+      <div class="shell library-provenance" aria-label="Canonical library inventory">
+        <div><strong>01</strong><span>untouched animation engine</span></div>
+        <div><strong>08</strong><span>original interactive combinations</span></div>
+        <div><strong>46</strong><span>production logo exports</span></div>
+        <div><strong>100%</strong><span>source sheet preserved</span></div>
       </div>
 
-      <div class="shell artifact-grid">
-        <article class="artifact artifact-engine">
-          <div class="artifact-label"><span>01 / ENGINE</span><span>JS · ZERO BUILD</span></div>
-          <div class="artifact-visual artifact-code" aria-hidden="true">
-            <code><b>Drayker</b>.create(<i>'#mark'</i>, {<br>&nbsp;&nbsp;body: <i>'geo'</i>,<br>&nbsp;&nbsp;rings: <i>'hairline'</i>,<br>&nbsp;&nbsp;accent: <i>'#3FA9FF'</i><br>});</code>
-          </div>
-          <h3>Interactive mark engine</h3>
-          <p>The original dependency-free renderer, with geometry, cursor response, static export and documented extension points.</p>
-          <div class="artifact-links">
-            <a href="assets/js/drayker-mark.js" download>Download engine ↓</a>
-            <a href="library/docs/DRAYKER-MARK.md">Read API notes →</a>
-          </div>
-        </article>
-
-        <article class="artifact artifact-network">
-          <div class="artifact-label"><span>02 / COMPONENT</span><span>DK NETWORK · 10D</span></div>
-          <div class="artifact-visual artifact-network-preview" aria-hidden="true">
-            <img src="assets/brand/logo/escuro/escopo/drayker-network.svg" alt="" width="160" height="160">
-            <span></span><span></span><span></span>
-          </div>
-          <h3>Network mesh component</h3>
-          <p>The animation used on this page is isolated as a reusable body, with a standalone example and deterministic pulses.</p>
-          <div class="artifact-links">
-            <a href="library/components/network-mesh.js" download>Download component ↓</a>
-            <a href="library/examples/network-mesh.html">Open example ↗</a>
-          </div>
-        </article>
-
-        <article class="artifact artifact-system">
-          <div class="artifact-label"><span>03 / SYSTEM</span><span>CSS + JS</span></div>
-          <div class="artifact-visual scope-palette" aria-label="Drayker scope color tokens">
-            <i style="--scope:#ff5500"></i><i style="--scope:#5ce02e"></i><i style="--scope:#ff8a00"></i><i style="--scope:#9c8cff"></i><i style="--scope:#3fa9ff"></i><i style="--scope:#14e0c0"></i><i style="--scope:#e8ecf5"></i><i style="--scope:#ffcb6b"></i>
-          </div>
-          <h3>Tokens and mark presets</h3>
-          <p>Named public colors and six tested configurations turn visual decisions from the design sheet into importable source.</p>
-          <div class="artifact-links">
-            <a href="library/tokens/drayker.css" download>CSS tokens ↓</a>
-            <a href="library/components/mark-presets.js" download>JS presets ↓</a>
-          </div>
-        </article>
-
-        <article class="artifact artifact-source">
-          <div class="artifact-label"><span>04 / SOURCE</span><span>ARCHIVE + MANIFEST</span></div>
-          <div class="artifact-visual source-stack" aria-hidden="true">
-            <span>HTML</span><span>MD</span><span>JSON</span><span>SVG</span>
-          </div>
-          <h3>Original decisions and handoff</h3>
-          <p>The complete variations sheet, design handoff, engine documentation and artifact index remain inspectable.</p>
-          <div class="artifact-links">
-            <a href="library/source/drayker-logo-variations.html">Open design sheet ↗</a>
-            <a href="library/manifest.json">Read manifest →</a>
-          </div>
-        </article>
+      <div class="shell canonical-feature">
+        <div class="canonical-feature-copy">
+          <span>SELECTED FOR PROPAGATION / ORIGINAL 13C</span>
+          <h3>Protection makes the most sense here.</h3>
+          <p>The propagation page uses the existing <code>grid + shieldRing + shield</code> combination in Dk Network blue. Nothing was extracted, approximated or reimplemented.</p>
+          <pre><code>&lt;svg data-drayker
+  data-body="grid"
+  data-rings="shieldRing"
+  data-wedge="shield"
+  data-accent="#3FA9FF"&gt;
+&lt;/svg&gt;</code></pre>
+        </div>
+        <div class="canonical-feature-mark">
+          <svg data-drayker
+               data-body="grid"
+               data-rings="shieldRing"
+               data-wedge="shield"
+               data-accent="#3FA9FF"
+               aria-hidden="true"></svg>
+          <span>CURSOR-REACTIVE · ORIGINAL ENGINE</span>
+        </div>
       </div>
 
-      <div class="shell scope-library">
-        <div class="scope-library-copy">
-          <span>OFFICIAL SCOPE MARKS</span>
-          <h3>Eight scopes. One geometry.</h3>
-          <p>Each mark is available for light and dark surfaces. Use the scope color; never recolor the orbital structure.</p>
-        </div>
-        <div class="scope-marks" aria-label="Official Drayker scope marks">
-          <a href="assets/brand/logo/escopo/drayker-emergence.svg" download><img src="assets/brand/logo/escopo/drayker-emergence.svg" alt="Emergence mark"><span>Emergence</span></a>
-          <a href="assets/brand/logo/escopo/drayker-dk.svg" download><img src="assets/brand/logo/escopo/drayker-dk.svg" alt="Dk mark"><span>Dk</span></a>
-          <a href="assets/brand/logo/escopo/drayker-daf.svg" download><img src="assets/brand/logo/escopo/drayker-daf.svg" alt="DAF mark"><span>DAF</span></a>
-          <a href="assets/brand/logo/escopo/drayker-bsdk.svg" download><img src="assets/brand/logo/escopo/drayker-bsdk.svg" alt="BSDK mark"><span>BSDK</span></a>
-          <a href="assets/brand/logo/escopo/drayker-network.svg" download><img src="assets/brand/logo/escopo/drayker-network.svg" alt="Dk Network mark"><span>Network</span></a>
-          <a href="assets/brand/logo/escopo/drayker-lcrypt.svg" download><img src="assets/brand/logo/escopo/drayker-lcrypt.svg" alt="Living Cryptography mark"><span>LCrypt</span></a>
-          <a href="assets/brand/logo/escopo/drayker-uid.svg" download><img src="assets/brand/logo/escopo/drayker-uid.svg" alt="UID mark"><span>UID</span></a>
-          <a href="assets/brand/logo/escopo/drayker-dfm.svg" download><img src="assets/brand/logo/escopo/drayker-dfm.svg" alt="DFM mark"><span>DFM</span></a>
-        </div>
+      <div class="shell reuse-paths">
+        <article>
+          <span>01 / INTERACTIVE</span>
+          <h3>Choose a catalogued combination.</h3>
+          <p>Browse the eight combinations already tested in the original design sheet. Copy only their declarative attributes and load the untouched engine.</p>
+          <a href="design/#animation-bank">Open the animation bank →</a>
+        </article>
+        <article>
+          <span>02 / PRODUCTION</span>
+          <h3>Use the supplied SVG or icon.</h3>
+          <p>Select by surface, scope and size. The catalog exposes light, dark, mono, signature and app-icon families with the original usage rules.</p>
+          <a href="design/#production-assets">Browse production assets →</a>
+        </article>
+        <article>
+          <span>03 / SOURCE</span>
+          <h3>Inspect the decision record.</h3>
+          <p>The complete Logo Variations HTML, engine documentation and supporting handoff documents remain available as source material.</p>
+          <a href="design/#source-material">Open source material →</a>
+        </article>
       </div>
 
       <div class="shell library-download">
         <div>
-          <span>COMPLETE PACKAGE</span>
-          <h3>Take the organized library with you.</h3>
+          <span>REUSABLE BY DESIGN</span>
+          <h3>One catalog. Original artifacts.</h3>
         </div>
         <div>
-          <p>Includes components, examples, source documents, tokens, manifest, texture and the full production logo collection.</p>
-          <a class="button button-solid" href="assets/brand/Drayker-Design-Library.zip" download>Download design library <span aria-hidden="true">↓</span></a>
+          <p>Open the live catalog for code, usage guidance and direct files, or download the self-contained package for offline reuse.</p>
+          <div class="library-actions">
+            <a class="button button-solid" href="design/">Open design library <span aria-hidden="true">→</span></a>
+            <a class="arrow-link" href="assets/brand/Drayker-Design-Library.zip" download>Download complete package ↓</a>
+          </div>
         </div>
       </div>
     </section>
