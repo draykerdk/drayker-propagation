@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#08080A">
+<link rel="shortcut icon" href="https://drayker.org/favicon.ico?v=20260811">
+<link rel="icon" href="https://drayker.org/favicon.ico?v=20260811" type="image/x-icon" sizes="32x32">
+<link rel="icon" href="https://drayker.org/assets/logo/drayker-favicon.svg?v=20260811" type="image/svg+xml" sizes="any">
+<link rel="icon" href="https://drayker.org/assets/logo/kit/favicon-32.png?v=20260811" type="image/png" sizes="32x32">
+<link rel="icon" href="https://drayker.org/assets/logo/kit/favicon-16.png?v=20260811" type="image/png" sizes="16x16">
+<link rel="apple-touch-icon" href="https://drayker.org/assets/logo/kit/apple-touch-icon.png?v=20260811" sizes="180x180">
+{% comment %}
+  Meta written out by hand rather than through {% seo %}: the theme has to build in
+  thirteen repositories whose plugin lists we do not want to depend on. A repo that does
+  enable jekyll-seo-tag will simply have this as its baseline.
+{% endcomment %}
+<title>{% if page.title and page.title != site.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title | default: 'Drayker' }}{% endif %}</title>
+{% if site.description %}<meta name="description" content="{{ site.description | strip_html | truncate: 300 }}">{% endif %}
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+{% if site.description %}<meta property="og:description" content="{{ site.description | strip_html | truncate: 300 }}">{% endif %}
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="https://drayker.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Drayker mark: an orange sphere crossed by two rings.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://drayker.org/og.png">
+{% comment %}
+  The documentation sites share one card image, hosted on the portal. A stale translation
+  should not be indexed next to the English page it no longer matches, so those are marked
+  noindex until they are brought up to date — there are open functions for that.
+{% endcomment %}
+{% if page.path contains 'README.PT' or page.path contains 'README.ES' or page.path contains 'CONTRIBUTING.PT' %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Drayker documentation theme — the same tokens as drayker.org and drayker.com.
+   Canvas #08080A · surface #0C0C0F · border #18181E · text #EDECF0 · muted #8585A0
+   accent #FF5500 · display Archivo · technical JetBrains Mono · width 1320px  */
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#08080A;color:#EDECF0;font-family:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif;font-size:16.5px;line-height:1.68;-webkit-font-smoothing:antialiased}
+a{color:#FF5500;text-decoration:none}
+a:hover{color:#FF7A33;text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid #FF5500;outline-offset:3px}
+::selection{background:#FF5500;color:#08080A}
+
+.dk-head{position:sticky;top:0;z-index:50;background:rgba(11,11,12,0.9);backdrop-filter:blur(14px);border-bottom:1px solid #18181E}
+.dk-head-in{max-width:1320px;margin:0 auto;padding:13px clamp(16px,4vw,44px);display:flex;align-items:center;gap:clamp(14px,2.6vw,32px);flex-wrap:wrap}
+.dk-brand{display:flex;align-items:center;gap:10px;color:#EDECF0;flex-shrink:0}
+.dk-brand:hover{color:#EDECF0;text-decoration:none}
+.dk-brand strong{font-size:17px;font-weight:600;letter-spacing:-0.02em}
+.dk-brand span{font-family:'JetBrains Mono',monospace;font-size:10px;color:#6A6A80;letter-spacing:0.08em;padding-top:3px}
+.dk-head-links{display:flex;align-items:center;gap:clamp(10px,1.8vw,20px);flex-wrap:wrap;margin-left:auto}
+.dk-head-links a{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.1em;color:#65657A;border:1px solid #222230;padding:6px 10px}
+.dk-head-links a:hover{border-color:#FF5500;color:#FF5500;text-decoration:none}
+
+.dk-hero{border-bottom:1px solid #18181E}
+.dk-hero-in{max-width:1320px;margin:0 auto;padding:clamp(38px,6vw,76px) clamp(16px,4vw,44px) clamp(28px,4vw,46px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:center}
+/* The mark keeps the hero company only where there is room for it: below 900px the
+   documentation is the page, and a decorative sphere would just push it down. */
+@media (min-width:900px){.dk-hero-in{grid-template-columns:minmax(0,1.35fr) minmax(0,0.65fr)}}
+.dk-hero-mark{display:none;justify-content:center}
+@media (min-width:900px){.dk-hero-mark{display:flex}}
+.dk-hero-mark svg{width:100%;max-width:260px;height:auto;display:block}
+.dk-kicker{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#FF5500;margin-bottom:18px}
+.dk-hero h1{font-size:clamp(32px,5vw,64px);line-height:1;letter-spacing:-0.04em;font-weight:700;margin:0;max-width:22ch;text-wrap:balance}
+.dk-hero p{font-size:clamp(15px,1.2vw,18px);line-height:1.62;color:#9898A8;max-width:64ch;margin:20px 0 0;text-wrap:pretty}
+
+main{display:block}
+.dk-doc{max-width:1320px;margin:0 auto;padding:clamp(34px,5vw,64px) clamp(16px,4vw,44px) clamp(48px,7vw,96px)}
+.dk-doc>*:first-child{margin-top:0}
+.dk-doc h1,.dk-doc h2,.dk-doc h3,.dk-doc h4{letter-spacing:-0.025em;line-height:1.14;margin:2.2em 0 0.7em;font-weight:600;text-wrap:balance}
+.dk-doc h1{font-size:clamp(28px,3.6vw,44px);font-weight:700}
+.dk-doc h2{font-size:clamp(23px,2.6vw,32px);padding-top:0.5em;border-top:1px solid #18181E}
+.dk-doc h3{font-size:19px}
+.dk-doc h4{font-size:16.5px;color:#D2D0D8}
+.dk-doc p{margin:0 0 1.15em;color:#B8B6C2;max-width:78ch;text-wrap:pretty}
+.dk-doc strong{color:#EDECF0;font-weight:600}
+.dk-doc ul,.dk-doc ol{margin:0 0 1.15em;padding-left:1.4em;max-width:78ch;color:#B8B6C2}
+.dk-doc li{margin-bottom:0.42em}
+.dk-doc li::marker{color:#6A6A80}
+.dk-doc blockquote{margin:0 0 1.15em;padding:2px 0 2px 20px;border-left:2px solid #FF5500;color:#9898A8}
+.dk-doc hr{border:0;border-top:1px solid #18181E;margin:2.4em 0}
+.dk-doc img{max-width:100%;height:auto}
+.dk-doc code{font-family:'JetBrains Mono',monospace;font-size:0.86em;background:#111115;border:1px solid #1E1E28;padding:1px 5px;color:#D2D0D8}
+.dk-doc pre{background:#0C0C0F;border:1px solid #18181E;padding:18px 20px;overflow-x:auto;margin:0 0 1.4em;line-height:1.55}
+.dk-doc pre code{background:none;border:0;padding:0;font-size:13.5px;color:#B8B6C2}
+.dk-doc table{border-collapse:collapse;width:100%;margin:0 0 1.4em;font-size:14.5px;display:block;overflow-x:auto}
+.dk-doc th,.dk-doc td{border:1px solid #18181E;padding:10px 14px;text-align:left;vertical-align:top}
+.dk-doc th{background:#0C0C0F;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:#8585A0;font-weight:500}
+.dk-doc td{color:#B8B6C2}
+
+.dk-foot{border-top:1px solid #18181E;background:#0C0C0F}
+.dk-foot-in{max-width:1320px;margin:0 auto;padding:clamp(30px,4vw,52px) clamp(16px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:clamp(22px,4vw,44px)}
+.dk-foot-col{display:flex;flex-direction:column;gap:9px}
+.dk-foot-t{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#6A6A80;margin-bottom:4px}
+.dk-foot a{font-size:13.5px;color:#9898A8}
+.dk-foot a:hover{color:#FF5500}
+.dk-foot-note{font-size:13px;color:#65657A;line-height:1.6;max-width:34ch}
+.dk-foot-bar{border-top:1px solid #18181E}
+.dk-foot-bar div{max-width:1320px;margin:0 auto;padding:18px clamp(16px,4vw,44px);font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#6A6A80;letter-spacing:0.06em;display:flex;gap:16px;justify-content:space-between;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="dk-head">
+  <div class="dk-head-in">
+    <a class="dk-brand" href="https://drayker.org">
+      <!-- Flat two-tone mark: two crossed ellipses (ring) + solid circle (sphere) + one dark
+           wedge (shadow). Same geometry as the portal header, no gradients, no script. -->
+      <svg viewBox="-106 -106 212 212" width="28" height="28" style="display:block" aria-hidden="true">
+        <ellipse cx="0" cy="0" rx="119" ry="38" transform="rotate(45)" fill="none" stroke="#8585A0" stroke-width="3.4"></ellipse>
+        <ellipse cx="0" cy="0" rx="119" ry="38" transform="rotate(-45)" fill="none" stroke="#8585A0" stroke-width="3.4"></ellipse>
+        <circle r="100" fill="#FF5500"></circle>
+        <path d="M -84.4 -53.7 A 119 38 45 0 0 0 51.2 A 119 38 -45 0 0 84.4 -53.7 A 100 100 0 0 0 -84.4 -53.7 Z M 0 51.2 A 119 38 45 0 0 53.7 84.4 A 100 100 0 0 1 -53.7 84.4 A 119 38 -45 0 0 0 51.2 Z" fill="#000000"></path>
+      </svg>
+      <strong>Drayker</strong>
+      <span>{{ site.dk_subdomain | default: 'docs' }}</span>
+    </a>
+    <nav class="dk-head-links" aria-label="Drayker sites">
+      <a href="https://drayker.org">VOLUNTEERS PORTAL</a>
+      <a href="{{ site.dk_repo | default: 'https://github.com/draykerdk' }}">REPOSITORY</a>
+    </nav>
+  </div>
+</header>
+
+<div class="dk-hero">
+  <div class="dk-hero-in">
+    <div>
+      <div class="dk-kicker">{{ site.dk_kicker | default: 'Documentation' }}</div>
+      <h1>{{ site.title | default: 'Drayker' }}</h1>
+      {% if site.description %}<p>{{ site.description }}</p>{% endif %}
+    </div>
+    {% comment %}
+      The live mark, from the one engine that draws every Drayker symbol. Body, rings,
+      wedge and scope colour come from the repository's own _config.yml, so a site
+      changes its own presentation without the theme learning about it. The colour must
+      be one of the scope colours already in use (DRAYKER-MARK.md §7) — never a new one.
+      With JavaScript off the container stays empty and the layout simply closes up.
+    {% endcomment %}
+    <div class="dk-hero-mark" aria-hidden="true">
+      <svg data-drayker
+           data-body="{{ site.dk_body | default: 'plain' }}"
+           data-rings="{{ site.dk_rings | default: 'hull' }}"
+           data-wedge="{{ site.dk_wedge | default: 'extract' }}"
+           data-accent="{{ site.dk_accent | default: '#FF5500' }}"
+           data-ring-radius="120"></svg>
+    </div>
+  </div>
+</div>
+
+<main>
+  <article class="dk-doc">
+    {{ content }}
+  </article>
+</main>
+
+<footer class="dk-foot">
+  <div class="dk-foot-in">
+    <div class="dk-foot-col">
+      <div class="dk-foot-t">DRAYKER</div>
+      <div class="dk-foot-note">Go beyond things. Do more with less.</div>
+    </div>
+    <div class="dk-foot-col">
+      <div class="dk-foot-t">SYSTEM</div>
+      <a href="https://dfmp.drayker.org">DFM Protocol</a>
+      <a href="https://dknowledge.drayker.org">Dknowledge</a>
+      <a href="https://drayker.org/eco/">Ecosystem</a>
+      <a href="https://drayker.org/economy/">Economy &amp; reputation</a>
+    </div>
+    <div class="dk-foot-col">
+      <div class="dk-foot-t">PARTICIPATE</div>
+      <a href="https://drayker.org/fn/">Open functions</a>
+      <a href="https://drayker.org/join/">Volunteer</a>
+      <a href="https://forum.drayker.org">Forum</a>
+      <a href="https://github.com/draykerdk">GitHub</a>
+    </div>
+  </div>
+  <div class="dk-foot-bar">
+    <div>
+      <span>SITE CONTENT CC BY 4.0 · OPEN SOURCE · NON-PROFIT</span>
+      <span>{{ site.dk_subdomain | default: 'drayker.org' }}</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://drayker.org/drayker-mark.js" defer></script>
+<script>
+  // Reduced motion is a preference about movement, not about the mark: the symbol is
+  // still drawn, it simply stops following the cursor and holds a fixed gaze.
+  document.addEventListener('DOMContentLoaded', function () {
+    try {
+      if (!window.matchMedia || !window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      document.querySelectorAll('[data-drayker]').forEach(function (el) { el.setAttribute('data-animate', 'false'); });
+    } catch (e) {}
+  });
+</script>
+</body>
+</html>
