@@ -22,6 +22,8 @@ const page = read('index.html');
 const designPage = read('design/index.html');
 const catalogPage = read('design/animations/index.html');
 const logoPage = read('design/logos/index.html');
+const readme = read('README.md');
+const deploymentGuide = read('docs/deployment.md');
 const manifest = JSON.parse(read('design/manifest.json'));
 const catalog = JSON.parse(read('design/animations/catalog-data.json'));
 const componentContract = read('.drayker/component.yml');
@@ -115,6 +117,11 @@ check(!page.includes('network-mesh.js') && !page.includes('mark-presets.js') && 
 
 check(page.includes('Drayker Propagation'), 'page title does not identify the propagation site');
 check(page.includes('https://propagation.drayker.org/'), 'production canonical URL is missing');
+check(page.includes('people keep creating, discovering and learning while intelligence carries the rest'), 'landing copy is not aligned with the public Drayker thesis');
+check(page.includes('https://drayker.org/docs/') && page.includes('https://drayker.org/fn/'), 'landing page is not connected to the clean portal routes');
+check(!page.includes('https://drayker.org/#org/'), 'landing page still publishes legacy hash routes');
+check(readme.includes('The production address is') && !readme.includes('The intended production address is'), 'README still describes the deployed site as hypothetical');
+check(!deploymentGuide.includes('Rename `draykerdk/drayker-theme`'), 'deployment guide still instructs readers to repeat the completed repository rename');
 check(page.includes('id="toolkit"') && page.includes('id="paths"') && page.includes('id="library"'), 'a propagation toolkit section is missing');
 check(page.includes('design/animations/') && page.includes('design/logos/'), 'landing page does not route to both complete design catalogs');
 check(designPage.includes('id="production-assets"') && designPage.includes('id="source-material"'), 'design overview is missing assets or source material');
