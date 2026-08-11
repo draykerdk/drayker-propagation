@@ -13,6 +13,8 @@ const page = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 check(exists('index.html'), 'index.html is missing');
 check(exists('assets/css/site.css'), 'site stylesheet is missing');
 check(exists('assets/js/site.js'), 'site script is missing');
+check(exists('assets/js/drayker-mark.js'), 'Drayker mark engine is missing');
+check(exists('assets/js/propagation-network.js'), 'propagation network animation is missing');
 check(exists('docs/brand-guide.md'), 'brand guide is missing');
 check(exists('docs/brand-guide.html'), 'static brand guide is missing');
 check(exists('docs/deployment.md'), 'deployment guide is missing');
@@ -27,6 +29,9 @@ check(page.includes('https://propagation.drayker.org/'), 'production canonical U
 check(page.includes('id="toolkit"'), 'toolkit section is missing');
 check(page.includes('id="paths"'), 'mission matcher section is missing');
 check(page.includes('id="brand"'), 'brand section is missing');
+check(page.includes('data-propagation-network'), 'interactive signal field is missing');
+check(page.includes('assets/js/drayker-mark.js'), 'mark engine is not loaded');
+check(page.includes('assets/js/propagation-network.js'), 'propagation animation is not loaded');
 check(!page.includes('TODO'), 'unfinished TODO text remains in the landing page');
 check(!page.includes('example.com'), 'placeholder URL remains in the landing page');
 const pagesWorkflow = exists('.github/workflows/deploy-pages.yml')

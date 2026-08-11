@@ -9,6 +9,7 @@ The site gives a volunteer a clear first move without turning outreach into hype
 - A responsive GitHub Pages landing page in [`index.html`](index.html).
 - A client-side mission matcher that suggests a small, source-led starting task based on a volunteer's strength and available time.
 - Ready-to-copy, factual message starters — each points people back to primary sources.
+- An interactive, reduced-motion-safe signal field based on the official **Dk Network · mesh (10d)** variation, with no third-party runtime dependency.
 - A reusable logo kit in [`assets/brand/logo`](assets/brand/logo), including light, dark, mono, signature and app-icon variants.
 - An English [brand guide](docs/brand-guide.md) and downloadable kit for contributors.
 - A zero-dependency static integrity check.
