@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:wdth,wght@75..125,400..700&family=Anybody:wdth,wght@75..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Sans:wght@400;500;600;700&family=Schibsted+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
-<script src="../../assets/js/drayker-mark.js"></script>
+<script src="drayker-mark.js"></script>
 <style>
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:#08080A;color:#EDECF0;font-family:Archivo,'Space Grotesk',sans-serif;-webkit-font-smoothing:antialiased}
@@ -33,39 +33,39 @@
   <div style="background:#08080A;border:1px solid #18181E;padding:30px 28px;margin-bottom:20px">
     <div class="mono" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6A6A80;margin-bottom:20px">escuro/ · os arquivos de verdade, via &lt;img&gt;</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:24px">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="../../assets/brand/logo/escuro/drayker-marca.svg" alt="Marca no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">marca</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="../../assets/brand/logo/escuro/drayker-icone.svg" alt="Ícone compacto no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">icone · &lt;20 px</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="../../assets/brand/logo/escuro/drayker-sem-cunha.svg" alt="Sem cunha no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">sem-cunha</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="../../assets/brand/logo/escuro/drayker-orbita-larga.svg" alt="Órbita larga no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">orbita-larga</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="../../assets/brand/logo/escuro/drayker-favicon.svg" alt="Favicon no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">favicon</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo/escuro/drayker-marca.svg" alt="Marca no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">marca</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo/escuro/drayker-icone.svg" alt="Ícone compacto no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">icone · &lt;20 px</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo/escuro/drayker-sem-cunha.svg" alt="Sem cunha no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">sem-cunha</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo/escuro/drayker-orbita-larga.svg" alt="Órbita larga no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">orbita-larga</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo/escuro/drayker-favicon.svg" alt="Favicon no escuro" style="width:100%;max-width:120px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">favicon</div></div>
     </div>
   </div>
 
   <div style="background:#08080A;border:1px solid #18181E;padding:26px 28px;margin-bottom:20px">
     <div class="mono" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6A6A80;margin-bottom:18px">escuro/escopo/ · a cunha continua preta mesmo no globo mais claro</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(90px,1fr));gap:18px">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-emergence.svg" alt="Emergence" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">emergence</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-dk.svg" alt="Dk" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">dk</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-daf.svg" alt="DAF" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">daf</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-bsdk.svg" alt="BSDK" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">bsdk</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-network.svg" alt="Dk Network" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">network</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-lcrypt.svg" alt="LCrypt" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">lcrypt</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-uid.svg" alt="UID" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">uid</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escuro/escopo/drayker-dfm.svg" alt="DFM / DFMP" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">dfm</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-emergence.svg" alt="Emergence" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">emergence</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-dk.svg" alt="Dk" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">dk</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-daf.svg" alt="DAF" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">daf</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-bsdk.svg" alt="BSDK" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">bsdk</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-network.svg" alt="Dk Network" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">network</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-lcrypt.svg" alt="LCrypt" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">lcrypt</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-uid.svg" alt="UID" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">uid</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escuro/escopo/drayker-dfm.svg" alt="DFM / DFMP" style="width:100%;max-width:84px;display:block"><div class="mono" style="font-size:10px;color:#5E5E74">dfm</div></div>
     </div>
   </div>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#18181E;border:1px solid #18181E;margin-bottom:64px">
     <div style="background:#F2F1EE;color:#08080A;padding:24px;display:flex;align-items:center;gap:18px">
-      <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:56px;height:56px;display:block;flex:none">
+      <img src="assets/logo/drayker-marca.svg" alt="" style="width:56px;height:56px;display:block;flex:none">
       <div><div style="font-family:Archivo,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.012em;line-height:1.1">Drayker</div><div class="mono" style="font-size:10px;color:#8A8A96;margin-top:6px">fundo claro · assets/logo/</div></div>
     </div>
     <div style="background:#08080A;color:#EDECF0;padding:24px;display:flex;align-items:center;gap:18px">
-      <img src="../../assets/brand/logo/escuro/drayker-marca.svg" alt="" style="width:56px;height:56px;display:block;flex:none">
+      <img src="assets/logo/escuro/drayker-marca.svg" alt="" style="width:56px;height:56px;display:block;flex:none">
       <div><div style="font-family:Archivo,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.012em;line-height:1.1">Drayker</div><div class="mono" style="font-size:10px;color:#5E5E74;margin-top:6px">fundo escuro · assets/logo/escuro/</div></div>
     </div>
     <div style="background:#FF5500;color:#08080A;padding:24px;display:flex;align-items:center;gap:18px">
-      <img src="../../assets/brand/logo/mono/drayker-vazado-preto.svg" alt="" style="width:56px;height:56px;display:block;flex:none">
+      <img src="assets/logo/mono/drayker-vazado-preto.svg" alt="" style="width:56px;height:56px;display:block;flex:none">
       <div><div style="font-family:Archivo,sans-serif;font-weight:600;font-size:24px;letter-spacing:-0.012em;line-height:1.1">Drayker</div><div class="mono" style="font-size:10px;color:#7A2A00;margin-top:6px">sobre cor e foto · mono/vazado</div></div>
     </div>
   </div>
@@ -93,7 +93,7 @@
     </div>
     <div id="22d" style="background:#08080A;color:#EDECF0;padding:26px 24px 22px;display:flex;flex-direction:column;gap:16px">
       <div style="display:flex;align-items:baseline;gap:10px"><div class="mono" style="font-size:11px;color:#08080A;background:#EDECF0;padding:2px 6px">22d</div><div style="font-size:17px;font-weight:600;letter-spacing:-0.02em">Vazado · já existe</div></div>
-      <img src="../../assets/brand/logo/mono/drayker-vazado-branco.svg" alt="Vazado branco" style="width:100%;max-width:150px;display:block;margin:0 auto">
+      <img src="assets/logo/mono/drayker-vazado-branco.svg" alt="Vazado branco" style="width:100%;max-width:150px;display:block;margin:0 auto">
       <p style="font-size:13px;line-height:1.55;color:#8585A0;margin:0">Uma tinta só, sem laranja: disco branco com a cunha furada. É o que resolve foto, vídeo e gravação — mas abre mão da cor do escopo.</p>
     </div>
   </div>
@@ -139,19 +139,19 @@
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1px;background:#18181E;border:1px solid #18181E;margin-bottom:20px">
     <div style="background:#F2F1EE;padding:28px 24px;display:flex;flex-direction:column;gap:14px;align-items:center">
-      <img src="../../assets/brand/logo/assinatura/drayker-horizontal.svg" alt="Assinatura titular" style="width:100%;max-width:250px;display:block">
+      <img src="assets/logo/assinatura/drayker-horizontal.svg" alt="Assinatura titular" style="width:100%;max-width:250px;display:block">
       <div class="mono" style="font-size:10px;color:#8A8A96;text-align:center">horizontal.svg · titular</div>
     </div>
     <div style="background:#F2F1EE;padding:28px 24px;display:flex;flex-direction:column;gap:14px;align-items:center">
-      <img src="../../assets/brand/logo/assinatura/drayker-vertical.svg" alt="Assinatura empilhada" style="width:100%;max-width:150px;display:block">
+      <img src="assets/logo/assinatura/drayker-vertical.svg" alt="Assinatura empilhada" style="width:100%;max-width:150px;display:block">
       <div class="mono" style="font-size:10px;color:#8A8A96;text-align:center">vertical.svg · empilhada</div>
     </div>
     <div style="background:#F2F1EE;padding:28px 24px;display:flex;flex-direction:column;gap:14px;align-items:center">
-      <img src="../../assets/brand/logo/assinatura/drayker-tecnica.svg" alt="Assinatura técnica" style="width:100%;max-width:230px;display:block">
+      <img src="assets/logo/assinatura/drayker-tecnica.svg" alt="Assinatura técnica" style="width:100%;max-width:230px;display:block">
       <div class="mono" style="font-size:10px;color:#8A8A96;text-align:center">tecnica.svg · placa, casco, rodapé</div>
     </div>
     <div style="background:#08080A;padding:28px 24px;display:flex;flex-direction:column;gap:14px;align-items:center">
-      <img src="../../assets/brand/logo/assinatura/drayker-tecnica-branco.svg" alt="Assinatura técnica no escuro" style="width:100%;max-width:230px;display:block">
+      <img src="assets/logo/assinatura/drayker-tecnica-branco.svg" alt="Assinatura técnica no escuro" style="width:100%;max-width:230px;display:block">
       <div class="mono" style="font-size:10px;color:#5E5E74;text-align:center">tecnica-branco.svg · só a palavra muda</div>
     </div>
   </div>
@@ -316,10 +316,10 @@
   <div style="background:#F2F1EE;color:#08080A;border:1px solid #18181E;padding:26px 28px;margin-bottom:64px;display:flex;flex-wrap:wrap;align-items:center;gap:28px">
     <div class="mono" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#55555F;flex-basis:100%">Regra do ícone · a logo é o ícone</div>
     <div style="display:flex;align-items:flex-end;gap:22px">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:64px;height:64px;display:block"><div class="mono" style="font-size:10px;color:#55555F">64 · logo</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:40px;height:40px;display:block"><div class="mono" style="font-size:10px;color:#55555F">40 · logo</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:24px;height:24px;display:block"><div class="mono" style="font-size:10px;color:#55555F">24 · logo</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logo/drayker-icone.svg" alt="" style="width:16px;height:16px;display:block"><div class="mono" style="font-size:10px;color:#FF5500">16 · exceção</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/logo/drayker-marca.svg" alt="" style="width:64px;height:64px;display:block"><div class="mono" style="font-size:10px;color:#55555F">64 · logo</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/logo/drayker-marca.svg" alt="" style="width:40px;height:40px;display:block"><div class="mono" style="font-size:10px;color:#55555F">40 · logo</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/logo/drayker-marca.svg" alt="" style="width:24px;height:24px;display:block"><div class="mono" style="font-size:10px;color:#55555F">24 · logo</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/logo/drayker-icone.svg" alt="" style="width:16px;height:16px;display:block"><div class="mono" style="font-size:10px;color:#FF5500">16 · exceção</div></div>
     </div>
     <p style="font-size:13px;line-height:1.6;color:#55555F;margin:0;flex:1 1 240px;min-width:200px">De 20 px para cima é sempre <code class="mono">drayker-marca.svg</code> — a logo inteira, sem versão alternativa. O compacto (<code class="mono">drayker-icone.svg</code>) só existe para 16 px de favicon, onde os aros da órbita larga fecham e sujam. Se der para usar a logo, usa a logo.</p>
   </div>
@@ -330,30 +330,30 @@
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#18181E;border:1px solid #18181E;margin-bottom:20px">
     <div style="background:#F2F1EE;padding:26px 24px;display:flex;flex-direction:column;gap:16px;align-items:center">
-      <img src="../../assets/brand/logo/mono/drayker-1cor-preto.svg" alt="Uma cor, preto" style="width:100%;max-width:130px;display:block">
+      <img src="assets/logo/mono/drayker-1cor-preto.svg" alt="Uma cor, preto" style="width:100%;max-width:130px;display:block">
       <div style="text-align:center"><div style="font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#08080A">Uma tinta · positivo</div><div class="mono" style="font-size:10px;color:#8A8A96;margin-top:5px">1cor-preto.svg</div></div>
       <p style="font-size:12.5px;line-height:1.55;color:#55555F;margin:0;text-align:center">O globo vira o papel. Gravação, carimbo, fatura, serigrafia de uma cor.</p>
     </div>
     <div style="background:#08080A;padding:26px 24px;display:flex;flex-direction:column;gap:16px;align-items:center">
-      <img src="../../assets/brand/logo/mono/drayker-1cor-branco.svg" alt="Uma cor, branco" style="width:100%;max-width:130px;display:block">
+      <img src="assets/logo/mono/drayker-1cor-branco.svg" alt="Uma cor, branco" style="width:100%;max-width:130px;display:block">
       <div style="text-align:center"><div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">Uma tinta · negativo</div><div class="mono" style="font-size:10px;color:#5E5E74;margin-top:5px">1cor-branco.svg</div></div>
       <p style="font-size:12.5px;line-height:1.55;color:#8585A0;margin:0;text-align:center">Mesmo arquivo com a tinta branca, para preto e prensa a quente.</p>
     </div>
     <div style="background:#08080A;padding:26px 24px;display:flex;flex-direction:column;gap:16px;align-items:center">
-      <img src="../../assets/brand/logo/mono/drayker-vazado-branco.svg" alt="Vazado branco" style="width:100%;max-width:130px;display:block">
+      <img src="assets/logo/mono/drayker-vazado-branco.svg" alt="Vazado branco" style="width:100%;max-width:130px;display:block">
       <div style="text-align:center"><div style="font-size:15px;font-weight:600;letter-spacing:-0.01em">Vazado</div><div class="mono" style="font-size:10px;color:#5E5E74;margin-top:5px">vazado-branco.svg</div></div>
       <p style="font-size:12.5px;line-height:1.55;color:#8585A0;margin:0;text-align:center">Disco cheio com a cunha furada de verdade — o fundo aparece pelo buraco. Sobre foto é o único que funciona.</p>
     </div>
     <div style="background:#FF5500;padding:26px 24px;display:flex;flex-direction:column;gap:16px;align-items:center">
-      <img src="../../assets/brand/logo/mono/drayker-vazado-preto.svg" alt="Vazado preto" style="width:100%;max-width:130px;display:block">
+      <img src="assets/logo/mono/drayker-vazado-preto.svg" alt="Vazado preto" style="width:100%;max-width:130px;display:block">
       <div style="text-align:center"><div style="font-size:15px;font-weight:600;letter-spacing:-0.01em;color:#08080A">Vazado · tinta preta</div><div class="mono" style="font-size:10px;color:#7A2A00;margin-top:5px">vazado-preto.svg</div></div>
       <p style="font-size:12.5px;line-height:1.55;color:#7A2A00;margin:0;text-align:center">Sobre o laranja do escopo o furo devolve a cor da marca sem imprimir uma segunda tinta.</p>
     </div>
   </div>
 
   <div style="background:#F2F1EE;border:1px solid #18181E;padding:34px 30px;margin-bottom:20px;display:flex;flex-wrap:wrap;gap:44px;align-items:center">
-    <img src="../../assets/brand/logo/assinatura/drayker-horizontal.svg" alt="Assinatura horizontal" style="width:100%;max-width:290px;display:block;outline:1px dashed #B9B7B0;outline-offset:-1px">
-    <img src="../../assets/brand/logo/assinatura/drayker-vertical.svg" alt="Assinatura vertical" style="width:100%;max-width:170px;display:block;outline:1px dashed #B9B7B0;outline-offset:-1px">
+    <img src="assets/logo/assinatura/drayker-horizontal.svg" alt="Assinatura horizontal" style="width:100%;max-width:290px;display:block;outline:1px dashed #B9B7B0;outline-offset:-1px">
+    <img src="assets/logo/assinatura/drayker-vertical.svg" alt="Assinatura vertical" style="width:100%;max-width:170px;display:block;outline:1px dashed #B9B7B0;outline-offset:-1px">
     <div style="flex:1 1 240px;min-width:220px">
       <div class="mono" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#55555F;margin-bottom:10px">Área de respiro</div>
       <p style="font-size:13px;line-height:1.62;color:#55555F;margin:0 0 10px">O tracejado é a caixa do arquivo: já vem com <strong style="color:#08080A;font-weight:600">X = metade do raio do globo</strong> livre em volta. Nada entra ali — nem texto, nem borda, nem outra marca.</p>
@@ -364,12 +364,12 @@
 
   <div style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:26px;background:#0C0C0F;border:1px solid #18181E;padding:26px 28px;margin-bottom:20px">
     <div class="mono" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6A6A80;flex-basis:100%">Kit de aplicativo · assets/logo/kit/</div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="background:#F2F1EE;padding:8px;display:flex"><img src="../../assets/brand/logo/kit/favicon-16.png" alt="" style="width:16px;height:16px;display:block;image-rendering:pixelated"></div><div class="mono" style="font-size:9.5px;color:#5E5E74">16</div></div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="background:#F2F1EE;padding:8px;display:flex"><img src="../../assets/brand/logo/kit/favicon-32.png" alt="" style="width:32px;height:32px;display:block"></div><div class="mono" style="font-size:9.5px;color:#5E5E74">32</div></div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="background:#F2F1EE;padding:8px;display:flex"><img src="../../assets/brand/logo/kit/favicon-48.png" alt="" style="width:48px;height:48px;display:block"></div><div class="mono" style="font-size:9.5px;color:#5E5E74">48</div></div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logo/kit/apple-touch-icon.png" alt="" style="width:72px;height:72px;display:block"><div class="mono" style="font-size:9.5px;color:#5E5E74">apple-touch 180</div></div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logo/kit/maskable-512.png" alt="" style="width:72px;height:72px;display:block;border-radius:50%"><div class="mono" style="font-size:9.5px;color:#5E5E74">maskable 512</div></div>
-    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="../../assets/brand/logo/kit/icon-512-branco.png" alt="" style="width:72px;height:72px;display:block"><div class="mono" style="font-size:9.5px;color:#5E5E74">512 branco</div></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="background:#F2F1EE;padding:8px;display:flex"><img src="assets/logo/kit/favicon-16.png" alt="" style="width:16px;height:16px;display:block;image-rendering:pixelated"></div><div class="mono" style="font-size:9.5px;color:#5E5E74">16</div></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="background:#F2F1EE;padding:8px;display:flex"><img src="assets/logo/kit/favicon-32.png" alt="" style="width:32px;height:32px;display:block"></div><div class="mono" style="font-size:9.5px;color:#5E5E74">32</div></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="background:#F2F1EE;padding:8px;display:flex"><img src="assets/logo/kit/favicon-48.png" alt="" style="width:48px;height:48px;display:block"></div><div class="mono" style="font-size:9.5px;color:#5E5E74">48</div></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/logo/kit/apple-touch-icon.png" alt="" style="width:72px;height:72px;display:block"><div class="mono" style="font-size:9.5px;color:#5E5E74">apple-touch 180</div></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/logo/kit/maskable-512.png" alt="" style="width:72px;height:72px;display:block;border-radius:50%"><div class="mono" style="font-size:9.5px;color:#5E5E74">maskable 512</div></div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/logo/kit/icon-512-branco.png" alt="" style="width:72px;height:72px;display:block"><div class="mono" style="font-size:9.5px;color:#5E5E74">512 branco</div></div>
     <p style="font-size:12.5px;line-height:1.6;color:#8585A0;margin:0;flex:1 1 220px;min-width:200px">PNG opaco onde o sistema exige (apple-touch e maskable, com zona segura de 20%). Nos demais, o SVG continua sendo a fonte.</p>
   </div>
 
@@ -391,10 +391,10 @@
     <div style="background:#0C0C0F;padding:26px 24px">
       <div class="mono" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6A6A80;margin-bottom:16px">Não faça</div>
       <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px">
-        <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:100%;display:block;transform:scaleX(0.62);opacity:0.75">
-        <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:100%;display:block;transform:rotate(32deg);opacity:0.75">
-        <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:100%;display:block;filter:hue-rotate(150deg) saturate(0.35);opacity:0.75">
-        <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:100%;display:block;filter:drop-shadow(0 4px 7px rgba(255,85,0,.9));opacity:0.75">
+        <img src="assets/logo/drayker-marca.svg" alt="" style="width:100%;display:block;transform:scaleX(0.62);opacity:0.75">
+        <img src="assets/logo/drayker-marca.svg" alt="" style="width:100%;display:block;transform:rotate(32deg);opacity:0.75">
+        <img src="assets/logo/drayker-marca.svg" alt="" style="width:100%;display:block;filter:hue-rotate(150deg) saturate(0.35);opacity:0.75">
+        <img src="assets/logo/drayker-marca.svg" alt="" style="width:100%;display:block;filter:drop-shadow(0 4px 7px rgba(255,85,0,.9));opacity:0.75">
       </div>
       <ul style="font-size:13px;line-height:1.72;color:#8585A0;margin:0;padding-left:18px">
         <li>Esticar, comprimir ou girar — a cunha é a sombra dos aros, gira junto ou não gira.</li>
@@ -413,34 +413,34 @@
 
   <div style="background:#F2F1EE;border:1px solid #18181E;padding:30px 28px;margin-bottom:20px">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:26px">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="../../assets/brand/logo/drayker-marca.svg" alt="Marca Drayker" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-marca.svg</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="../../assets/brand/logo/drayker-icone.svg" alt="Ícone Drayker" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-icone.svg</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="../../assets/brand/logo/drayker-favicon.svg" alt="Favicon Drayker" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-favicon.svg</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="../../assets/brand/logo/drayker-sem-cunha.svg" alt="Marca sem cunha" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-sem-cunha.svg</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="../../assets/brand/logo/drayker-orbita-larga.svg" alt="Órbita larga" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-orbita-larga.svg</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="assets/logo/drayker-marca.svg" alt="Marca Drayker" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-marca.svg</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="assets/logo/drayker-icone.svg" alt="Ícone Drayker" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-icone.svg</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="assets/logo/drayker-favicon.svg" alt="Favicon Drayker" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-favicon.svg</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="assets/logo/drayker-sem-cunha.svg" alt="Marca sem cunha" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-sem-cunha.svg</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:12px"><img src="assets/logo/drayker-orbita-larga.svg" alt="Órbita larga" style="width:100%;max-width:132px;display:block"><div class="mono" style="font-size:10px;color:#55555F;text-align:center">drayker-orbita-larga.svg</div></div>
     </div>
   </div>
 
   <div style="background:#F2F1EE;border:1px solid #18181E;padding:26px 28px;margin-bottom:20px">
     <div class="mono" style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#55555F;margin-bottom:18px">assets/logo/escopo/ · um arquivo por projeto</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(96px,1fr));gap:18px">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-emergence.svg" alt="Emergence" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">emergence</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-dk.svg" alt="Dk" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">dk</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-daf.svg" alt="DAF" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">daf</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-bsdk.svg" alt="BSDK" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">bsdk</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-network.svg" alt="Dk Network" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">network</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-lcrypt.svg" alt="LCrypt" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">lcrypt</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-uid.svg" alt="UID" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">uid</div></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="../../assets/brand/logo/escopo/drayker-dfm.svg" alt="DFM / DFMP" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">dfm</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-emergence.svg" alt="Emergence" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">emergence</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-dk.svg" alt="Dk" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">dk</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-daf.svg" alt="DAF" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">daf</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-bsdk.svg" alt="BSDK" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">bsdk</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-network.svg" alt="Dk Network" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">network</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-lcrypt.svg" alt="LCrypt" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">lcrypt</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-uid.svg" alt="UID" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">uid</div></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:9px"><img src="assets/logo/escopo/drayker-dfm.svg" alt="DFM / DFMP" style="width:100%;max-width:88px;display:block"><div class="mono" style="font-size:10px;color:#55555F">dfm</div></div>
     </div>
   </div>
 
   <div style="display:flex;flex-wrap:wrap;align-items:center;gap:22px;background:#0C0C0F;border:1px solid #18181E;padding:22px 24px;margin-bottom:64px">
-    <img src="../../assets/brand/logo/drayker-icone.svg" alt="" style="width:16px;height:16px;display:block">
-    <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:24px;height:24px;display:block">
-    <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:32px;height:32px;display:block">
-    <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:48px;height:48px;display:block">
-    <img src="../../assets/brand/logo/drayker-marca.svg" alt="" style="width:72px;height:72px;display:block">
+    <img src="assets/logo/drayker-icone.svg" alt="" style="width:16px;height:16px;display:block">
+    <img src="assets/logo/drayker-marca.svg" alt="" style="width:24px;height:24px;display:block">
+    <img src="assets/logo/drayker-marca.svg" alt="" style="width:32px;height:32px;display:block">
+    <img src="assets/logo/drayker-marca.svg" alt="" style="width:48px;height:48px;display:block">
+    <img src="assets/logo/drayker-marca.svg" alt="" style="width:72px;height:72px;display:block">
     <p style="font-size:13px;line-height:1.6;color:#8585A0;margin:0;flex:1 1 240px;min-width:200px">Os mesmos arquivos em escala, sobre o preto do site. Nada é redesenhado: é um <code class="mono" style="color:#EDECF0">&lt;img src&gt;</code>.</p>
   </div>
 
@@ -518,7 +518,7 @@
 
   <div class="mono" style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#FF5500;margin-bottom:18px">Turno 13 · a estrutura como nave</div>
   <h1 style="font-size:clamp(30px,4.4vw,56px);line-height:1;letter-spacing:-0.04em;font-weight:700;margin:0 0 14px;max-width:30ch">Os aros são uma nave. A sombra é o que ela faz.</h1>
-  <p style="font-size:16px;line-height:1.62;color:#8585A0;max-width:66ch;margin:0 0 18px">Tudo aqui sai de um motor único e documentado — <a href="../docs/DRAYKER-MARK.md">drayker-mark.js</a> — em que um símbolo é <strong style="color:#EDECF0;font-weight:600">corpo + estrutura orbital + efeito nos dois quartos</strong>. A cunha deixou de ser só ausência de luz: ela é o que a megaestrutura está fazendo com o planeta, blindagem ou extração, desenhada dentro da própria sombra.</p>
+  <p style="font-size:16px;line-height:1.62;color:#8585A0;max-width:66ch;margin:0 0 18px">Tudo aqui sai de um motor único e documentado — <a href="DRAYKER-MARK.md">drayker-mark.js</a> — em que um símbolo é <strong style="color:#EDECF0;font-weight:600">corpo + estrutura orbital + efeito nos dois quartos</strong>. A cunha deixou de ser só ausência de luz: ela é o que a megaestrutura está fazendo com o planeta, blindagem ou extração, desenhada dentro da própria sombra.</p>
   <p class="mono" style="font-size:12px;line-height:1.7;color:#5E5E74;max-width:66ch;margin:0 0 40px">&lt;svg data-drayker data-body="geo" data-rings="hull" data-wedge="extract"&gt;&lt;/svg&gt;<br>Drayker.create(el, { body, rings, wedge, accent, ringRadius })<br>Drayker.toSVGString({ rings: 'seal' }) → SVG estático</p>
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1px;background:#18181E;border:1px solid #18181E;margin-bottom:20px">
