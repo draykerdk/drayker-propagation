@@ -13,27 +13,26 @@ The repository contains `.github/workflows/deploy-pages.yml`. It validates the s
 - TLS certificate: approved
 - HTTPS enforcement: enabled
 
-## Provisioning sequence
+## Recovery or reprovisioning sequence
 
-These are the steps used to provision the current deployment. They require a repository administrator, maintainer, or a token with both **Administration: write** and **Pages: write** for the repository.
+The site is already provisioned. Use these steps only if the Pages configuration or DNS record has to be recreated. They require a repository administrator, maintainer, or a token with both **Administration: write** and **Pages: write** for the repository.
 
-1. Rename `draykerdk/drayker-theme` to `draykerdk/drayker-propagation`.
-2. Push or merge the Pages workflow into `master`.
-3. In **Settings → Pages**, set the publishing source to **GitHub Actions**.
-4. In the same Pages settings, save `propagation.drayker.org` as the custom domain.
-5. Only after GitHub accepts that domain, create this DNS-only record in the `drayker.org` zone:
+1. Confirm that the canonical repository is `draykerdk/drayker-propagation` and that `.github/workflows/deploy-pages.yml` is present on `master`.
+2. In **Settings → Pages**, set the publishing source to **GitHub Actions**.
+3. In the same Pages settings, save `propagation.drayker.org` as the custom domain.
+4. Only after GitHub accepts that domain, create this DNS-only record in the `drayker.org` zone:
 
    | Type | Name | Target | Proxy |
    | --- | --- | --- | --- |
    | CNAME | `propagation` | `draykerdk.github.io` | DNS only |
 
-6. Wait for GitHub Pages to approve the certificate, then enable **Enforce HTTPS**.
+5. Wait for GitHub Pages to approve the certificate, then enable **Enforce HTTPS**.
 
 Creating the DNS record before GitHub Pages accepts the custom domain is intentionally avoided: it can expose an unclaimed subdomain to takeover.
 
 ## API equivalent
 
-With an authenticated GitHub CLI session that has the required organization permissions, the Pages setup can be completed after the rename with:
+With an authenticated GitHub CLI session that has the required organization permissions, the Pages setup can be recreated with:
 
 ```sh
 gh api --method POST repos/draykerdk/drayker-propagation/pages \

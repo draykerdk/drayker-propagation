@@ -11,7 +11,7 @@
           title: 'Make a one-sentence bridge.',
           body: 'Read one public page and write a short, accurate introduction that links directly back to it. Share the source before your interpretation.',
           steps: ['Choose one primary page.', 'Write the clearest sentence you can defend.', 'Send the reader to the source.'],
-          href: 'https://drayker.org/#org/docs',
+          href: 'https://drayker.org/docs/',
           label: 'Open public documentation'
         },
         session: {
@@ -19,7 +19,7 @@
           title: 'Draft a source-backed explainer.',
           body: 'Choose a single question a new reader may have, then make a short explainer that separates the public record from your own framing.',
           steps: ['Find the primary source and its scope.', 'Write for one real reader question.', 'Add a direct source link and invite a question.'],
-          href: 'https://drayker.org/#org/docs',
+          href: 'https://drayker.org/docs/',
           label: 'Explore documentation'
         },
         ongoing: {
@@ -79,7 +79,7 @@
           title: 'Become a reliable public handoff.',
           body: 'Help interested people move from curiosity to the appropriate public page, open function or discussion without becoming a private gatekeeper.',
           steps: ['Keep the official entry points at hand.', 'Verify a link before sharing it.', 'Offer the public volunteer route when someone is ready.'],
-          href: 'https://drayker.org/#org/fn',
+          href: 'https://drayker.org/fn/',
           label: 'Browse open functions'
         }
       },
@@ -97,7 +97,7 @@
           title: 'Map one question to its sources.',
           body: 'Collect the minimum set of public pages someone needs to inspect a specific question. Explain how the sources relate without pretending they resolve every uncertainty.',
           steps: ['Write the question in plain language.', 'Collect primary pages only.', 'Add a short source map with dates and scope.'],
-          href: 'https://drayker.org/#org/docs',
+          href: 'https://drayker.org/docs/',
           label: 'Open public documentation'
         },
         ongoing: {
