@@ -1,0 +1,25 @@
+/* Drayker public design tokens — source: DRAYKER-MARK.md */
+:root {
+  --drayker-ink: #08080a;
+  --drayker-panel: #0c0c0f;
+  --drayker-line: #18181e;
+  --drayker-text: #edecf0;
+  --drayker-muted: #8585a0;
+  --drayker-accent: #ff5500;
+  --drayker-accent-hot: #ff8a38;
+  --drayker-paper: #f2f1ee;
+
+  --drayker-emergence: #ff5500;
+  --drayker-dk: #5ce02e;
+  --drayker-daf: #ff8a00;
+  --drayker-bsdk: #9c8cff;
+  --drayker-network: #3fa9ff;
+  --drayker-lcrypt: #14e0c0;
+  --drayker-uid: #e8ecf5;
+  --drayker-dfm: #ffcb6b;
+
+  --drayker-font: 'Archivo', sans-serif;
+  --drayker-label-font: 'JetBrains Mono', monospace;
+  --drayker-ring-tilt: .733rad;
+  --drayker-ring-radius: 120;
+}

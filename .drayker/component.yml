@@ -1,33 +1,39 @@
 schema_version: 1
 component:
-  id: drayker-theme
-  name: Drayker Theme
-  layer: PORTAL
-  artifact_type: theme
-  problem: Give Drayker documentation sites a consistent, accessible visual and navigation system.
+  id: drayker-propagation
+  name: Drayker Propagation
+  layer: COMMUNITY
+  artifact_type: portal
+  problem: Give volunteers a source-led way to explain, translate and connect people to Drayker while making the public design system reusable.
   scope:
-    - Shared Jekyll layout and design tokens for documentation repositories.
-    - Navigation back to source repositories and ecosystem entrypoints.
+    - Public propagation guidance, message starters and volunteer mission selection.
+    - Organized reuse of the Drayker logo variations, interactive mark engine, design tokens, examples and official exports.
+    - Navigation to public documentation, discussion and contribution entrypoints.
   non_scope:
-    - The Design Component used by drayker.org and drayker.com.
-    - Governance or content truth for consuming repositories.
+    - Governance decisions or authoritative technical claims about other Drayker components.
+    - Private volunteer coordination, contact collection or campaign analytics.
+    - The production content of drayker.org, drayker.com or the public forum.
   dependencies:
     - drayker.org
+    - general-forum
   implementation:
     level: operational
-    scope: The theme is published as repository code and referenced by Drayker documentation sites.
+    scope: The static propagation portal and reusable design library are published through GitHub Pages at propagation.drayker.org.
     evidence:
-      - type: usage
-        ref: https://github.com/draykerdk/dk/blob/master/docs/_config.yml
+      - type: deployment
+        ref: https://propagation.drayker.org/
       - type: document
         ref: README.md
+      - type: test
+        ref: tools/check.js
   risks:
-    - A breaking layout change can affect many documentation sites at once.
-    - Shared styling can hide differences in content maturity between components.
+    - Volunteer material can drift from primary sources if links and message starters are not reviewed.
+    - Reusable visual components can be mistaken for permission to alter the official mark.
+    - Archived design explorations can be confused with approved production variants without the library labels and usage guide.
   contributions:
     availability: open
-    entrypoint: https://github.com/draykerdk/drayker-theme/issues
+    entrypoint: https://github.com/draykerdk/general-forum/issues/new?template=volunteer-introduction.yml
   source_of_truth:
-    repository: https://github.com/draykerdk/drayker-theme
-    path: _layouts/default.html
-  last_reviewed: "2026-08-10"
+    repository: https://github.com/draykerdk/drayker-propagation
+    path: index.html
+  last_reviewed: "2026-08-11"
