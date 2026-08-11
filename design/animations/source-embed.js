@@ -1,42 +1,98 @@
 (function () {
   'use strict';
 
-  function isolateSourceAnimation(frame) {
-    var targetId = frame.getAttribute('data-source-target');
-    var doc;
+  var states = new WeakMap();
 
+  function animationNodes(doc) {
+    var nodes = new Map();
+    doc.querySelectorAll('[id]').forEach(function (card) {
+      if (!/^(?:[1-9]|1[0-3])[a-z]$/.test(card.id)) return;
+      var svg = card.querySelector('svg.mark, svg.mark3, svg[data-drayker]');
+      if (svg) nodes.set(card.id, svg);
+    });
+    return nodes;
+  }
+
+  function installFrameStyles(doc) {
+    var style = doc.createElement('style');
+    style.textContent = [
+      '*{box-sizing:border-box!important}',
+      'html,body{width:100%!important;height:100%!important;overflow:hidden!important;background:#0b0b0e!important}',
+      'body{margin:0!important}',
+      '.dk-player-stage{width:100%!important;height:100%!important;display:grid!important;place-items:center!important;padding:clamp(18px,5%,48px)!important;background:radial-gradient(circle at 50% 48%,#111119 0,#0b0b0e 62%)!important}',
+      '.dk-player-stage>svg{width:min(92%,680px)!important;height:auto!important;max-width:none!important;max-height:92%!important;display:block!important;cursor:crosshair!important}'
+    ].join('');
+    doc.head.appendChild(style);
+  }
+
+  function show(frame, targetId, label) {
+    var state = states.get(frame);
+    if (!state || !state.nodes.has(targetId)) return false;
+    var svg = state.nodes.get(targetId);
+    svg.setAttribute('role', 'img');
+    svg.setAttribute('aria-label', label || frame.title || ('Original Drayker animation ' + targetId));
+    state.stage.replaceChildren(svg);
+    state.current = targetId;
+    frame.dataset.sourceTarget = targetId;
+    frame.classList.add('source-frame-ready');
+    frame.classList.remove('source-frame-error');
+    frame.dispatchEvent(new CustomEvent('drayker-player-change', { detail: { id: targetId } }));
+    return true;
+  }
+
+  function isolate(frame) {
+    var doc;
     try {
       doc = frame.contentDocument;
     } catch (error) {
       frame.classList.add('source-frame-error');
       return;
     }
+    if (!doc || !doc.body) return;
 
-    var target = doc && doc.getElementById(targetId);
-    if (!target) {
+    var nodes = animationNodes(doc);
+    var stage = doc.createElement('main');
+    stage.className = 'dk-player-stage';
+    stage.setAttribute('aria-live', 'off');
+    installFrameStyles(doc);
+    doc.body.replaceChildren(stage);
+    states.set(frame, { doc: doc, nodes: nodes, stage: stage, current: null });
+
+    if (!show(frame, frame.dataset.sourceTarget || '11b', frame.title)) {
       frame.classList.add('source-frame-error');
-      return;
     }
-
-    var svg = target.querySelector('svg');
-    var targetSelector = '[id="' + targetId.replace(/"/g, '\\"') + '"]';
-    var style = doc.createElement('style');
-    style.textContent = [
-      '*{box-sizing:border-box!important}',
-      'html,body{width:100%!important;height:100%!important;overflow:hidden!important;background:#0c0c0f!important}',
-      'body{margin:0!important;display:grid!important;place-items:center!important}',
-      targetSelector + '{width:100%!important;height:100%!important;min-height:0!important;margin:0!important;padding:5%!important;border:0!important;background:transparent!important;display:grid!important;place-items:center!important}',
-      targetSelector + '>:not(svg){display:none!important}',
-      targetSelector + '>svg{width:min(94%,680px)!important;height:auto!important;max-height:94%!important;display:block!important;cursor:crosshair!important}'
-    ].join('');
-
-    doc.head.appendChild(style);
-    doc.body.replaceChildren(target);
-    if (svg) svg.setAttribute('aria-label', frame.getAttribute('title') || 'Original Drayker animation');
-    frame.classList.add('source-frame-ready');
+    frame.dispatchEvent(new CustomEvent('drayker-player-ready', { detail: { count: nodes.size } }));
   }
 
-  document.querySelectorAll('iframe[data-source-target]').forEach(function (frame) {
-    frame.addEventListener('load', function () { isolateSourceAnimation(frame); }, { once: true });
-  });
+  function mount(frame) {
+    if (!frame || frame.dataset.sourceMounted === 'true') return;
+    frame.dataset.sourceMounted = 'true';
+    frame.addEventListener('load', function () { isolate(frame); });
+    try {
+      if (frame.contentDocument && frame.contentDocument.readyState === 'complete') {
+        setTimeout(function () { isolate(frame); }, 0);
+      }
+    } catch (error) {
+      frame.classList.add('source-frame-error');
+    }
+  }
+
+  function scan(root) {
+    (root || document).querySelectorAll('iframe[data-source-target]').forEach(mount);
+  }
+
+  window.DraykerSourcePlayer = { mount: mount, show: show };
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', function () { scan(); });
+  else scan();
+
+  new MutationObserver(function (mutations) {
+    mutations.forEach(function (mutation) {
+      mutation.addedNodes.forEach(function (node) {
+        if (node.nodeType !== 1) return;
+        if (node.matches && node.matches('iframe[data-source-target]')) mount(node);
+        scan(node);
+      });
+    });
+  }).observe(document.documentElement, { childList: true, subtree: true });
 })();
