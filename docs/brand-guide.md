@@ -44,7 +44,7 @@ The complete pack is in [`../assets/brand/logo/`](../assets/brand/logo/).
 - Distinguish what is published, proposed and open.
 - Do not state that a system, product or governance mechanism is operational unless the public source says so.
 - Do not imply endorsement, investment advice, guarantees or artificial scarcity.
-- Invite questions and contribution; do not pressure a decision.
+- Invite questions and contribution. Do not pressure a decision.
 
 ## A quick pre-publish check
 
