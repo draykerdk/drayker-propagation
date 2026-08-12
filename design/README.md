@@ -4,7 +4,7 @@ This directory organizes the supplied design material without replacing its impl
 
 ## Choose by use
 
-- **Interactive mark:** start in `animations/`. Its inventory covers all 65 animated cards from the source sheet and moves each original SVG into one isolated player; no animation is copied or reconstructed.
+- **Interactive mark:** start in `animations/`. Its inventory covers all 65 animated cards from the source sheet and moves each original SVG into one isolated player. No animation is copied or reconstructed.
 - **Logo or icon:** start in `logos/`, where all 46 supplied files are grouped by surface, scope, format and output size.
 - **Rules:** read `docs/DRAYKER-MARK.md` before extending or exporting the mark.
 - **Decision record:** open `source/Drayker Logo Variations.html`. Its engine and relative assets are preserved beside it, so the original sheet runs unchanged.
@@ -12,7 +12,7 @@ This directory organizes the supplied design material without replacing its impl
 ## Integrity guarantees
 
 - The production engine and the engine beside the original source sheet are byte-identical to the supplied `drayker-mark.js`.
-- Every catalog page executes its exact source-sheet SVG inside an isolated same-origin frame; geometry, renderer loops and pointer behavior are not copied.
+- Every catalog page executes its exact source-sheet SVG inside an isolated same-origin frame. Geometry, renderer loops and pointer behavior are not copied.
 - Turn 13’s unusual rings are cataloged last as customization examples, not normal-use recommendations.
 - The original HTML, documentation, SVG and raster assets under `source/` are unedited copies.
 - `manifest.json` records the canonical configurations, scope colors and artifact locations.
