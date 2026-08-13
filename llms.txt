@@ -1,0 +1,27 @@
+# Drayker Propagation
+
+> The source-led propagation toolkit and canonical design library for Drayker.
+
+## What is here
+
+- Message starters that keep public claims connected to primary sources.
+- A mission finder for people who want a first small contribution.
+- The official Drayker design library, logo exports and interactive mark engine.
+- Preserved source material and deployment guidance for maintainers.
+
+## Canonical resources
+
+- [Propagation toolkit](https://propagation.drayker.org/)
+- [Design library](https://propagation.drayker.org/design/)
+- [Animation library](https://propagation.drayker.org/design/animations/)
+- [Logo library](https://propagation.drayker.org/design/logos/)
+- [Owning repository](https://github.com/draykerdk/drayker-propagation)
+- [Drayker portal](https://drayker.org/)
+
+## Interpretation rule
+
+Propagation explains Drayker; it does not define governance or prove that a documented component is deployed. Prefer the linked primary repository for implementation claims.
+
+## Crawling
+
+Public pages and brand assets may be indexed and cited with attribution. The sitemap is at https://propagation.drayker.org/sitemap.xml.

@@ -125,6 +125,11 @@ check(!page.includes('network-mesh.js') && !page.includes('mark-presets.js') && 
 
 check(page.includes('Drayker Propagation'), 'page title does not identify the propagation site');
 check(page.includes('https://propagation.drayker.org/'), 'production canonical URL is missing');
+check(page.includes('application/ld+json') && page.includes('https://drayker.com/#organization'), 'structured organization data is missing');
+check(page.includes('meta property="og:site_name"') && page.includes('meta name="twitter:title"'), 'social metadata is incomplete');
+check(page.includes('href="llms.txt"') && exists('llms.txt'), 'llms.txt discovery is incomplete');
+check(exists('robots.txt') && read('robots.txt').includes('OAI-SearchBot'), 'AI crawler policy is incomplete');
+check(exists('sitemap.xml') && read('sitemap.xml').includes('https://propagation.drayker.org/design/'), 'sitemap is incomplete');
 check(page.includes('people keep creating, discovering and learning while intelligence carries the rest'), 'landing copy is not aligned with the public Drayker thesis');
 check(page.includes('https://drayker.org/docs/') && page.includes('https://drayker.org/fn/'), 'landing page is not connected to the clean portal routes');
 check(!page.includes('https://drayker.org/#org/'), 'landing page still publishes legacy hash routes');
