@@ -85,9 +85,6 @@
     }
   },
   "documents": [
-    { "name": "Mark specification", "path": "docs/DRAYKER-MARK.md" },
-    { "name": "Dknowledge design handoff", "path": "docs/DKNOWLEDGE-DESIGN.md" },
-    { "name": "V3 site handoff", "path": "docs/V3-HANDOFF.md" },
-    { "name": "GitHub snapshot", "path": "docs/github.md" }
+    { "name": "Mark specification", "path": "docs/DRAYKER-MARK.md" }
   ]
 }

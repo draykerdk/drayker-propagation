@@ -54,9 +54,6 @@ const expectedSourceIds = [
   'design/README.md',
   'design/manifest.json',
   'design/docs/DRAYKER-MARK.md',
-  'design/docs/DKNOWLEDGE-DESIGN.md',
-  'design/docs/V3-HANDOFF.md',
-  'design/docs/github.md',
   'design/source/Drayker Logo Variations.html',
   'design/source/drayker-mark.js',
   'design/source/DRAYKER-MARK.md',
@@ -72,6 +69,19 @@ const expectedSourceIds = [
 check(!exists('assets/js/propagation-network.js'), 'the reimplemented propagation animation still exists');
 check(!exists('library/components/network-mesh.js'), 'the reimplemented network mesh still exists');
 check(!exists('library/components/mark-presets.js'), 'invented mark presets still exist');
+
+// Internal working notes are not design library. These three were copied in from the
+// portal — a sync log and two handoffs addressed to whoever was implementing at the time —
+// and were being served publicly. This library publishes what someone needs in order to
+// use the brand; drafts about how it got built belong in the vault.
+check(!exists('design/docs/github.md'), 'the portal sync log is published again');
+check(!exists('design/docs/V3-HANDOFF.md'), 'an internal design handoff is published again');
+check(!exists('design/docs/DKNOWLEDGE-DESIGN.md'), 'an internal design handoff is published again');
+
+// docs/brand-guide.html is the brand guide. A docs/brand-guide.md also existed, and Jekyll
+// would render it to the same path — so the literal .html won and the markdown was never
+// served. Anyone editing it would have changed nothing and had no way to tell.
+check(!exists('docs/brand-guide.md'), 'the shadowed brand-guide markdown is back; it can never be served');
 
 check(hash('assets/js/drayker-mark.js') === expectedEngineHash, 'production engine differs from the supplied engine');
 check(hash('design/source/drayker-mark.js') === expectedEngineHash, 'preserved source engine differs from the supplied engine');
