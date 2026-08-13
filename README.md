@@ -13,7 +13,7 @@ Drayker proposes a way of working where people keep creating, discovering and le
 - A [canonical design library](design/README.md) with all 65 source animations, searchable by nine explained families and documented on dedicated pages.
 - Every animation is executed directly from the preserved source sheet. Its geometry, timing and pointer behavior are not reimplemented.
 - A [complete logo library](design/logos/) covering all 46 supplied light, dark, scope, monochrome, signature and app-icon files.
-- An English [brand guide](docs/brand-guide.md) and downloadable kit for contributors.
+- An English [brand guide](docs/brand-guide.html) and downloadable kit for contributors.
 - A zero-dependency static integrity check.
 
 ## GitHub Pages deployment
