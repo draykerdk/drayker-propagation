@@ -111,6 +111,14 @@ check(logoPage.includes('Do not invert the light SVG with CSS'), 'dark-surface l
 
 const canonicalNetwork = 'data-body="grid" data-rings="hairline" data-wedge="none" data-accent="#3FA9FF" data-shadow="1"';
 check(page.replace(/\s+/g, ' ').includes(canonicalNetwork), 'the propagation page does not use the standard Network grid configuration');
+// The canonical library opens with the canonical thing. It used to lead with a grid body
+// in #3FA9FF — the Dk Network scope colour — while the official mark appeared further down
+// as a code sample, which is the library recommending something it does not endorse.
+// DRAYKER-MARK.md §2.5: "A MARCA OFICIAL (é esta, não invente outra)".
+const officialHeroMark = 'data-rings="mono" data-accent="#FF5500" data-gaze="0,0.34" data-animate="false" data-fit="1.5"';
+check(designPage.replace(/\s+/g, ' ').includes(officialHeroMark), 'the design library hero does not lead with the official mark');
+check(designPage.indexOf(officialHeroMark) < designPage.indexOf('data-source-target="11b"'), 'the official mark must come before the studies');
+
 check(designPage.includes('data-source-target="11b"') && designPage.includes('data-source-target="11c"') && designPage.includes('data-source-target="11d"'), 'design page must feature the original Earth, Sun and Black Hole source animations');
 check(designPage.indexOf('animations/#symbols') < designPage.indexOf('animations/#preview-4a'), 'universal symbols must appear before customization examples');
 check(!page.includes('network-mesh.js') && !page.includes('mark-presets.js') && !page.includes('propagation-network.js'), 'landing page still loads a reimplemented animation');
