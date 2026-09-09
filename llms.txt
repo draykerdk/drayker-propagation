@@ -1,6 +1,6 @@
 # Drayker Propagation
 
-> The source-led propagation toolkit and canonical design library for Drayker.
+> Drayker Propagation gives volunteers source material, message starters and brand assets for introducing the initiative to relevant people and communities.
 
 ## What is here
 
