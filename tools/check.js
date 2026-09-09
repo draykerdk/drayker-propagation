@@ -27,7 +27,7 @@ const deploymentGuide = read('docs/deployment.md');
 const manifest = JSON.parse(read('design/manifest.json'));
 const catalog = JSON.parse(read('design/animations/catalog-data.json'));
 const componentContract = read('.drayker/component.yml');
-const expectedEngineHash = '0a421c6b10ade43a6e45e03ba1a5e7a690ea1e9cb29ebc5827321385e37c380c';
+const expectedEngineHash = 'aa208322b5910b7355d0336091547caa41525d949f76e244f865f1b3df78b8f8';
 const expectedSheetHash = '8934b382f88c7dbca7272284448fae7927582ed0de3c0d1ed7edefae4ba485ce';
 const letters = (number, sequence) => [...sequence].map((letter) => number + letter);
 const expectedSourceIds = [
