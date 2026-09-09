@@ -1,8 +1,10 @@
 # Drayker Propagation
 
-An English-language public toolkit for volunteers who want to help people find, understand and responsibly discuss Drayker’s actual public argument.
+Drayker Propagation gives volunteers source material, message starters and brand assets for introducing the initiative to relevant people and communities.
 
-Drayker proposes a way of working where people keep creating, discovering and learning while intelligence carries the rest, with the resulting decisions, evidence and resources kept connected to the work. This site gives a volunteer a clear first move without turning that argument into hype: primary sources, honest message starters, a small mission matcher, a public contribution path and the official brand assets.
+The toolkit helps a contributor choose an audience, explain a relevant part of the work and connect the invitation to a public page or discussion.
+
+Communication helps the right people discover work they can understand, question and develop.
 
 ## What is included
 
