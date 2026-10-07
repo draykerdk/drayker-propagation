@@ -28,7 +28,8 @@ const manifest = JSON.parse(read('design/manifest.json'));
 const catalog = JSON.parse(read('design/animations/catalog-data.json'));
 const componentContract = read('.drayker/component.yml');
 const expectedEngineHash = 'aa208322b5910b7355d0336091547caa41525d949f76e244f865f1b3df78b8f8';
-const expectedSheetHash = '8934b382f88c7dbca7272284448fae7927582ed0de3c0d1ed7edefae4ba485ce';
+// The sheet's visible text and comments were translated to English (layout, IDs and code unchanged).
+const expectedSheetHash = '4da84d90b581570895c68292e15d719b6d96c6607473541b57cb1769deeac33f';
 const letters = (number, sequence) => [...sequence].map((letter) => number + letter);
 const expectedSourceIds = [
   '1a', '1b', '1d', '2a', '2b', '3f',
@@ -124,7 +125,7 @@ check(page.replace(/\s+/g, ' ').includes(canonicalNetwork), 'the propagation pag
 // The canonical library opens with the canonical thing. It used to lead with a grid body
 // in #3FA9FF — the Dk Network scope colour — while the official mark appeared further down
 // as a code sample, which is the library recommending something it does not endorse.
-// DRAYKER-MARK.md §2.5: "A MARCA OFICIAL (é esta, não invente outra)".
+// DRAYKER-MARK.md §2.5: "THE OFFICIAL MARK (it is this one, do not invent another)".
 const officialHeroMark = 'data-rings="mono" data-accent="#FF5500" data-gaze="0,0.34" data-animate="false" data-fit="1.5"';
 check(designPage.replace(/\s+/g, ' ').includes(officialHeroMark), 'the design library hero does not lead with the official mark');
 check(designPage.indexOf(officialHeroMark) < designPage.indexOf('data-source-target="11b"'), 'the official mark must come before the studies');
