@@ -1,6 +1,6 @@
 # Drayker Propagation
 
-Drayker Propagation gives volunteers source material, message starters and brand assets for introducing the initiative to relevant people and communities.
+Drayker Propagation gives volunteers source material, message starters and brand assets for introducing Drayker to relevant people and communities.
 
 The toolkit helps a contributor choose an audience, explain a relevant part of the work and connect the invitation to a public page or discussion.
 
@@ -24,7 +24,7 @@ The site includes a zero-build [GitHub Pages workflow](.github/workflows/deploy-
 
 The production address is [propagation.drayker.org](https://propagation.drayker.org/). GitHub Pages publishes `master` through the repository workflow, with the custom domain and HTTPS already enabled. See the [deployment guide](docs/deployment.md) for the current configuration and recovery procedure.
 
-No runtime credentials, form collection or third-party analytics are used. The main contribution CTA opens the organization's existing public volunteer-introduction issue form.
+No runtime credentials, form collection or third-party analytics are used. The main contribution CTA opens the existing public volunteer-introduction issue form in draykerdk/general-forum.
 
 ## Validate locally
 
@@ -45,3 +45,5 @@ This is a propagation toolkit, not a claim factory. Keep every message tied to a
 ## Repository identity
 
 The canonical repository is [`draykerdk/drayker-propagation`](https://github.com/draykerdk/drayker-propagation). The former theme prototype and its experimental animation are not sources for this site. The reusable documentation theme remains a separate repository at `draykerdk/drayker-theme`.
+
+Code under MIT (see `LICENSE`), content under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
