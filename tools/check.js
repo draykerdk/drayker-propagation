@@ -139,7 +139,9 @@ check(page.includes('https://propagation.drayker.org/'), 'production canonical U
 check(page.includes('application/ld+json') && page.includes('https://drayker.com/#organization'), 'structured organization data is missing');
 check(page.includes('meta property="og:site_name"') && page.includes('meta name="twitter:title"'), 'social metadata is incomplete');
 check(page.includes('href="llms.txt"') && exists('llms.txt'), 'llms.txt discovery is incomplete');
-check(exists('robots.txt') && read('robots.txt').includes('OAI-SearchBot'), 'AI crawler policy is incomplete');
+const robotsLines = exists('robots.txt') ? read('robots.txt').split(/\r?\n/).map((line) => line.trim()) : [];
+check(robotsLines.includes('User-agent: *') && robotsLines.includes('Allow: /'), 'robots.txt must allow every crawler with User-agent: * and Allow: /');
+check(robotsLines.includes('Sitemap: https://propagation.drayker.org/sitemap.xml'), 'robots.txt has the wrong sitemap');
 check(exists('sitemap.xml') && read('sitemap.xml').includes('https://propagation.drayker.org/design/'), 'sitemap is incomplete');
 check(page.includes('people keep creating, discovering and learning while intelligence carries the rest'), 'landing copy is not aligned with the public Drayker thesis');
 check(page.includes('https://drayker.org/docs/') && page.includes('https://drayker.org/fn/'), 'landing page is not connected to the clean portal routes');
